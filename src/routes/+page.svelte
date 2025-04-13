@@ -11,5 +11,5 @@
 <p>CURRENTLY TESTING ->> enhanced:img rendering# format types</p>
 <p>
 	<!-- <enhanced:img src={madone} alt="madone alt text" sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" /> -->
-	<enhanced:img src="../lib/assets/images/trek_pone_modone.jpg?format=webp;avif&" alt="madone alt text" sizes="min(1280px, 100vw)" />
+	<enhanced:img src="../lib/assets/images/trek_pone_modone.jpg?format=avif;webp&" alt="madone alt text" sizes="min(1280px, 100vw)" />
 </p>
