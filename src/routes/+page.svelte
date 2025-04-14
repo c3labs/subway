@@ -30,6 +30,6 @@
     bind:duration
     preload="metadata"
     mutedtype="video/mp4">
-	<source src={scroller} media="(min-width: 400px)" />
+	<source src={scroller} media="(min-width: 600px)" />
 	</video>
 </p>
