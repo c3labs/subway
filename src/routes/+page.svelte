@@ -25,11 +25,11 @@
 <p>
 	<!-- <enhanced:img src={madone} alt="madone alt text" sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" /> -->
 	<enhanced:img src="../lib/assets/images/trek_pone_modone.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" />
-	<video
+	<!-- <video
     bind:currentTime={time}
     bind:duration
     preload="metadata"
     mutedtype="video/mp4">
 	<source src={scroller} media="(min-width: 600px)" />
-	</video>
+	</video> -->
 </p>
