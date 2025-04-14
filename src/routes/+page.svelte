@@ -1,23 +1,23 @@
 <script lang="ts">
 	// import madone from '$lib/assets/images/trek_pone_modone.jpg?enhanced';
-	import scroller from '$lib/assets/video/subway.tester2.mp4';
-	import { run } from 'svelte/legacy';
+	// import scroller from '$lib/assets/video/subway.tester2.mp4';
+	// import { run } from 'svelte/legacy';
 
-	let time = $state(0);
-	let duration = $state();
+	// let time = $state(0);
+	// let duration = $state();
 
-	let scrollY = $state(0);
+	// let scrollY = $state(0);
 
-	run(() => {
-		const totalScroll =	document.documentElement.scrollHeight - window.innerHeight;
-		time = duration * (scrollY / totalScroll);
-	});
+	// run(() => {
+	// 	const totalScroll =	document.documentElement.scrollHeight - window.innerHeight;
+	// 	time = duration * (scrollY / totalScroll);
+	// });
 </script>
 
 <svelte:head>
 	<title>SUBWAY - Radsport Wagner | We just ride!</title>
 </svelte:head>
-<svelte:window bind:scrollY />
+<!-- <svelte:window bind:scrollY /> -->
 <h1 class=" font-mono ">SUBWAY - Development Server</h1>
 <p>Have a look at <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 <p>LAST IMPLEMENTED ->> enhanced:img rendering# format types</p>
