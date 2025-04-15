@@ -21,7 +21,7 @@
 
 <div class="relative h-[300vh]" data-show-light-ui="true">
 	<div class="sticky top-0 left-0">
-		<div class="absolute z-20 h-screen w-full bg-black" style="opacity: 0;"></div>
+		<div class="absolute z-20 h-screen w-full bg-black" style="opacity: 0.5;"></div>
 		<div class="absolute z-10 h-screen w-full">
 			<video
 				bind:currentTime={time}
@@ -45,7 +45,7 @@
 						<span class="inline-block">PART OF</span>
 					</p>
 					<p class="max-w-[80%]">
-						<span class="inline-block" style="transform: translateX(-109.009px);">HEADLINE 1</span>
+						<span class="inline-block" style="transform: translateX(-109.009px);">HEADLINE 1 {scrollY}</span>
 					</p>
 				</div>
 				<div class="flex justify-center">
