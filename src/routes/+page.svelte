@@ -37,20 +37,19 @@
 		</div>
 	</div>
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
-		<div
-			class="h3 flex h-full w-full flex-col items-stretch justify-center text-white sm:text-[3.5vw]" style="opacity: 1;">
+		<div class="h3 flex h-full w-full flex-col items-stretch justify-center text-white sm:text-[3.5vw] overflow-hidden" style="opacity: 1;">
 			<div class="container">
 				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
 					<p class="max-w-[80%] self-start">
 						<span class="inline-block">PART OF</span>
 					</p>
 					<p class="max-w-[80%]">
-						<span class="inline-block" style="transform: translateX(-109.009px);">HEADLINE 1 {scrollY}</span>
+						<span class="inline-block" style="transform: translateX({-109+scrollY}px);">HEADLINE 1</span>
 					</p>
 				</div>
 				<div class="flex justify-center">
 					<p>
-						<span class="inline-block" style="transform: translateX(-21.2191px);">SUBLINE OR SOMETHING ELSE</span>
+						<span class="inline-block" style="transform: translateX({610-scrollY}px);">SUBLINE OR SOMETHING ELSE</span>
 					</p>
 				</div>
 			</div>
