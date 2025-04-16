@@ -10,7 +10,7 @@
 	let scrollY = $state(0);
 	$effect(() => {
 		const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
-		time = duration * (scrollY / totalScroll);
+		time = (duration * (scrollY / totalScroll))+0.1;
 	});
 </script>
 
