@@ -41,7 +41,7 @@
 			<div class="container">
 				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
 					<p class="max-w-[80%] self-start">
-						<span class="inline-block">PART OF</span>
+						<span class="inline-block">CURRENT TIMEVALUE: {time}</span>
 					</p>
 					<p class="max-w-[80%]">
 						<span class="inline-block" style="transform: translateX({-109+scrollY}px);">HEADLINE 1</span>
