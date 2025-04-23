@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { scrollY } from 'svelte/reactivity/window';
 	// import logo from '$lib/images/svelte-logo.svg';
 	// import github from '$lib/images/github.svg';
 </script>
 
-<header class="fixed left-0 z-[90] flex w-full justify-between px-5 pt-5 sm:px-10 sm:pt-10 md:px-20 top-12 sm:top-6 font-menu text-xs">
+<header class="fixed left-0 z-[90] flex w-full justify-between px-5 pt-5 pb-20 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs backdrop-blur-sm bg-neutral-100/20">
 	<div class="corner">
-		<ul>
+		<ul class="flex gap-x-12">
 			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">TECH/BIKES</a>
 			</li>
@@ -27,9 +28,9 @@
 	</div>
 
 	<div class="corner">
-		<ul>
+		<ul class="flex gap-x-12">
 			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined}>
-				<a href="/workbench">+SERVICE/WORKBENCH</a>
+				<a href="/workbench">+SERVICE/WORKBENCH{scrollY.current}</a>
 			</li>
 			<li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined}>
 				<a href="/info">+INFORMATION</a>
