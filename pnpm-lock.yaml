@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fontsource/anta':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/titillium-web':
+        specifier: ^5.2.5
+        version: 5.2.5
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.5
@@ -278,6 +285,12 @@ packages:
   '@eslint/plugin-kit@0.2.8':
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource/anta@5.2.5':
+    resolution: {integrity: sha512-DirP9mGQBIw2dpceQpAWbzTbK2oFsiXJEkNSCy+wAT5OhpxorLmgGZeNTH/vx3q4Byxm2j+zYHjnq/TXVbe2pg==}
+
+  '@fontsource/titillium-web@5.2.5':
+    resolution: {integrity: sha512-A8bdnHEIpXcNN4l8lH79pi7hO5QF8TrNcrdrSJr5kHqw4q34H+a7N85MPIuHCeT7nOegL+VSb4A16b7Sv9z4dA==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1721,6 +1734,10 @@ snapshots:
     dependencies:
       '@eslint/core': 0.13.0
       levn: 0.4.1
+
+  '@fontsource/anta@5.2.5': {}
+
+  '@fontsource/titillium-web@5.2.5': {}
 
   '@humanfs/core@0.19.1': {}
 

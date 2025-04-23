@@ -21,7 +21,7 @@
 
 <div class="relative h-[300vh]" data-show-light-ui="true">
 	<div class="sticky top-0 left-0">
-		<div class="absolute z-20 h-screen w-full bg-black" style="opacity: 0.5;"></div>
+		<div class="hidden absolute z-20 h-screen w-full bg-zinc-900" style="opacity: 0.12"></div>
 		<div class="absolute z-10 h-screen w-full">
 			<video
 				bind:currentTime={time}
@@ -41,15 +41,15 @@
 			<div class="container">
 				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
 					<p class="max-w-[80%] self-start">
-						<span class="inline-block">CURRENT TIMEVALUE: {time}</span>
+						<span class="inline-block font-headline font-extralight text-4xl">CURRENT TIMEVALUE: NaN</span>
 					</p>
 					<p class="max-w-[80%]">
-						<span class="inline-block" style="transform: translateX({-109+scrollY}px);">HEADLINE 1</span>
+						<span class="inline-block font-headline font-bold text-6xl bg-hero/70 bg-red-700/60 p-1" style="transform: translateX({-109+scrollY}px);">HEADLINE 1</span>
 					</p>
 				</div>
 				<div class="flex justify-center">
 					<p>
-						<span class="inline-block" style="transform: translateX({610-scrollY}px);">SUBLINE OR SOMETHING ELSE</span>
+						<span class="inline-block font-headline font-extralight text-4xl" style="transform: translateX({610-scrollY}px);">SUBLINE OR SOMETHING ELSE</span>
 					</p>
 				</div>
 			</div>
