@@ -44,7 +44,7 @@
 						<span class="inline-block font-headline font-extralight text-4xl">CURRENT TIMEVALUE: NaN</span>
 					</p>
 					<p class="max-w-[80%]">
-						<span class="inline-block font-headline font-bold text-6xl bg-hero/70 bg-red-700/60 p-1" style="transform: translateX({-109+scrollY}px);">HEADLINE 1</span>
+						<span class="inline-block font-headline font-bold text-6xl bg-hero/60 bg-red-700/60 p-1" style="transform: translateX({-109+scrollY}px);">HEADLINE 1</span>
 					</p>
 				</div>
 				<div class="flex justify-center">
