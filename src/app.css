@@ -6,3 +6,8 @@
 
     --color-hero: #891717;
 }
+
+:root {
+
+    --bg-state-color: var(--color-neutral-900);
+}
