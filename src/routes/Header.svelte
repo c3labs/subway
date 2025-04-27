@@ -1,10 +1,14 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { scrollY } from 'svelte/reactivity/window';
+	import { innerHeight, scrollY } from 'svelte/reactivity/window';
 	// import logo from '$lib/images/svelte-logo.svg';
 	// import github from '$lib/images/github.svg';
 
+	// let totalScroll = $state(0);
+
 	$effect(() => {
+		// if (window.scrollY > 4100 && window.scrollY < 6300) {
+		// totalScroll = window.scrollY;
 		if (scrollY.current > 4100 && scrollY.current < 6300) {
 			document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-50);";
 		} else {
@@ -38,7 +42,7 @@
 	<div class="corner">
 		<ul class="flex gap-x-12">
 			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined}>
-				<a href="/workbench">+SERVICE/WORKBENCH{scrollY.current}</a>
+				<a href="/workbench">+SERVICE/WORKBENCH {innerHeight.current}</a>
 			</li>
 			<li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined}>
 				<a href="/info">+INFORMATION</a>

@@ -19,9 +19,9 @@
 </svelte:head>
 <svelte:window bind:scrollY />
 
-<div class="relative h-[300vh]" data-show-light-ui="true">
+<div class="relative h-[400vh]" data-show-light-ui="true">
 	<div class="sticky top-0 left-0">
-		<div class="hidden absolute z-20 h-screen w-full bg-zinc-900" style="opacity: 0.12"></div>
+		<div class="hidden absolute z-20 h-screen w-full bg-neutral-900" style="opacity: 0.12"></div>
 		<div class="absolute z-10 h-screen w-full">
 			<video
 				bind:currentTime={time}
@@ -41,29 +41,31 @@
 			<div class="container">
 				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
 					<p class="max-w-[80%] self-start">
-						<span class="inline-block font-headline font-extralight text-4xl">CURRENT TIMEVALUE: NaN</span>
+						<span class="inline-block font-headline font-extralight text-4xl">PART #1: STICKY PRELINE</span>
 					</p>
 					<p class="max-w-[80%]">
-						<span class="inline-block font-headline font-bold text-6xl bg-hero/60 bg-red-700/60 p-1" style="transform: translateX({-109+scrollY}px);">HEADLINE 1</span>
+						<span class="inline-block font-headline font-bold text-6xl bg-hero/60 bg-red-700/60 p-1" style="transform: translateX({-309+scrollY}px);">PART #2: HERO HEADLINE</span>
 					</p>
 				</div>
 				<div class="flex justify-center">
 					<p>
-						<span class="inline-block font-headline font-extralight text-4xl" style="transform: translateX({610-scrollY}px);">SUBLINE OR SOMETHING ELSE</span>
+						<span class="inline-block font-headline font-extralight text-4xl" style="transform: translateX({610-scrollY}px);">PART #3: SUBLINE OR SOMETHING ELSE</span>
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<p>
-	<!-- <enhanced:img src={madone} alt="madone alt text" sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" /> -->
-	<enhanced:img src="../lib/assets/images/trek_pone_modone.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)"	/>
-	<!-- <enhanced:img src={madone} alt="madone alt text" sizes="min(1280px, 100vw)" /> -->
-</p>
-
-<div class=" h-[300vh]">
+<div class="relative h-[200vh]">
+	<div class="sticky top-0 left-0 z-10 h-screen w-full">
+		<div class=" absolute z-10 h-screen w-full">
+			<!-- <enhanced:img src={madone} alt="madone alt text" sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" /> -->
+			<enhanced:img src="../lib/assets/images/trek_pone_modone.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center"	/>
+			<!-- <enhanced:img src={madone} alt="madone alt text" sizes="min(1280px, 100vw)" /> -->
+		</div>
+	</div>
+</div>
+<div class="relative h-[100vh]">
 	<div class="heading">
 		<h1 class=" font-mono">SUBWAY - Development Server</h1>
 		<p>
@@ -71,7 +73,7 @@
 		</p>
 	</div>
 	<div class="str str1">
-		<p>LAST IMPLEMENTED ->> enhanced:img rendering# format types</p>
-		<p>CURRENTLY IMPLEMENTING ->> scrollable:video# media size src dependency</p>
+		<p>LAST IMPLEMENTED ->> scrollable:video# media size src dependency</p>
+		<p>CURRENTLY IMPLEMENTING ->> Intersection Observer testing for data-show-light-ui purposes</p>
 	</div>
 </div>
