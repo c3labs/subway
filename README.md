@@ -1,4 +1,21 @@
-# sv
+# subway web frontend :: based on sveltekit adapter>node & c3labsed over nixpack>>coolify
+
+## autodeployment
+
+Coolify is configured with autodeployment in mind - GitHub App subway-coolify-c3labs-de is configured to monitor commits and initiates redeployment of web-hooked coolify project.
+
+
+## tailwindcss / fontsource / enhanced:img
+
+Adjustments and integrations:
+
+- tailwindcss v4.01
+- Anta & Titillium Web from @fontssource 
+- @sveltejs/enhanced-img has been integrated
+- @sveltejs/adapter-node has been intergrated and configured
+
+
+## sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 

@@ -2,6 +2,7 @@
 	// import madone from '$lib/assets/images/trek_pone_modone.jpg?enhanced';
 	import hiscroller from '$lib/assets/video/subway.800_30_na.mp4';
 	import loscroller from '$lib/assets/video/subway.300_30_na.mp4';
+	import { fade } from 'svelte/transition';
 
 	// video timehead positioning based on current window scroll position
 
@@ -21,7 +22,9 @@
 
 <div class="relative h-[400vh]" data-show-light-ui="true">
 	<div class="sticky top-0 left-0">
-		<div class="hidden absolute z-20 h-screen w-full bg-neutral-900" style="opacity: 0.12"></div>
+		{#if scrollY < 50}
+		<div transition:fade class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
+		{/if}
 		<div class="absolute z-10 h-screen w-full">
 			<video
 				bind:currentTime={time}
@@ -39,19 +42,23 @@
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
 		<div class="h3 flex h-full w-full flex-col items-stretch justify-center text-white sm:text-[3.5vw] overflow-hidden" style="opacity: 1;">
 			<div class="container">
+				{#if scrollY > 500}
 				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
+					
 					<p class="max-w-[80%] self-start">
-						<span class="inline-block font-headline font-extralight text-4xl">PART #1: STICKY PRELINE</span>
+						<span transition:fade class="inline-block font-headline font-extralight text-4xl">PART #1: STICKY PRELINE</span>
 					</p>
 					<p class="max-w-[80%]">
-						<span class="inline-block font-headline font-bold text-6xl bg-hero/60 bg-red-700/60 p-1" style="transform: translateX({-309+scrollY}px);">PART #2: HERO HEADLINE</span>
+						<span transition:fade class="inline-block font-headline font-bold text-6xl bg-hero/60 bg-red-700/60 p-1" style="transform: translateX({-309+scrollY}px);">PART #2: HERO HEADLINE</span>
 					</p>
+					
 				</div>
 				<div class="flex justify-center">
 					<p>
-						<span class="inline-block font-headline font-extralight text-4xl" style="transform: translateX({610-scrollY}px);">PART #3: SUBLINE OR SOMETHING ELSE</span>
+						<span transition:fade class="inline-block font-headline font-extralight text-4xl" style="transform: translateX({610-scrollY}px);">PART #3: SUBLINE OR SOMETHING ELSE</span>
 					</p>
 				</div>
+				{/if}
 			</div>
 		</div>
 	</div>
