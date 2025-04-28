@@ -1,11 +1,13 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	// import madone from '$lib/assets/images/trek_pone_modone.jpg?enhanced';
 	import hiscroller from '$lib/assets/video/subway.800_30_na.mp4';
 	import loscroller from '$lib/assets/video/subway.300_30_na.mp4';
 	import { fade } from 'svelte/transition';
+	import { afterNavigate } from '$app/navigation';
 
 	// video timehead positioning based on current window scroll position
-
+	let initiator = $state(false);
 	let time = $state(0);
 	let duration = $state(0);
 	let scrollY = $state(0);
@@ -13,6 +15,12 @@
 		const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
 		time = (duration * (scrollY / totalScroll))+0.1;
 	});
+	afterNavigate(({ from }) => {
+		// show this fukkin initiator thingy only on first page visit!!
+		initiator = from === null ? false : true;
+		console.log(initiator);
+	});
+	console.log("initiator");
 </script>
 
 <svelte:head>
@@ -22,8 +30,8 @@
 
 <div class="relative h-[400vh]" data-show-light-ui="true">
 	<div class="sticky top-0 left-0">
-		{#if scrollY < 50}
-		<div transition:fade class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
+		{#if scrollY < 50 && !initiator}
+		<div transition:fade onoutroend={() => (initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
 		{/if}
 		<div class="absolute z-10 h-screen w-full">
 			<video
