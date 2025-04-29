@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { innerHeight, scrollY } from 'svelte/reactivity/window';
-	// import logo from '$lib/images/svelte-logo.svg';
+	import logo from '$lib/assets/images/logo/subway.logo.v02.svg?raw';
 	// import github from '$lib/images/github.svg';
 
 	// let totalScroll = $state(0);
@@ -32,11 +32,12 @@
 		</ul>
 	</div>
 
-	<div>
+	<div class=" absolute left-1/2 top-5 w-20 grow -translate-x-1/2 sm:top-7 sm:w-30 md:top-8 md:w-32 ">
 		<!-- LOGO SECTION HERE -->
-		<!-- <a href="https://svelte.dev/docs/kit">
-			<img src={logo} alt="SvelteKit" />
-		</a> -->
+		<a aria-label="subway - we just ride - Logo - back to home" href="https://subway.dev.c3labs.de">
+			<!-- <img class="w-15" src={logo} alt="" /> -->
+			{@html logo}
+		</a>
 	</div>
 
 	<div class="corner">
