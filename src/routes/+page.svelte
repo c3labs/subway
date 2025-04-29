@@ -50,7 +50,7 @@
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
 		<div class="h3 flex h-full w-full flex-col items-stretch justify-center text-white sm:text-[3.5vw] overflow-hidden" style="opacity: 1;">
 			<div class="container">
-				{#if scrollY > 500}
+				{#if scrollY > 50}
 				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
 					
 					<p class="max-w-[80%] self-start">
