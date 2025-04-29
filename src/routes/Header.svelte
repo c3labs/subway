@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { innerHeight, scrollY } from 'svelte/reactivity/window';
-	import logo from '$lib/assets/images/logo/subway.logo.v02.svg?raw';
+	import logo from '$lib/assets/images/logo/subway.logo.v01.svg?raw';
 	// import github from '$lib/images/github.svg';
 
 	// let totalScroll = $state(0);
@@ -17,7 +17,7 @@
 	});
 </script>
 
-<header class="fixed left-0 z-[90] flex w-full justify-between px-5 pt-5 pb-20 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs backdrop-blur-sm bg-neutral-100/20 text-[var(--bg-state-color)] transition-colors duration-500">
+<header class="fixed left-0 z-[90] flex w-full justify-between px-5 pt-5 pb-10 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs backdrop-blur-sm bg-neutral-100/20 text-[var(--bg-state-color)] transition-colors duration-500">
 	<div class="corner">
 		<ul class="flex gap-x-12">
 			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
@@ -32,7 +32,7 @@
 		</ul>
 	</div>
 
-	<div class=" absolute left-1/2 top-5 w-20 grow -translate-x-1/2 sm:top-7 sm:w-30 md:top-8 md:w-32 ">
+	<div class="absolute left-1/2 top-5 w-20 grow -translate-x-1/2 sm:top-7 sm:w-30 md:top-8 md:w-42 ">
 		<!-- LOGO SECTION HERE -->
 		<a aria-label="subway - we just ride - Logo - back to home" href="https://subway.dev.c3labs.de">
 			<!-- <img class="w-15" src={logo} alt="" /> -->
