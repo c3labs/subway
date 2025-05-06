@@ -1,32 +1,28 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { innerHeight, scrollY } from 'svelte/reactivity/window';
 	import logo from '$lib/assets/images/logo/subway.logo.v01.svg?raw';
-	// import github from '$lib/images/github.svg';
+	import { uiobserver } from '$lib/uiobserver.svelte';
 
-	// let totalScroll = $state(0);
-
-	$effect(() => {
-		// if (window.scrollY > 4100 && window.scrollY < 6300) {
-		// totalScroll = window.scrollY;
-		if (scrollY.current > 4100 && scrollY.current < 6300) {
-			document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-50);";
-		} else {
-			document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-900);";
-		}
-	});
+	// $effect(() => {
+	// 	if (ioScrollY > 4100 && ioScrollY < 6300) {
+	// 		document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-50);";
+	// 	} else {
+	// 		document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-900);";
+	// 	}
+	// });
 </script>
 
-<header class="fixed left-0 z-[90] flex w-full justify-between px-5 pt-5 pb-20 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs backdrop-blur-sm bg-neutral-100/20 text-[var(--bg-state-color)] transition-colors duration-500">
+<header class="fixed left-0 z-[90] flex w-full justify-between px-5 pt-5 pb-20 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs backdrop-blur-sm bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] transition-colors duration-500">
 	<div class="corner">
 		<ul class="flex gap-x-12">
 			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">TECH/BIKES</a>
+				<button onclick={uiobserver.toggleUi}>UISTATE: {uiobserver.uistate}</button>
 			</li>
-			<li aria-current={page.url.pathname === '/projectone' ? 'page' : undefined}>
+			<li aria-current={page.url.pathname === '/projectone' ? 'page' : undefined} class="aria-[current=page]:text-red-600 transition-colors duration-1000">
 				<a href="/projectone">PROJECT ONE</a>
 			</li>
-			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined}>
+			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined} class="aria-[current=page]:text-red-600 transition-colors duration-1000">
 				<a href="/leasing">LEASING</a>
 			</li>
 		</ul>
@@ -41,10 +37,10 @@
 
 	<div class="corner">
 		<ul class="flex gap-x-12">
-			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined}>
-				<a href="/workbench">+SERVICE/WORKBENCH {innerHeight.current}</a>
+			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined} class="aria-[current=page]:text-red-600 transition-colors duration-1000">
+				<a href="/workbench">+SERVICE/WORKBENCH</a>
 			</li>
-			<li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined}>
+			<li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined} class="aria-[current=page]:text-red-600 transition-colors duration-1000">
 				<a href="/info">+INFORMATION</a>
 			</li>
 		</ul>

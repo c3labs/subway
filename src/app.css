@@ -10,4 +10,5 @@
 :root {
 
     --bg-state-color: var(--color-neutral-900);
+    --bg-menu-color: var(--color-neutral-50);
 }
