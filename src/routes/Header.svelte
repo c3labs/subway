@@ -10,7 +10,7 @@
 	// 		document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-900);";
 	// 	}
 	// });
-	
+
 </script>
 
 <header class="fixed left-0 z-[90] flex w-full justify-between px-5 pt-5 pb-20 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs backdrop-blur-sm bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] transition-colors duration-500">
@@ -20,10 +20,10 @@
 				<a href="/">TECH/BIKES</a>
 				<button onclick={uiobserver.toggleUi}>UISTATE: {uiobserver.uistate}</button>
 			</li>
-			<li aria-current={page.url.pathname === '/projectone' ? 'page' : undefined} class="aria-[current=page]:text-red-600 transition-colors duration-1000">
+			<li aria-current={page.url.pathname === '/projectone' ? 'page' : undefined} class="aria-[current=page]:text-red-600">
 				<a href="/projectone">PROJECT ONE</a>
 			</li>
-			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined} class="aria-[current=page]:text-red-600 transition-colors duration-1000">
+			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined} class="aria-[current=page]:text-red-600">
 				<a href="/leasing">LEASING</a>
 			</li>
 		</ul>
@@ -38,10 +38,10 @@
 
 	<div class="corner">
 		<ul class="flex gap-x-12">
-			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined} class="aria-[current=page]:text-red-600 transition-colors duration-1000">
+			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined} class="aria-[current=page]:text-red-600">
 				<a href="/workbench">+SERVICE/WORKBENCH</a>
 			</li>
-			<li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined} class="aria-[current=page]:text-red-600 transition-colors duration-1000">
+			<li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined} class="aria-[current=page]:text-red-600">
 				<a href="/info">+INFORMATION</a>
 			</li>
 		</ul>
