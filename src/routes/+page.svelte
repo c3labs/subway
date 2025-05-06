@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	// import madone from '$lib/assets/images/trek_pone_modone.jpg?enhanced';
-	import hiscroller from '$lib/assets/video/subway.testpart1.mp4';
+	import hiscroller from '$lib/assets/video/subway.800_30_na.mp4';
 	import loscroller from '$lib/assets/video/subway.300_30_na.mp4';
 	import { fade } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
