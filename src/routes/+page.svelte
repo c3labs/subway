@@ -68,7 +68,7 @@
 						<span transition:fade class="inline-block font-headline font-extralight text-4xl">PART #1: STICKY PRELINE</span>
 					</p>
 					<p class="max-w-[80%]">
-						<span transition:fade class="inline-block font-headline font-bold text-6xl bg-hero/60 bg-red-700/60 p-1" style="transform: translateX({-309+scrollY}px);">PART #2: HERO HEADLINE</span>
+						<span transition:fade class="inline-block font-headline font-bold text-6xl bg-hero/60 p-1" style="transform: translateX({-309+scrollY}px);">PART #2: HERO HEADLINE</span>
 					</p>
 					
 				</div>
