@@ -21,6 +21,9 @@ importers:
       '@eslint/js':
         specifier: ^9.18.0
         version: 9.24.0
+      '@svelte-put/intersect':
+        specifier: ^4.0.0
+        version: 4.0.0(svelte@5.25.8)
       '@sveltejs/adapter-node':
         specifier: ^5.2.12
         version: 5.2.12(@sveltejs/kit@2.20.4(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.25.8)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.25.8)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.2)))
@@ -585,6 +588,11 @@ packages:
     resolution: {integrity: sha512-yAkUOkIKZlK5dl7u6dg897doBgLXmUHhIINM2c+sND3DZwnrdQkkSiDh7N75Ll4mM4dxSkYfXqU9fW3lLkMFug==}
     cpu: [x64]
     os: [win32]
+
+  '@svelte-put/intersect@4.0.0':
+    resolution: {integrity: sha512-NTDqkUSKUlmK4NL1/ecWPRi3GGcv6QOCMyf8ym9dH3KStVOHXD7gozKnCgZgklR+V6G4KdT3ej3GO6YnSZs4og==}
+    peerDependencies:
+      svelte: ^5.1.0
 
   '@sveltejs/acorn-typescript@1.0.5':
     resolution: {integrity: sha512-IwQk4yfwLdibDlrXVE04jTZYlLnwsTT2PIOQQGNLWfjavGifnk1JD1LcZjZaBTRcxZu2FfPfNLOE04DSu9lqtQ==}
@@ -1953,6 +1961,10 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.39.0':
     optional: true
+
+  '@svelte-put/intersect@4.0.0(svelte@5.25.8)':
+    dependencies:
+      svelte: 5.25.8
 
   '@sveltejs/acorn-typescript@1.0.5(acorn@8.14.1)':
     dependencies:

@@ -5,22 +5,33 @@
 	import loscroller from '$lib/assets/video/subway.300_30_na.mp4';
 	import { fade } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
+	import { intersect, type IntersectDetail } from '@svelte-put/intersect'
 
 	// video timehead positioning based on current window scroll position
 	let initiator = $state(false);
 	let time = $state(0);
 	let duration = $state(0);
 	let scrollY = $state(0);
+
 	$effect(() => {
 		const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
 		time = (duration * (scrollY / totalScroll))+0.1;
 	});
+
 	afterNavigate(({ from }) => {
 		// show this fukkin initiator thingy only on first page visit!!
 		initiator = from === null ? false : true;
 		console.log(initiator);
 	});
-	console.log("initiator");
+
+	function onIntersect(e: CustomEvent<IntersectDetail>) {
+		const { observer, entries, direction } = e.detail;
+		// console.log('the observer itself', observer);
+		console.log('scrolling direction:', direction);
+		console.log('intersecting:', entries[0]?.isIntersecting ? 'entering' : 'leaving');
+		// console.log('action intersect was used on element', entries[0]?.target);
+		console.log('list of IntersectionObserverEntry:', entries);
+	}
 </script>
 
 <svelte:head>
@@ -73,7 +84,7 @@
 </div>
 <div class="relative h-[200vh]">
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
-		<div class=" absolute z-10 h-screen w-full">
+		<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class=" absolute z-10 h-screen w-full">
 			<!-- <enhanced:img src={madone} alt="madone alt text" sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" /> -->
 			<enhanced:img src="../lib/assets/images/trek_pone_modone.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" />
 			<!-- <enhanced:img src={madone} alt="madone alt text" sizes="min(1280px, 100vw)" /> -->
@@ -87,7 +98,7 @@
 			Have a look at <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
 		</p>
 	</div>
-	<div class="str str1">
+	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect}>
 		<p>LAST IMPLEMENTED ->> scrollable:video# media size src dependency</p>
 		<p>CURRENTLY IMPLEMENTING ->> Intersection Observer testing for data-show-light-ui purposes</p>
 	</div>

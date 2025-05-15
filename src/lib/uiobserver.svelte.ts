@@ -28,6 +28,18 @@ $effect.root(() => {
     })
 })
 
+export function uigreetz(node: HTMLDivElement) {
+    console.log('Hi')
+
+    darkmode = false;
+
+    return {
+        destroy() {
+            console.log('Bye')
+        }
+    }
+}
+
 // export function createObserver() {
 
 //     let scrollPercent = $state(1)
