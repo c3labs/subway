@@ -1,6 +1,7 @@
 // intersection observer for targeting data-require-light-ui header switch
 
 // import { innerHeight, scrollY } from 'svelte/reactivity/window'
+import { type IntersectDetail } from '@svelte-put/intersect';
 
 let darkmode = $state(false)
 
@@ -39,6 +40,25 @@ export function uigreetz(node: HTMLDivElement) {
         }
     }
 }
+
+export function onIntersect(e: CustomEvent<IntersectDetail>) {
+    const { observer, entries, direction } = e.detail;
+    // console.log('the observer itself', observer);
+    console.log('scrolling direction:', direction);
+    console.log('intersecting:', entries[0]?.isIntersecting ? 'entering' : 'leaving');
+    // console.log('action intersect was used on element', entries[0]?.target );
+    console.log('element is requesting ui:', entries[0]?.target.dataset.uipref );
+    // entries[0].target.style.backgroundColor = "red";
+    console.log('list of IntersectionObserverEntry:', entries);
+    console.log('list of IntersectionObserverEntry:', entries[0]?.isIntersecting );
+    if(entries[0]?.isIntersecting ) {
+        if(entries[0].target.dataset.uipref === "dark" ) {
+            uiobserver.uistate = false;
+        } else {
+            uiobserver.uistate = true;
+        }
+    }
+};
 
 // export function createObserver() {
 
