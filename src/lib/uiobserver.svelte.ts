@@ -3,19 +3,25 @@
 // import { innerHeight, scrollY } from 'svelte/reactivity/window'
 import { type IntersectDetail } from '@svelte-put/intersect';
 
-let darkmode = $state(false)
-
+let darkmode = $state(false);
+let navState = $state(false);
 
 export const uiobserver = {
 
     get uistate() {
-        return darkmode
+        return darkmode;
     },
     set uistate(val: boolean) {
-        darkmode = val
+        darkmode = val;
     },
     toggleUi() {
-        darkmode = !darkmode
+        darkmode = !darkmode;
+    },
+    get navstate() {
+        return navState;
+    },
+    toggleNav() {
+        navState = !navState;
     }
 }
 
