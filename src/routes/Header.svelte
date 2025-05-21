@@ -12,9 +12,10 @@
 	// 	}
 	// });
 
-	function navigate (navroute: URL) {
+	// has to be transfered into uiobserver sometimes in the future !!
+	function navigate (navroute: string | URL) {
 		goto(navroute);
-		console.log('current navSate:', uiobserver.navstate);
+		// console.log('current navSate:', uiobserver.navstate);
 		if(uiobserver.navstate) {
 
 			uiobserver.toggleNav();
@@ -26,8 +27,8 @@
 <header class="fixed left-0 z-[90] flex flex-col xl:flex-row w-full justify-between px-5 pt-5 pb-5 xl:pb-20 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs backdrop-blur-sm bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] transition-all duration-1000">
 	<div class="corner">
 		<ul class="flex flex-col items-end xl:flex-row gap-x-12">
-			<li class="lg:hidden {uiobserver.navstate ? 'opacity-30' : 'opacity-80'}">
-				<button onclick={uiobserver.toggleNav}>{uiobserver.navstate ? '-' : '+'}NAV {uiobserver.uistate}</button>
+			<li class="lg:hidden pb-1 {uiobserver.navstate ? 'opacity-30' : 'opacity-80'}">
+				<button onclick={() => uiobserver.toggleNav()}>{uiobserver.navstate ? '-' : '+'}NAV {uiobserver.uistate}</button>
 			</li>
 			<li aria-current={page.url.pathname === '/bikes' ? 'page' : undefined} class="aria-[current=page]:text-hero lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'}">
 				<button onclick={() => navigate('/bikes')} class="cursor-pointer">TECH/BIKES</button>
