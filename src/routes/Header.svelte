@@ -28,14 +28,12 @@
 			</li>
 		</ul>
 	</div>
-
 	<div class="absolute top-5 w-24 grow left-1/8 -translate-x-1/3 lg:left-1/2 lg:-translate-x-1/2 sm:top-5 sm:w-30 md:top-2 md:w-35 ">
 		<!-- LOGO SECTION HERE -->
 		<a aria-label="subway - we just ride - Logo - back to home" href="/">
 			{@html logo}
 		</a>
 	</div>
-
 	<div class="corner">
 		<ul class="flex flex-col items-end xl:flex-row gap-x-12">
 			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined} class="aria-[current=page]:text-red-600">
