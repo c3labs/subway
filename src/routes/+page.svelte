@@ -58,16 +58,16 @@
 				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
 					
 					<p class="max-w-[80%] self-start">
-						<span transition:fade class="inline-block font-headline font-extralight text-4xl">PART #1: STICKY PRELINE</span>
+						<span transition:fade class="inline-block font-headline font-extralight text-4xl">EGAL WELCHEN TRAIL </span>
 					</p>
 					<p class="max-w-[80%]">
-						<span transition:fade class="inline-block font-headline font-bold text-6xl bg-hero/60 p-1" style="transform: translateX({-309+scrollY}px);">PART #2: HERO HEADLINE</span>
+						<span transition:fade class="inline-block font-headline font-bold text-6xl bg-hero/50 p-1">DU 2025 NIMMST</span>
 					</p>
 					
 				</div>
 				<div class="flex justify-center">
 					<p>
-						<span transition:fade class="inline-block font-headline font-extralight text-4xl" style="transform: translateX({610-scrollY}px);">PART #3: SUBLINE OR SOMETHING ELSE</span>
+						<span transition:fade class="inline-block font-headline font-extralight text-4xl" style="transform: translateX({610-scrollY}px);">WE JUST RIDE</span>
 					</p>
 				</div>
 				{/if}
@@ -86,13 +86,10 @@
 </div>
 <div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="light">
 	<div class="heading">
-		<h1 class=" font-mono">SUBWAY - Development Server</h1>
-		<p>
-			Have a look at <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
-		</p>
+		<h1 class=" font-headline text-neutral-300">SUBWAY - Development Server</h1>
 	</div>
 	<div>
-		<p>LAST IMPLEMENTED ->> scrollable:video# media size src dependency</p>
-		<p>CURRENTLY IMPLEMENTING ->> Intersection Observer testing for data-show-light-ui purposes</p>
+		<p>LAST IMPLEMENTED ->> Intersection Observer testing for data-uipref purposes</p>
+		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI</p>
 	</div>
 </div>
