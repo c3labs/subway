@@ -93,3 +93,45 @@
 		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI</p>
 	</div>
 </div>
+<div class="fixed z-50 bottom-0 right-4 min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider">
+	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block">
+		<div class="flex flex-col items-end gap-1">
+			<div>
+				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-md transition-colors bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] duration-1000">
+					<div class="relative">FINDE DEIN PASSENDES BIKE | TECH/BIKES</div>
+				</button>
+			</div>
+			<div>
+				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] duration-1000">
+					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
+				</button>
+			</div>
+			<div>
+				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] duration-1000">
+						<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="hidden w-full p-5 sm:hidden sm:p-0">
+		<div class="relative flex w-full justify-end overflow-hidden rounded-xl p-4 backdrop-blur-sm sm:p-8">
+			<div class="w-full">
+				<div class="relative flex w-full justify-end gap-5 max-sm:pl-8 sm:flex-col sm:items-stretch sm:gap-0 md:items-end">
+					<h2 class="h4-pitch hidden text-right sm:block">Sculpture Handlebar</h2>
+					<div class="flex grow items-start justify-end leading-none text-dark-grey">
+						<span class="h4-pitch whitespace-nowrap">€ 725</span>
+					</div>
+					<div class="max-w-full sm:mt-4">
+						<div>
+							<div>
+								<div class="flex items-center justify-end leading-none">
+									<button class="h4-pitch text-white">Add to Cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

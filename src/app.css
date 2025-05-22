@@ -5,6 +5,8 @@
     --font-headline: Titillium Web, sans-serif;
 
     --color-hero: #a51111;
+
+    --radius-special: 0.9rem;
 }
 
 :root {

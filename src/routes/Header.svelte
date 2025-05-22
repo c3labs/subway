@@ -24,7 +24,7 @@
 
 </script>
 
-<header class="fixed left-0 z-[90] flex flex-col xl:flex-row w-full justify-between px-5 pt-5 pb-5 xl:pb-20 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs backdrop-blur-sm bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] transition-all duration-1000">
+<header class="fixed left-0 z-[90] flex flex-col xl:flex-row w-full justify-between px-5 pt-5 pb-5 xl:pb-20 sm:px-10 sm:pt-10 md:px-20 font-menu text-xs tracking-wider backdrop-blur-md bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] transition-all duration-1000">
 	<div class="corner">
 		<ul class="flex flex-col items-end xl:flex-row gap-x-12">
 			<li class="lg:hidden pb-1 {uiobserver.navstate ? 'opacity-30' : 'opacity-80'}">
