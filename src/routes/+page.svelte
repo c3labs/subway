@@ -97,7 +97,7 @@
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block">
 		<div class="flex flex-col items-end gap-1">
 			<div>
-				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-md transition-colors bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] duration-1000">
+				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] duration-1000">
 					<div class="relative">FINDE DEIN PASSENDES BIKE | TECH/BIKES</div>
 				</button>
 			</div>
