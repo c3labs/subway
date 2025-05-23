@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	// import madone from '$lib/assets/images/trek_pone_modone.jpg?enhanced';
 	import hiscroller from '$lib/assets/video/subway.800_30_na.mp4';
+	// import hiscroller from '$lib/assets/video/subway.testpart1.mp4';
 	import loscroller from '$lib/assets/video/subway.300_30_na.mp4';
 	import { fade } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
@@ -13,16 +14,28 @@
 	let time = $state(0);
 	let duration = $state(0);
 	let scrollY = $state(0);
+	var scrollRelation = 0;
+	var scrollQuot = 0;
 
 	$effect(() => {
-		const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
-		time = (duration * (scrollY / totalScroll))+0.1;
+		// const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+		const videostage: HTMLElement | null = document.getElementById("herostage");
+		
+		// @ts-ignore
+		scrollRelation = videostage.scrollHeight - scrollY;
+		
+		if( scrollRelation < 1 ) {
+			scrollRelation = 1;
+		}
+		// @ts-ignore
+		scrollQuot = 1 / videostage.scrollHeight * (videostage.scrollHeight - scrollRelation);
+		time = duration * scrollQuot;
 	});
 
 	afterNavigate(({ from }) => {
 		// show this fukkin initiator thingy only on first page visit!!
 		initiator = from === null ? false : true;
-		console.log(initiator);
+		// console.log(initiator);
 	});
 
 </script>
@@ -32,7 +45,7 @@
 </svelte:head>
 <svelte:window bind:scrollY />
 
-<div class="relative h-[400vh]">
+<div class="relative h-[400vh]" id="herostage">
 	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="light" in:fade={{duration: 300, delay: 500 }} out:fade>
 		{#if scrollY < 50 && !initiator}
 		<div transition:fade onoutroend={() => (initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
