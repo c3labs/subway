@@ -14,7 +14,7 @@
     </div>
     <div class="relative h-[150vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
         <div class="sticky top-0 left-0 z-10 h-screen w-full bg-neutral-100" in:fade={{duration: 300, delay: 500 }} out:fade>
-            <div class="no-scrollbar scroll-smooth flex h-full cursor-grab touch-pan-y touch-pinch-zoom select-none overflow-x-scroll" use:dragscroll>
+            <div class="no-scrollbar lg:scroll-smooth flex h-full cursor-grab touch-pan-y touch-pinch-zoom select-none overflow-x-scroll lg:snap-x lg:snap-proximity" use:dragscroll>
                 <div class=" relative h-full shrink-0 overflow-hidden transition-[width] duration-700 ease-in-out w-[50vw] pb-[15vh] pt-[15vh] snap-start">
                     <div class="text-neutral-900" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>ProjectONE - second section part #1- brief explainer how to get one of these projektONEs implemented as horizontal slider</div>
                 </div>
