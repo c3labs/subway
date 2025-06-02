@@ -14,3 +14,9 @@
     --bg-state-color: var(--color-neutral-900);
     --bg-menu-color: var(--color-neutral-50);
 }
+
+@layer base {
+    .noscrollbar {
+        scrollbar-width: none;
+    }
+}
