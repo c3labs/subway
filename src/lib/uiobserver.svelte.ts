@@ -53,12 +53,12 @@ export function onIntersect(e: CustomEvent<IntersectDetail>) {
     console.log('scrolling direction:', direction);
     console.log('intersecting:', entries[0]?.isIntersecting ? 'entering' : 'leaving');
     // console.log('action intersect was used on element', entries[0]?.target );
-    console.log('element is requesting ui:', entries[0]?.target.dataset.uipref );
+    console.log('element is requesting ui:', (entries[0].target as HTMLElement).dataset.uipref);
     // entries[0].target.style.backgroundColor = "red";
     console.log('list of IntersectionObserverEntry:', entries);
     console.log('list of IntersectionObserverEntry:', entries[0]?.isIntersecting );
     if(entries[0]?.isIntersecting ) {
-        if(entries[0].target.dataset.uipref === "dark" ) {
+        if((entries[0].target as HTMLElement).dataset.uipref === "dark" ) {
             uiobserver.uistate = false;
         } else {
             uiobserver.uistate = true;
