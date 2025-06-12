@@ -46,7 +46,7 @@
 <svelte:window bind:scrollY />
 
 <div class="relative h-[400vh]" id="herostage">
-	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="light" in:fade={{duration: 300, delay: 500 }} out:fade>
+	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="dark" in:fade={{duration: 300, delay: 500 }} out:fade>
 		{#if scrollY < 50 && !initiator}
 		<div transition:fade onoutroend={() => (initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
 		{/if}
@@ -65,22 +65,18 @@
 		</div>
 	</div>
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
-		<div class="h3 flex h-full w-full flex-col items-stretch justify-center text-white sm:text-[3.5vw] overflow-hidden" style="opacity: 1;">
+		<div class="flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden" style="opacity: 1;">
 			<div class="container">
 				{#if scrollY > 50}
 				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
-					
-					<p class="max-w-[80%] self-start">
+					<p class="">
 						<span transition:fade class="inline-block font-headline font-extralight text-4xl">EGAL WELCHEN TRAIL </span>
 					</p>
-					<p class="max-w-[80%]">
-						<span transition:fade class="inline-block font-headline font-bold text-6xl bg-hero/50 p-1">DU 2025 NIMMST</span>
+					<p class="">
+						<span transition:fade class="inline-block font-headline font-bold text-6xl bg-hero/70 p-1">DU 2025 NIMMST</span>
 					</p>
-					
-				</div>
-				<div class="flex justify-center">
-					<p>
-						<span transition:fade class="inline-block font-headline font-extralight text-4xl" style="transform: translateX({610-scrollY}px);">WE JUST RIDE</span>
+					<p class="">
+						<span transition:fade class="inline-block font-headline font-extralight text-4xl">WE JUST RIDE</span>
 					</p>
 				</div>
 				{/if}
@@ -110,17 +106,17 @@
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block">
 		<div class="flex flex-col items-end gap-1">
 			<div>
-				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] duration-1000">
-					<div class="relative">FINDE DEIN PASSENDES BIKE | TECH/BIKES</div>
+				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+					<div class="relative">MODELLJAHR 2025 | TECH/BIKES</div>
 				</button>
 			</div>
 			<div>
-				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] duration-1000">
+				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
 				</button>
 			</div>
 			<div>
-				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-state-color)]/30 text-[var(--bg-menu-color)] duration-1000">
+				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 						<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
 				</button>
 			</div>

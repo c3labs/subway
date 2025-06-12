@@ -28,9 +28,9 @@ export const uiobserver = {
 $effect.root(() => {
     $effect(() => {
         if (darkmode) {
-            document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-50);--bg-menu-color:var(--color-neutral-900);";
+            document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-200);--bg-menu-color:var(--color-neutral-950);";
         } else {
-            document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-900);--bg-menu-color:var(--color-neutral-50);";
+            document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-950);--bg-menu-color:var(--color-neutral-200);";
         }
     })
 })
@@ -62,6 +62,11 @@ export function onIntersect(e: CustomEvent<IntersectDetail>) {
             uiobserver.uistate = false;
         } else {
             uiobserver.uistate = true;
+        }
+        if((entries[0].target as HTMLElement).dataset.uiwidth ) {
+            console.log('got some uiwidth values:');
+        } else {
+            console.log('got no uiwidth values');
         }
     }
 };
