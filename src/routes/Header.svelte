@@ -14,7 +14,7 @@
 
 	// has to be transfered into uiobserver sometimes in the future !!
 	function navigate (navroute: string | URL) {
-		goto(navroute);
+		goto(navroute, { noScroll: true });
 		// console.log('current navSate:', uiobserver.navstate);
 		if(uiobserver.navstate) {
 
