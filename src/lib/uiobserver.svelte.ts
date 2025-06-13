@@ -2,9 +2,11 @@
 
 // import { innerHeight, scrollY } from 'svelte/reactivity/window'
 import { type IntersectDetail } from '@svelte-put/intersect';
+import { afterNavigate } from '$app/navigation';
 
 let darkmode = $state(false);
 let navState = $state(false);
+let iniLoader = $state(false);
 
 export const uiobserver = {
 
@@ -20,6 +22,12 @@ export const uiobserver = {
     get navstate() {
         return navState;
     },
+    get initiator() {
+        return iniLoader;
+    },
+    set initiator(val: boolean) {
+        iniLoader = val;
+    },
     toggleNav() {
         navState = !navState;
     }
@@ -34,6 +42,12 @@ $effect.root(() => {
         }
     })
 })
+
+// afterNavigate(({ from }) => {
+//     // show this fukkin initiator thingy only on first page visit!!
+//     iniLoader = from === null ? false : true;
+//     // console.log(initiator);
+// })
 
 export function uigreetz(node: HTMLDivElement) {
     console.log('Hi')

@@ -4,13 +4,13 @@
 	import hiscroller from '$lib/assets/video/subway.800_30_na.mp4';
 	// import hiscroller from '$lib/assets/video/subway.testpart1.mp4';
 	import loscroller from '$lib/assets/video/subway.300_30_na.mp4';
-	import { fade } from 'svelte/transition';
-	import { afterNavigate } from '$app/navigation';
+	import { fly, fade } from 'svelte/transition';
+	// import { afterNavigate } from '$app/navigation';
 	import { intersect } from '@svelte-put/intersect';
 	import { uiobserver, onIntersect } from "$lib/uiobserver.svelte";
 
 	// video timehead positioning based on current window scroll position
-	let initiator = $state(false);
+	// let initiator = $state(false);
 	let time = $state(0);
 	let duration = $state(0);
 	let scrollY = $state(0);
@@ -32,11 +32,11 @@
 		time = duration * scrollQuot;
 	});
 
-	afterNavigate(({ from }) => {
-		// show this fukkin initiator thingy only on first page visit!!
-		initiator = from === null ? false : true;
-		// console.log(initiator);
-	});
+	// afterNavigate(({ from }) => {
+	// 	// show this fukkin initiator thingy only on first page visit!!
+	// 	initiator = from === null ? false : true;
+	// 	// console.log(initiator);
+	// });
 
 </script>
 
@@ -47,8 +47,8 @@
 
 <div class="relative h-[400vh]" id="herostage">
 	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="dark" in:fade={{duration: 300, delay: 500 }} out:fade>
-		{#if scrollY < 50 && !initiator}
-		<div transition:fade onoutroend={() => (initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
+		{#if scrollY < 50 && !uiobserver.initiator}
+		<div transition:fade onoutroend={() => (uiobserver.initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
 		{/if}
 		<div class="absolute z-10 h-screen w-full">
 			<video
@@ -66,17 +66,17 @@
 	</div>
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
 		<div class="flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden" style="opacity: 1;">
-			<div class="container">
+			<div class="container mx-auto px-4">
 				{#if scrollY > 50}
-				<div class="mb-[10vh] flex flex-col items-end justify-between space-y-5 sm:flex-row sm:space-y-0">
+				<div class="mb-[10vh] flex flex-col items-end space-y-2 sm:flex-row sm:space-y-0">
 					<p class="">
-						<span transition:fade class="inline-block font-headline font-extralight text-4xl">EGAL WELCHEN TRAIL </span>
+						<span in:fly={{ x :-100, duration: 300, delay: 100 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">EGAL WELCHEN TRAIL </span>
 					</p>
 					<p class="">
-						<span transition:fade class="inline-block font-headline font-bold text-6xl bg-hero/70 p-1">DU 2025 NIMMST</span>
+						<span in:fly={{ duration: 300, delay: 200  }} out:fade class="inline-block font-headline font-bold text-5xl md:text-6xl bg-hero/70 p-1">DU 2025 NIMMST</span>
 					</p>
 					<p class="">
-						<span transition:fade class="inline-block font-headline font-extralight text-4xl">WE JUST RIDE</span>
+						<span in:fly={{ x :100, duration: 300, delay: 300 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">WE JUST RIDE</span>
 					</p>
 				</div>
 				{/if}
