@@ -44,6 +44,7 @@
 	},
 	"dependencies": {
 		"@fontsource/anta": "^5.2.5",
-		"@fontsource/titillium-web": "^5.2.5"
+		"@fontsource/titillium-web": "^5.2.5",
+		"svelte-scrollto-element": "^3.1.0"
 	}
 }

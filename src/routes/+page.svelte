@@ -7,7 +7,7 @@
 	import { fly, fade } from 'svelte/transition';
 	// import { afterNavigate } from '$app/navigation';
 	import { intersect } from '@svelte-put/intersect';
-	import { uiobserver, onIntersect } from "$lib/uiobserver.svelte";
+	import { uiobserver, onIntersect } from '$lib/uiobserver.svelte';
 
 	// video timehead positioning based on current window scroll position
 	// let initiator = $state(false);
@@ -99,7 +99,7 @@
 	</div>
 	<div>
 		<p>LAST IMPLEMENTED ->> Intersection Observer testing for data-uipref purposes</p>
-		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI</p>
+		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI </p>
 	</div>
 </div>
 <div class="fixed z-50 bottom-0 right-4 min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider">

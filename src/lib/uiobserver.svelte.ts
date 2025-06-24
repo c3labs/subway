@@ -7,6 +7,7 @@ import { afterNavigate } from '$app/navigation';
 let darkmode = $state(false);
 let navState = $state(false);
 let iniLoader = $state(false);
+let wChange = $state(false);
 
 export const uiobserver = {
 
@@ -21,6 +22,9 @@ export const uiobserver = {
     },
     get navstate() {
         return navState;
+    },
+    get wchange() {
+        return wChange;
     },
     get initiator() {
         return iniLoader;
@@ -79,8 +83,10 @@ export function onIntersect(e: CustomEvent<IntersectDetail>) {
         }
         if((entries[0].target as HTMLElement).dataset.uiwidth ) {
             console.log('got some uiwidth values:');
+            wChange = true;
         } else {
             console.log('got no uiwidth values');
+            wChange = false;
         }
     }
 };
