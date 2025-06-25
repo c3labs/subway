@@ -35,7 +35,7 @@
 
 	onMount(() => {
         // disableScrollHandling();
-        animateScroll.scrollToTop({ duration: 1, delay: 300 });
+        animateScroll.scrollToTop({ duration: 1, delay: 300, offset: 50 });
         console.log('[    reset scroll position  # home   ] - onMount');
     })
 
