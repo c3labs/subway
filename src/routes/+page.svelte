@@ -1,13 +1,14 @@
 <script lang="ts">
-	import { page } from '$app/state';
+	
 	// import madone from '$lib/assets/images/trek_pone_modone.jpg?enhanced';
 	import hiscroller from '$lib/assets/video/subway.800_30_na.mp4';
 	// import hiscroller from '$lib/assets/video/subway.testpart1.mp4';
 	import loscroller from '$lib/assets/video/subway.300_30_na.mp4';
 	import { fly, fade } from 'svelte/transition';
-	// import { afterNavigate } from '$app/navigation';
 	import { intersect } from '@svelte-put/intersect';
 	import { uiobserver, onIntersect } from '$lib/uiobserver.svelte';
+	import { animateScroll } from 'svelte-scrollto-element';
+	import { onMount } from 'svelte';
 
 	// video timehead positioning based on current window scroll position
 	// let initiator = $state(false);
@@ -32,11 +33,11 @@
 		time = duration * scrollQuot;
 	});
 
-	// afterNavigate(({ from }) => {
-	// 	// show this fukkin initiator thingy only on first page visit!!
-	// 	initiator = from === null ? false : true;
-	// 	// console.log(initiator);
-	// });
+	onMount(() => {
+        // disableScrollHandling();
+        animateScroll.scrollTo({ element: 'body', duration: 1, delay: 300 });
+        console.log('[    reset scroll position  # home   ] - onMount');
+    })
 
 </script>
 
@@ -47,9 +48,9 @@
 
 <div class="relative h-[400vh]" id="herostage">
 	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="dark" in:fade={{duration: 300, delay: 500 }} out:fade>
-		{#if scrollY < 50 && !uiobserver.initiator}
+		<!-- {#if scrollY < 50 && !uiobserver.initiator}
 		<div transition:fade onoutroend={() => (uiobserver.initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
-		{/if}
+		{/if} -->
 		<div class="absolute z-10 h-screen w-full">
 			<video
 				bind:currentTime={time}

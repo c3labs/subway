@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import logo from '$lib/assets/images/logo/subway.logo.v01.svg?raw';
 	import { uiobserver } from '$lib/uiobserver.svelte';
+	import { animateScroll } from 'svelte-scrollto-element';
 
 	// $effect(() => {
 	// 	if (ioScrollY > 4100 && ioScrollY < 6300) {
@@ -15,6 +16,9 @@
 	// has to be transfered into uiobserver sometimes in the future !!
 	function navigate (navroute: string | URL) {
 		goto(navroute, { noScroll: true });
+		// animateScroll.scrollTo({ element: 'body', duration: 1, delay: 500 });
+
+		uiobserver.initiator = true;
 		// console.log('current navSate:', uiobserver.navstate);
 		if(uiobserver.navstate) {
 

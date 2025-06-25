@@ -11,9 +11,11 @@ Adjustments and integrations:
 
 - tailwindcss v4.01
 - Anta & Titillium Web from @fontssource 
-- @sveltejs/enhanced-img has been integrated
+- @sveltejs/enhanced-img 
 - @sveltejs/adapter-node has been intergrated and configured
-
+- @svelte-put/dragscroll 4.0.0
+- @svelte-put/intersect 4.0.0
+- svelte-scrollto-element 3.1.0
 
 ## sv
 

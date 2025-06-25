@@ -4,7 +4,21 @@
 	import { uiobserver , onIntersect } from "$lib/uiobserver.svelte";
     import { dragscroll } from '@svelte-put/dragscroll';
 	import { animateScroll } from 'svelte-scrollto-element';
+	import { afterNavigate } from "$app/navigation";
+	import { onMount } from "svelte";
+
+    onMount(() => {
+        // disableScrollHandling();
+        animateScroll.scrollTo({ element: 'body', duration: 1, delay: 300 });
+        console.log('[    reset scroll position  # projectOne   ] - onMount');
+    })
+
 </script>
+
+<svelte:head>
+	<title>ProjectOne - SUBWAY - Radsport Wagner | We just ride!</title>
+</svelte:head>
+
 <div class="c3:outher_box">
     <div class="relative h-[200vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark">
         <div class="sticky top-0 left-0 z-10 h-screen w-full bg-neutral-800" in:fade={{duration: 300, delay: 500 }} out:fade>
