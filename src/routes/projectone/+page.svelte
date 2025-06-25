@@ -9,7 +9,7 @@
 
     onMount(() => {
         // disableScrollHandling();
-        animateScroll.scrollTo({ element: 'body', duration: 1, delay: 300 });
+        animateScroll.scrollToTop({ duration: 1, delay: 300 });
         console.log('[    reset scroll position  # projectOne   ] - onMount');
     })
 
