@@ -7,15 +7,37 @@
 	import '@fontsource/titillium-web/700.css';
 	// import '@fontsource/titillium-web/900.css';
 
+	import logo from '$lib/assets/images/logo/subway.logo.v01.svg?raw';
+
 	import Header from './Header.svelte';
 
 	// import { page } from '$app/state';
+	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { fade } from 'svelte/transition';
 	import { uiobserver } from '$lib/uiobserver.svelte';
 	import '../app.css';
 
 	let { children } = $props();
+	let countdown = $state(25);
+	let timer = $state(0);
+
+	$effect(() => {
+		if(countdown === 0) {
+			if (timer) {
+				clearInterval(timer);
+				timer = 0;
+				console.log(timer);
+			}
+		}
+	});
+
+	onMount(() => {
+		timer = setInterval(() => {
+			countdown -= 1;
+		}, 100);
+		console.log(timer);
+	});
 
 	afterNavigate(({ from }) => {
 		// show this fukkin initiator thingy only on first page visit!!
@@ -29,8 +51,19 @@
 <Header />
 
 <main>
-	{#if !uiobserver.initiator }
-		<div in:fade out:fade class="absolute z-[100] h-screen w-full bg-red-900/10"></div>
+	{#if !uiobserver.initiator && countdown > 0 }
+		<div class="flex flex-col items-center bottom-0 justify-center left-0 right-0 fixed top-0 z-[100] h-screen w-full bg-neutral-900" out:fade={{ duration: 500 }}>
+			<div class="w-[25vw]">
+				{@html logo}
+			</div>
+			<div class="text-white">
+				<span>swipe up</span>
+				<label>
+					timer: {countdown} 
+					<progress class="rounded-full w-[300px]" value={countdown/25}></progress>
+				</label>
+			</div>
+		</div>
 	{/if}
 	{@render children()}
 </main>

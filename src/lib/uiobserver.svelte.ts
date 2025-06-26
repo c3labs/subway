@@ -2,7 +2,7 @@
 
 // import { innerHeight, scrollY } from 'svelte/reactivity/window'
 import { type IntersectDetail } from '@svelte-put/intersect';
-import { afterNavigate } from '$app/navigation';
+import { afterNavigate, goto } from '$app/navigation';
 
 let darkmode = $state(false);
 let navState = $state(false);
@@ -88,6 +88,16 @@ export function onIntersect(e: CustomEvent<IntersectDetail>) {
             console.log('got no uiwidth values');
             wChange = false;
         }
+    }
+};
+
+export function navigate (navroute: string | URL) {
+    goto(navroute, { noScroll: true });
+
+    uiobserver.initiator = true;
+    // console.log('current navSate:', uiobserver.navstate);
+    if(uiobserver.navstate) {
+        uiobserver.toggleNav();
     }
 };
 

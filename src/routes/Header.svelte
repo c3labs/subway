@@ -1,30 +1,8 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	// import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import logo from '$lib/assets/images/logo/subway.logo.v01.svg?raw';
-	import { uiobserver } from '$lib/uiobserver.svelte';
-	import { animateScroll } from 'svelte-scrollto-element';
-
-	// $effect(() => {
-	// 	if (ioScrollY > 4100 && ioScrollY < 6300) {
-	// 		document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-50);";
-	// 	} else {
-	// 		document.documentElement.style.cssText = "--bg-state-color:var(--color-neutral-900);";
-	// 	}
-	// });
-
-	// has to be transfered into uiobserver sometimes in the future !!
-	function navigate (navroute: string | URL) {
-		goto(navroute, { noScroll: true });
-		// animateScroll.scrollTo({ element: 'body', duration: 1, delay: 500 });
-
-		uiobserver.initiator = true;
-		// console.log('current navSate:', uiobserver.navstate);
-		if(uiobserver.navstate) {
-
-			uiobserver.toggleNav();
-		}
-	}
+	import { uiobserver, navigate } from '$lib/uiobserver.svelte';
 
 </script>
 

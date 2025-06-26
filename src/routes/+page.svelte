@@ -6,7 +6,7 @@
 	import loscroller from '$lib/assets/video/subway.300_30_na.mp4';
 	import { fly, fade } from 'svelte/transition';
 	import { intersect } from '@svelte-put/intersect';
-	import { uiobserver, onIntersect } from '$lib/uiobserver.svelte';
+	import { uiobserver, onIntersect, navigate } from '$lib/uiobserver.svelte';
 	import { animateScroll } from 'svelte-scrollto-element';
 	import { onMount } from 'svelte';
 
@@ -19,7 +19,6 @@
 	var scrollQuot = 0;
 
 	$effect(() => {
-		// const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
 		const videostage: HTMLElement | null = document.getElementById("herostage");
 		
 		// @ts-ignore
@@ -34,10 +33,9 @@
 	});
 
 	onMount(() => {
-        // disableScrollHandling();
         animateScroll.scrollToTop({ duration: 1, delay: 300, offset: 50 });
         console.log('[    reset scroll position  # home   ] - onMount');
-    })
+    });
 
 </script>
 
@@ -107,17 +105,17 @@
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block">
 		<div class="flex flex-col items-end gap-1">
 			<div>
-				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">MODELLJAHR 2025 | TECH/BIKES</div>
 				</button>
 			</div>
 			<div>
-				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
 				</button>
 			</div>
 			<div>
-				<button class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 						<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
 				</button>
 			</div>

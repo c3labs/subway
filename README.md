@@ -5,9 +5,9 @@
 Coolify is configured with autodeployment in mind - GitHub App subway-coolify-c3labs-de is configured to monitor commits and initiates redeployment of web-hooked coolify project.
 
 
-## tailwindcss / fontsource / enhanced:img
+## Adjustments and integrations
 
-Adjustments and integrations:
+added pnpm packages:
 
 - tailwindcss v4.01
 - Anta & Titillium Web from @fontssource 
