@@ -62,7 +62,9 @@
 			</div>
 		</div>
 	{/if}
-	{@render children()}
+	{#if countdown < 1 }
+		{@render children()}
+	{/if}
 </main>
 
 <footer>
