@@ -11,7 +11,6 @@
 
 	import Header from './Header.svelte';
 
-	// import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { fade } from 'svelte/transition';
@@ -19,30 +18,28 @@
 	import '../app.css';
 
 	let { children } = $props();
-	let countdown = $state(25);
-	let timer = $state(0);
+	let countdown = $state(10);
+	let timerId = $state(0);
 
 	$effect(() => {
 		if(countdown === 0) {
-			if (timer) {
-				clearInterval(timer);
-				timer = 0;
-				console.log(timer);
+			if (timerId) {
+				clearInterval(timerId);
+				timerId = 0;
+				console.log(timerId);
 			}
 		}
 	});
 
 	onMount(() => {
-		timer = setInterval(() => {
+		timerId = setInterval(() => {
 			countdown -= 1;
-		}, 100);
-		console.log(timer);
+		}, 250);
+		console.log(timerId);
 	});
 
 	afterNavigate(({ from }) => {
-		// show this fukkin initiator thingy only on first page visit!!
 		uiobserver.initiator = from === null ? false : true;
-		// console.log(initiator);
 	});
 
 </script>
@@ -53,15 +50,15 @@
 <main>
 	{#if !uiobserver.initiator && countdown > 0 }
 		<div class="flex flex-col items-center bottom-0 justify-center left-0 right-0 fixed top-0 z-[100] h-screen w-full bg-neutral-900" out:fade={{ duration: 500 }}>
-			<div class="w-[25vw]">
+			<div class="w-[45vw] md:w-[35vw] lg:w-[25vw]">
 				{@html logo}
 			</div>
 			<div class="text-white">
-				<span>swipe up</span>
-				<label>
-					timer: {countdown} 
-					<progress class="rounded-full w-[300px]" value={countdown/25}></progress>
-				</label>
+					<div class="flex justify-start items-center">
+    					<div class="flex-1 p-0.5 rounded border shadow-inner border-neutral-950 bg-neutral-800 w-48 lg:w-2xs">
+        					<div class="[min-width:4px] h-2 rounded bg-neutral-900 transition-all" style="width: {10 * (11-countdown)}%"></div>
+						</div>
+					</div>
 			</div>
 		</div>
 	{/if}

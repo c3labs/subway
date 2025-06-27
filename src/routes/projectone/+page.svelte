@@ -1,10 +1,10 @@
 <script lang="ts">
+    
 	import { fade, fly } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
 	import { uiobserver , onIntersect } from "$lib/uiobserver.svelte";
     import { dragscroll } from '@svelte-put/dragscroll';
 	import { animateScroll } from 'svelte-scrollto-element';
-	import { afterNavigate } from "$app/navigation";
 	import { onMount } from "svelte";
 
     onMount(() => {
