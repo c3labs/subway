@@ -33,7 +33,7 @@
 	});
 
 	onMount(() => {
-        animateScroll.scrollToTop({ duration: 1, delay: 300, offset: 50 });
+        animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 10 });
         console.log('[    reset scroll position  # home   ] - onMount');
     });
 
@@ -66,7 +66,7 @@
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
 		<div class="flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden" style="opacity: 1;">
 			<div class="container mx-auto px-4">
-				{#if scrollY > 50}
+				{#if scrollY > 50 && scrollY < 2550}
 				<div class="mb-[10vh] flex flex-col items-end space-y-2 sm:flex-row sm:space-y-0">
 					<p class="">
 						<span in:fly={{ x :-100, duration: 300, delay: 100 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">EGAL WELCHEN TRAIL </span>
