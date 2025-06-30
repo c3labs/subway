@@ -48,7 +48,7 @@
 <svelte:window bind:scrollY />
 
 <div class="relative h-[400vh]" id="herostage">
-	<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 pb-8 font-extralight font-headline text-white text-xl">DIE BIKES MODELLJAHR 2025 | <span class="font-bold">IHR SEID DABEI!</span></h1>
+	<!-- <h1 class="container float-start mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 pb-8 font-extralight font-headline text-white text-xl">DIE BIKES MODELLJAHR 2025 | <span class="font-bold">IHR SEID DABEI!</span></h1> -->
 	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="dark" in:fade={{duration: 300, delay: 500 }} out:fade onintrostart={() => (transitioning = true)} onintroend={() => (transitioning = false)}>
 		<!-- {#if scrollY < 50 && !uiobserver.initiator}
 		<div transition:fade onoutroend={() => (uiobserver.initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
@@ -68,6 +68,7 @@
 		</div>
 	</div>
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
+		<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 pb-8 font-extralight font-headline text-white text-xl">DIE BIKES MODELLJAHR 2025 | <span class="font-bold">IHR SEID DABEI!</span></h1>
 		<div class="flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden" style="opacity: 1;">
 
 			<div class="container mx-auto px-4">
