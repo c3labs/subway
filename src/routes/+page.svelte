@@ -35,7 +35,7 @@
 
 	onMount(() => {
 		// hier muss irgendein window.goTo rein mit delay 
-		animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 10 });
+		animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 20 });
         // animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 10 });
         console.log('[    reset scroll position  # home   ] - onMount');
     });
@@ -48,6 +48,7 @@
 <svelte:window bind:scrollY />
 
 <div class="relative h-[400vh]" id="herostage">
+	<h1 class="mx-auto px-4 z-11 sticky top-32 font-extralight font-headline text-white">MODELLJAHR 2025 - Wir sind dabei!</h1>
 	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="dark" in:fade={{duration: 300, delay: 500 }} out:fade onintrostart={() => (transitioning = true)} onintroend={() => (transitioning = false)}>
 		<!-- {#if scrollY < 50 && !uiobserver.initiator}
 		<div transition:fade onoutroend={() => (uiobserver.initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
@@ -68,9 +69,11 @@
 	</div>
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
 		<div class="flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden" style="opacity: 1;">
+
 			<div class="container mx-auto px-4">
+				
 				{#if scrollY > 50 && scrollY < 1550 && !transitioning}
-				<div class="mb-[10vh] flex flex-col items-end space-y-2 sm:flex-row sm:space-y-0">
+				<!-- <div class="mb-[10vh] flex flex-col items-end space-y-2 sm:flex-row sm:space-y-0">
 					<p class="">
 						<span in:fly={{ x :-100, duration: 300, delay: 100 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">EGAL WELCHEN TRAIL </span>
 					</p>
@@ -80,10 +83,16 @@
 					<p class="">
 						<span in:fly={{ x :100, duration: 300, delay: 300 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">WE JUST RIDE</span>
 					</p>
-				</div>
+				</div> -->
+				<h2 in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-center font-headline font-extralight text-3xl md:text-4xl text-white">EGAL WELCHEN TRAIL
+					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
+						<span class="relative text-white text-4xl md:text-5xl font-bold">DU 2025 NIMMST</span>
+					</span>
+					WE JUST RIDE.
+				</h2>
 				{/if}
 				{#if scrollY > 2000 && scrollY < 3550 && !transitioning}
-				<div class="mb-[10vh] flex flex-col items-end space-y-2 sm:flex-row sm:space-y-0">
+				<!-- <div class="mb-[10vh] flex flex-col items-end space-y-2 sm:flex-row sm:space-y-0">
 					<p class="">
 						<span in:fly={{ x :-100, duration: 300, delay: 100 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">NOCH EGALER WELCHEN TRAIL </span>
 					</p>
@@ -93,7 +102,13 @@
 					<p class="">
 						<span in:fly={{ x :100, duration: 300, delay: 300 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">WE STILL JUST RIDE</span>
 					</p>
-				</div>
+				</div> -->
+				<h2 in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-center font-headline font-extralight text-3xl md:text-4xl text-white">NOCH EGALER WELCHEN TRAIL
+					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
+						<span class="relative text-white text-4xl md:text-5xl font-bold">DU 2026 NIMMST</span>
+					</span>
+					WE STILL JUST RIDE.
+				</h2>
 				{/if}
 			</div>
 		</div>
