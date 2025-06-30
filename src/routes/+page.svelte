@@ -85,7 +85,7 @@
 						<span in:fly={{ x :100, duration: 300, delay: 300 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">WE JUST RIDE</span>
 					</p>
 				</div> -->
-				<h2 in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-center font-headline font-extralight text-3xl md:text-4xl text-white">EGAL WELCHEN TRAIL
+				<h2 in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-right lg:text-center font-headline font-extralight text-3xl md:text-4xl text-white">EGAL WELCHEN TRAIL
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl md:text-5xl font-bold">DU 2025 NIMMST</span>
 					</span>
@@ -104,7 +104,7 @@
 						<span in:fly={{ x :100, duration: 300, delay: 300 }} out:fade class="inline-block font-headline font-extralight text-3xl md:text-4xl">WE STILL JUST RIDE</span>
 					</p>
 				</div> -->
-				<h2 in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-center font-headline font-extralight text-3xl md:text-4xl text-white">NOCH EGALER WELCHEN TRAIL
+				<h2 in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-right lg:text-center font-headline font-extralight text-3xl md:text-4xl text-white">NOCH EGALER WELCHEN TRAIL
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl md:text-5xl font-bold">DU 2026 NIMMST</span>
 					</span>
