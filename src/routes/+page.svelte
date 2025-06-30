@@ -67,7 +67,7 @@
 			</video>
 		</div>
 	</div>
-	<div class="sticky top-0 left-0 z-10 h-screen w-full">
+	<div class="sticky top-0 left-0 z-10 h-screen w-full" out:fade>
 		<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 pb-8 font-extralight font-headline text-white text-xl">DIE BIKES MODELLJAHR 2025 | <span class="font-bold">IHR SEID DABEI!</span></h1>
 		<div class="flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden" style="opacity: 1;">
 
@@ -133,7 +133,7 @@
 		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI </p>
 	</div>
 </div>
-<div class="fixed z-50 bottom-0 right-4 min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider">
+<div class="fixed z-50 bottom-0 right-4 min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block">
 		<div class="flex flex-col items-end gap-1">
 			<div>
