@@ -137,17 +137,17 @@
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block">
 		<div class="flex flex-col items-end gap-1">
 			<div>
-				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">MODELLJAHR 2025 | TECH/BIKES</div>
 				</button>
 			</div>
 			<div>
-				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
 				</button>
 			</div>
 			<div>
-				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 						<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
 				</button>
 			</div>
