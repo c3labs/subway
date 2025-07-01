@@ -124,7 +124,7 @@
 		</div>
 	</div>
 </div>
-<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="light" data-stagepart="3">
+<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="dark" data-stagepart="3">
 	<div class="heading">
 		<h1 class=" font-headline text-neutral-300">SUBWAY - Development Server</h1>
 	</div>
@@ -136,21 +136,23 @@
 <div class="fixed z-50 bottom-0 top-36_ right-4 h-[{uiobserver.stagepart * 46}px] transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block transition-all_">
 		<div class="flex flex-col align-bottom items-end gap-1">
-			<div class="{uiobserver.stagepart >= 1 ? 'irgendwas' : 'hidden'} transition-all_ transition-discrete_" style="/* display: block; */">
-				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+			{#if uiobserver.stagepart >= 1}
+			<div class="transition-all transition-discrete">
+				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 1 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">MODELLJAHR 2025 | TECH/BIKES</div>
 				</button>
 			</div>
+			{/if}
 			{#if uiobserver.stagepart >= 2}
-			<div class="transition-all transition-discrete" style="/* display: block; */" transition:fade>
-				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+			<div class="transition-all transition-discrete" transition:fade>
+				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 2 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
 				</button>
 			</div>
 			{/if}
 			{#if uiobserver.stagepart >= 3}
 			<div class="transition-all transition-discrete" transition:fade>
-				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 3 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
 				</button>
 			</div>				
