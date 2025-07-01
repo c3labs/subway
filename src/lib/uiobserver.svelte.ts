@@ -8,6 +8,7 @@ let darkmode = $state(false);
 let navState = $state(false);
 let iniLoader = $state(false);
 let wChange = $state(false);
+let stagePart = $state(0);
 
 export const uiobserver = {
 
@@ -25,6 +26,9 @@ export const uiobserver = {
     },
     get wchange() {
         return wChange;
+    },
+    get stagepart() {
+        return stagePart;
     },
     get initiator() {
         return iniLoader;
@@ -68,13 +72,13 @@ export function uigreetz(node: HTMLDivElement) {
 export function onIntersect(e: CustomEvent<IntersectDetail>) {
     const { observer, entries, direction } = e.detail;
     // console.log('the observer itself', observer);
-    console.log('scrolling direction:', direction);
-    console.log('intersecting:', entries[0]?.isIntersecting ? 'entering' : 'leaving');
+    // console.log('scrolling direction:', direction);
+    // console.log('intersecting:', entries[0]?.isIntersecting ? 'entering' : 'leaving');
     // console.log('action intersect was used on element', entries[0]?.target );
     console.log('element is requesting ui:', (entries[0].target as HTMLElement).dataset.uipref);
     // entries[0].target.style.backgroundColor = "red";
     console.log('list of IntersectionObserverEntry:', entries);
-    console.log('list of IntersectionObserverEntry:', entries[0]?.isIntersecting );
+    // console.log('list of IntersectionObserverEntry:', entries[0]?.isIntersecting );
     if(entries[0]?.isIntersecting ) {
         if((entries[0].target as HTMLElement).dataset.uipref === "dark" ) {
             uiobserver.uistate = false;
@@ -82,11 +86,15 @@ export function onIntersect(e: CustomEvent<IntersectDetail>) {
             uiobserver.uistate = true;
         }
         if((entries[0].target as HTMLElement).dataset.uiwidth ) {
-            console.log('got some uiwidth values:');
+            // console.log('got some uiwidth values:');
             wChange = true;
         } else {
-            console.log('got no uiwidth values');
+            // console.log('got no uiwidth values');
             wChange = false;
+        }
+        if((entries[0].target as HTMLElement).dataset.stagepart ) {
+            console.log('got some stagepart values:', (entries[0].target as HTMLElement).dataset.stagepart);
+            stagePart = Number((entries[0].target as HTMLElement).dataset.stagepart);
         }
     }
 };

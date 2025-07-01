@@ -49,7 +49,7 @@
 
 <div class="relative h-[400vh]" id="herostage">
 	<!-- <h1 class="container float-start mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 pb-8 font-extralight font-headline text-white text-xl">DIE BIKES MODELLJAHR 2025 | <span class="font-bold">IHR SEID DABEI!</span></h1> -->
-	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="dark" in:fade={{duration: 300, delay: 500 }} out:fade onintrostart={() => (transitioning = true)} onintroend={() => (transitioning = false)}>
+	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="sticky top-0 left-0" data-uipref="dark" data-stagepart="1" in:fade={{duration: 300, delay: 500 }} out:fade onintrostart={() => (transitioning = true)} onintroend={() => (transitioning = false)}>
 		<!-- {#if scrollY < 50 && !uiobserver.initiator}
 		<div transition:fade onoutroend={() => (uiobserver.initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
 		{/if} -->
@@ -115,7 +115,7 @@
 		</div>
 	</div>
 </div>
-<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="relative h-[200vh]" data-uipref="dark">
+<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="relative h-[200vh]" data-uipref="dark" data-stagepart="2">
 	<div class="sticky top-0 left-0 z-10 h-screen w-full">
 		<div class="absolute z-10 h-screen w-full">
 			<!-- <enhanced:img src={madone} alt="madone alt text" sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" /> -->
@@ -124,7 +124,7 @@
 		</div>
 	</div>
 </div>
-<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="light">
+<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="light" data-stagepart="3">
 	<div class="heading">
 		<h1 class=" font-headline text-neutral-300">SUBWAY - Development Server</h1>
 	</div>
@@ -133,45 +133,28 @@
 		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI </p>
 	</div>
 </div>
-<div class="fixed z-50 bottom-0 right-4 min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
-	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block">
-		<div class="flex flex-col items-end gap-1">
-			<div>
+<div class="fixed z-50 bottom-0 top-36_ right-4 h-[{uiobserver.stagepart * 46}px] transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
+	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block transition-all_">
+		<div class="flex flex-col align-bottom items-end gap-1">
+			<div class="{uiobserver.stagepart >= 1 ? 'irgendwas' : 'hidden'} transition-all_ transition-discrete_" style="/* display: block; */">
 				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">MODELLJAHR 2025 | TECH/BIKES</div>
 				</button>
 			</div>
-			<div>
+			{#if uiobserver.stagepart >= 2}
+			<div class="transition-all transition-discrete" style="/* display: block; */" transition:fade>
 				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
 				</button>
 			</div>
-			<div>
+			{/if}
+			{#if uiobserver.stagepart >= 3}
+			<div class="transition-all transition-discrete" transition:fade>
 				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors bg-[var(--bg-menu-color)]/28 text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
-						<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
+					<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
 				</button>
-			</div>
-		</div>
-	</div>
-	<div class="hidden w-full p-5 sm:hidden sm:p-0">
-		<div class="relative flex w-full justify-end overflow-hidden rounded-xl p-4 backdrop-blur-sm sm:p-8">
-			<div class="w-full">
-				<div class="relative flex w-full justify-end gap-5 max-sm:pl-8 sm:flex-col sm:items-stretch sm:gap-0 md:items-end">
-					<h2 class="h4-pitch hidden text-right sm:block">Sculpture Handlebar</h2>
-					<div class="flex grow items-start justify-end leading-none text-dark-grey">
-						<span class="h4-pitch whitespace-nowrap">€ 725</span>
-					</div>
-					<div class="max-w-full sm:mt-4">
-						<div>
-							<div>
-								<div class="flex items-center justify-end leading-none">
-									<button class="h4-pitch text-white">Add to Cart</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			</div>				
+			{/if}
 		</div>
 	</div>
 </div>
