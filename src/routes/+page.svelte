@@ -16,27 +16,41 @@
 	let duration = $state(0);
 	let scrollY = $state(0);
 	let transitioning = $state(false);
-	var scrollRelation = 0;
-	var scrollQuot = 0;
-
+	// let scrollRelation = $state(0);
+	let scrollQuot = $state(0);
+	
 	$effect(() => {
 		const videostage: HTMLElement | null = document.getElementById("herostage");
 		
 		// @ts-ignore
-		scrollRelation = videostage.scrollHeight - scrollY;
+		// scrollRelation = videostage.scrollHeight - scrollY;
+
+		var vidOverflow = document.body.scrollHeight - videostage.scrollHeight;
+		if (vidOverflow > window.innerHeight) {
+			vidOverflow = window.innerHeight;
+		}
+
+		// @ts-ignore
+		var maxScrollY = videostage?.scrollHeight - window.innerHeight + vidOverflow;
+
+		scrollQuot = 1 / maxScrollY * scrollY;
 		
-		if( scrollRelation < 1 ) {
-			scrollRelation = 1;
+		if( scrollQuot > 1 ) {
+			scrollQuot = 1;
 		}
 		// @ts-ignore
-		scrollQuot = 1 / videostage.scrollHeight * (videostage.scrollHeight - scrollRelation);
+		// scrollQuot = 1 / videostage.scrollHeight * (videostage.scrollHeight - scrollRelation);
 		time = duration * scrollQuot;
+		// @ts-ignore
+		// console.log('[    Info >> videostage.scrollHeight ] : ', videostage.scrollHeight );
+		// console.log('[    Info >> videostage.scrollHeight ] : ', videostage.scrollHeight );
+
 	});
 
 	onMount(() => {
 		// hier muss irgendein window.goTo rein mit delay 
-		animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 20 });
-        // animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 10 });
+		animateScroll.scrollToTop({ duration: 1000, delay: 250, offset: 550 });
+        // animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 20 });
         console.log('[    reset scroll position  # home   ] - onMount');
     });
 
@@ -68,7 +82,7 @@
 		</div>
 	</div>
 	<div class="sticky top-0 left-0 z-10 h-screen w-full" out:fade>
-		<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 pb-8 font-extralight font-headline text-white text-xl">DIE BIKES MODELLJAHR 2025 | <span class="font-bold">IHR SEID DABEI!</span></h1>
+		<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 pb-8 font-extralight font-headline text-white text-xl bg-red-700">DIE BIKES MODELLJAHR 2025 | <span class="font-bold">IHR SEID DABEI!</span> SCROLLQUOT: [ {scrollQuot} ] | TIME: [ {time} ] | SCROLLY: [ {scrollY} ]</h1>
 		<div class="flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden" style="opacity: 1;">
 
 			<div class="container mx-auto px-4">
@@ -115,16 +129,16 @@
 		</div>
 	</div>
 </div>
-<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="relative h-[200vh]" data-uipref="dark" data-stagepart="2">
-	<div class="sticky top-0 left-0 z-10 h-screen w-full">
-		<div class="absolute z-10 h-screen w-full">
+<!-- <div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="relative h-[200vh]" data-uipref="dark" data-stagepart="2"> -->
+	<!-- <div class="sticky top-0 left-0 z-10 h-screen w-full"> -->
+		<!-- <div class="absolute z-10 h-screen w-full"> -->
 			<!-- <enhanced:img src={madone} alt="madone alt text" sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" /> -->
-			<enhanced:img src="../lib/assets/images/trek_pone_modone.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" />
+			<!-- <enhanced:img src="../lib/assets/images/trek_pone_modone.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" /> -->
 			<!-- <enhanced:img src={madone} alt="madone alt text" sizes="min(1280px, 100vw)" /> -->
-		</div>
-	</div>
-</div>
-<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="dark" data-stagepart="3">
+		<!-- </div> -->
+	<!-- </div> -->
+<!-- </div> -->
+<!-- <div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="dark" data-stagepart="3">
 	<div class="heading">
 		<h1 class=" font-headline text-neutral-300">SUBWAY - Development Server</h1>
 	</div>
@@ -132,8 +146,8 @@
 		<p>LAST IMPLEMENTED ->> Intersection Observer testing for data-uipref purposes</p>
 		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI </p>
 	</div>
-</div>
-<div class="fixed z-50 bottom-0 top-36_ right-4 h-[{uiobserver.stagepart * 46}px] transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
+</div> -->
+<!-- <div class="fixed z-50 bottom-0 top-36_ right-4 h-[{uiobserver.stagepart * 46}px] transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block transition-all_">
 		<div class="flex flex-col align-bottom items-end gap-1">
 			{#if uiobserver.stagepart >= 1}
@@ -159,4 +173,4 @@
 			{/if}
 		</div>
 	</div>
-</div>
+</div> -->
