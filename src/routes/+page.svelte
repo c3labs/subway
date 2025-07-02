@@ -138,7 +138,7 @@
 		<!-- </div> -->
 	<!-- </div> -->
 <!-- </div> -->
-<!-- <div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="dark" data-stagepart="3">
+<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-500 relative h-[100vh]" data-uipref="dark" data-stagepart="3">
 	<div class="heading">
 		<h1 class=" font-headline text-neutral-300">SUBWAY - Development Server</h1>
 	</div>
@@ -146,8 +146,8 @@
 		<p>LAST IMPLEMENTED ->> Intersection Observer testing for data-uipref purposes</p>
 		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI </p>
 	</div>
-</div> -->
-<!-- <div class="fixed z-50 bottom-0 top-36_ right-4 h-[{uiobserver.stagepart * 46}px] transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
+</div>
+<div class="fixed z-50 bottom-0 top-36_ right-4 h-[{uiobserver.stagepart * 46}px] transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block transition-all_">
 		<div class="flex flex-col align-bottom items-end gap-1">
 			{#if uiobserver.stagepart >= 1}
@@ -173,4 +173,4 @@
 			{/if}
 		</div>
 	</div>
-</div> -->
+</div>
