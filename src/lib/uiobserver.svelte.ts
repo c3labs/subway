@@ -77,7 +77,7 @@ export function onIntersect(e: CustomEvent<IntersectDetail>) {
     // console.log('action intersect was used on element', entries[0]?.target );
     console.log('element is requesting ui:', (entries[0].target as HTMLElement).dataset.uipref);
     // entries[0].target.style.backgroundColor = "red";
-    console.log('list of IntersectionObserverEntry:', entries);
+    // console.log('list of IntersectionObserverEntry:', entries);
     // console.log('list of IntersectionObserverEntry:', entries[0]?.isIntersecting );
     if(entries[0]?.isIntersecting ) {
         if((entries[0].target as HTMLElement).dataset.uipref === "dark" ) {
