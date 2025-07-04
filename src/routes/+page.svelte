@@ -83,10 +83,9 @@
 			<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>WIR LASSEN DEIN TRAUMBIKE WIRKLICHKEIT WERDEN | <span class="font-bold">PROJECT ONE</span></h1>
 		{/if}
 		{#if scrollQuot > 0.66 && scrollQuot < 1 && !transitioning}
-			<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>SCHON MAL ÜBER EIN FIRMENRAD NACHGEDACHT? | <span class="font-bold">BIKE LEASING</span></h1>
+			<h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>SCHON MAL ÜBER EIN FIRMENRAD NACHGEDACHT? | <span class="font-bold">BIKE LEASING</span></h1>
 		{/if}
-		<div class="flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
-
+		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
 			<div class="container mx-auto px-4">
 				{#if scrollQuot > 0.01 && scrollQuot < 0.13 && !transitioning}
 				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-right lg:text-center font-headline font-extralight text-3xl md:text-4xl text-white">EGAL WELCHES 
@@ -96,7 +95,11 @@
 					AUF DICH WARTET ...
 				</h2>
 				{/if}
-				{#if scrollQuot > 0.17 && scrollQuot < 0.25 && !transitioning}
+			</div>
+		</div>
+		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
+			<div class="container mx-auto px-4">
+				{#if scrollQuot > 0.17 && scrollQuot < 0.3 && !transitioning}
 				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-right lg:text-center font-headline font-extralight text-3xl md:text-4xl text-white">WIR HABEN DEN
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl md:text-5xl font-bold">IDEALEN BEGLEITER</span>
@@ -104,7 +107,11 @@
 					FÜR ALL DEINE TRAILS.
 				</h2>
 				{/if}
-				{#if scrollQuot > 0.35 && scrollQuot < 0.5 && !transitioning}
+			</div>
+		</div>
+		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
+			<div class="container mx-auto px-4">
+				{#if scrollQuot > 0.36 && scrollQuot < 0.5 && !transitioning}
 				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-right lg:text-center font-headline font-extralight text-3xl md:text-4xl text-white">NEUE HEADLINE
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl md:text-5xl font-bold">PROJECT ONE</span>
