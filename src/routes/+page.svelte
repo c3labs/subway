@@ -84,7 +84,7 @@
 		{/if}
 		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
 				{#if scrollQuot > 0.01 && scrollQuot < 0.16 && !transitioning}
-				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl landscape:max-lg:text-3xl md:text-4xl text-white">EGAL WELCHES 
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">EGAL WELCHES 
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">BIKE ADVENTURE 2025 </span>
 					</span>
@@ -94,7 +94,7 @@
 		</div>
 		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
 				{#if scrollQuot > 0.17 && scrollQuot < 0.33 && !transitioning}
-				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl landscape:max-lg:text-3xl md:text-4xl text-white">WIR HABEN DEN
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">WIR HABEN DEN
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">IDEALEN BEGLEITER</span>
 					</span>
@@ -104,7 +104,7 @@
 		</div>
 		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
 				{#if scrollQuot > 0.34 && scrollQuot < 0.5 && !transitioning}
-				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl landscape:max-lg:text-3xl md:text-4xl text-white">NEUE HEADLINE
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">NEUE HEADLINE
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">PROJECT ONE</span>
 					</span>
