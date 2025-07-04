@@ -11,7 +11,6 @@
 	import { onMount } from 'svelte';
 
 	// video timehead positioning based on current window scroll position
-	// let initiator = $state(false);
 	let time = $state(0);
 	let duration = $state(0);
 	let scrollY = $state(0);
@@ -42,10 +41,9 @@
 	});
 
 	onMount(() => {
-		// hier muss irgendein window.goTo rein mit delay 
 		animateScroll.scrollToTop({ duration: 1000, delay: 250, offset: 250 });
         // animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 20 });
-        console.log('[    reset scroll position  # home   ] - onMount');
+        // console.log('[    reset scroll position  # home   ] - onMount');
     });
 
 </script>
@@ -56,7 +54,6 @@
 <svelte:window bind:scrollY />
 
 <div class="relative h-[600vh]" id="herostage">
-	<!-- <h1 class="container float-start mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 pb-8 font-extralight font-headline text-white text-xl">DIE BIKES MODELLJAHR 2025 | <span class="font-bold">IHR SEID DABEI!</span></h1> -->
 	<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" class="sticky top-0 left-0" in:fade={{duration: 300, delay: 500 }} out:fade onintrostart={() => (transitioning = true)} onintroend={() => (transitioning = false)}>
 		<!-- {#if scrollY < 50 && !uiobserver.initiator}
 		<div transition:fade onoutroend={() => (uiobserver.initiator = true)} class="absolute z-20 h-screen w-full bg-neutral-900" style="opacity: {1-(scrollY/500)}"></div>
@@ -86,40 +83,34 @@
 			<h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>SCHON MAL ÜBER EIN FIRMENRAD NACHGEDACHT? | <span class="font-bold">BIKE LEASING</span></h1>
 		{/if}
 		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
-			<div class="container mx-auto px-4">
-				{#if scrollQuot > 0.01 && scrollQuot < 0.13 && !transitioning}
-				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-right lg:text-center font-headline font-extralight text-3xl md:text-4xl text-white">EGAL WELCHES 
+				{#if scrollQuot > 0.01 && scrollQuot < 0.16 && !transitioning}
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl landscape:text-3xl md:text-4xl text-white">EGAL WELCHES 
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-						<span class="relative text-white text-4xl md:text-5xl font-bold">BIKE ADVENTURE 2025 </span>
+						<span class="relative text-white text-4xl landscape:text-4xl md:text-5xl font-bold">BIKE ADVENTURE 2025 </span>
 					</span>
 					AUF DICH WARTET ...
 				</h2>
 				{/if}
-			</div>
 		</div>
 		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
-			<div class="container mx-auto px-4">
-				{#if scrollQuot > 0.17 && scrollQuot < 0.3 && !transitioning}
-				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-right lg:text-center font-headline font-extralight text-3xl md:text-4xl text-white">WIR HABEN DEN
+				{#if scrollQuot > 0.17 && scrollQuot < 0.33 && !transitioning}
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl landscape:text-3xl md:text-4xl text-white">WIR HABEN DEN
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-						<span class="relative text-white text-4xl md:text-5xl font-bold">IDEALEN BEGLEITER</span>
+						<span class="relative text-white text-4xl landscape:text-4xl md:text-5xl font-bold">IDEALEN BEGLEITER</span>
 					</span>
 					FÜR ALL DEINE TRAILS.
 				</h2>
 				{/if}
-			</div>
 		</div>
 		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
-			<div class="container mx-auto px-4">
-				{#if scrollQuot > 0.36 && scrollQuot < 0.5 && !transitioning}
-				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="text-right lg:text-center font-headline font-extralight text-3xl md:text-4xl text-white">NEUE HEADLINE
+				{#if scrollQuot > 0.34 && scrollQuot < 0.5 && !transitioning}
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl landscape:text-3xl md:text-4xl text-white">NEUE HEADLINE
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-						<span class="relative text-white text-4xl md:text-5xl font-bold">PROJECT ONE</span>
+						<span class="relative text-white text-4xl landscape:text-4xl md:text-5xl font-bold">PROJECT ONE</span>
 					</span>
 					RELATED!
 				</h2>
 				{/if}
-			</div>
 		</div>
 	</div>
 </div>
@@ -141,29 +132,23 @@
 		<p>CURRENTLY IMPLEMENTING ->> header/footer responsivnes UI </p>
 	</div>
 </div>
-<div class="fixed z-50 bottom-0 top-36_ right-4 h-[{uiobserver.stagepart * 46}px] transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 font-menu text-xs tracking-wider" transition:fade>
-	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 sm:block transition-all_">
-		<div class="flex flex-col align-bottom items-end gap-1">
+<div class="fixed z-50 bottom-0 right-4 transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 landscape:w-full landscape:left-0 font-menu text-xs tracking-wider" transition:fade>
+	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 landscape:md:py-4 sm:block">
+		<div class="flex flex-col landscape:flex-row align-bottom items-end landscape:justify-center gap-1">
 			<!-- {#if uiobserver.stagepart >= 1} -->
-			<div class="transition-all">
 				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 1 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">FINDE DEIN BIKE | TECH/BIKES</div>
 				</button>
-			</div>
 			<!-- {/if}
 			{#if uiobserver.stagepart >= 2} -->
-			<div class="transition-all" transition:fade>
 				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 2 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
 				</button>
-			</div>
 			<!-- {/if}
 			{#if uiobserver.stagepart >= 3} -->
-			<div class="transition-all" transition:fade>
 				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 3 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
 				</button>
-			</div>				
 			<!-- {/if} -->
 		</div>
 	</div>
