@@ -2,8 +2,8 @@
 	
 	// import madone from '$lib/assets/images/trek_pone_modone.jpg?enhanced';
 	// import hiscroller from '$lib/assets/video/subway.800_30_na.mp4';
-	import hiscroller from '$lib/assets/video/subway.testpart4_800.mp4';
-	import loscroller from '$lib/assets/video/subway.testpart4_400.mp4';
+	import hiscroller from '$lib/assets/video/subway.testpart5_800.mp4';
+	import loscroller from '$lib/assets/video/subway.testpart5_400.mp4';
 	import { fly, fade } from 'svelte/transition';
 	import { intersect } from '@svelte-put/intersect';
 	import { uiobserver, onIntersect, navigate } from '$lib/uiobserver.svelte';
@@ -119,6 +119,26 @@
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">PROJECT ONE</span>
 					</span>
 					DREAM BIKES!
+				</h2>
+				{/if}
+		</div>
+		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
+				{#if scrollQuot > 0.66 && scrollQuot < 0.83 && !transitioning}
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">MIT DEM FIRMENRAD ZUR ARBEIT:  
+					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
+						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">BIKE LEASING</span>
+					</span>
+					GANZ EINFACH...
+				</h2>
+				{/if}
+		</div>
+		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
+				{#if scrollQuot > 0.84 && scrollQuot < 1 && !transitioning}
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">WIR ZEIGEN EUCH WIE EINFACH DER WEG ZUM
+					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
+						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">NEUEN WUNSCHBIKE</span>
+					</span>
+					IST, UND GESUND IST ES AUCH!
 				</h2>
 				{/if}
 		</div>
