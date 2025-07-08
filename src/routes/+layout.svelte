@@ -26,7 +26,7 @@
 			if (timerId) {
 				clearInterval(timerId);
 				timerId = 0;
-				console.log(timerId);
+				// console.log(timerId);
 			}
 		}
 	});
@@ -35,7 +35,7 @@
 		timerId = setInterval(() => {
 			countdown -= 1;
 		}, 250);
-		console.log(timerId);
+		// console.log(timerId);
 	});
 
 	afterNavigate(({ from }) => {
@@ -67,9 +67,27 @@
 	{/if}
 </main>
 
-<footer>
-	<p>
-		visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
+<footer class="relative z-11 bg-neutral-900">
+	<div class="container flex flex-col-reverse lg:flex-row text-neutral-400 font-menu text-sm p-6">
+		<div class="logo w-1/2">
+			logo
+		</div>
+		<div class="infos w-1/2">
+			<ul>
+				<li>anschrift/inhaber</li>
+				<li>oeffnungszeiten</li>
+				<li>coordinates lat/long</li>
+				<li>impressum/datenschutz</li>
+				<li>kontaktdaten/tel/fax?/mail</li>
+				<li>batteriegesetz?</li>
+			</ul>
+		</div>
+	</div>
+	<p class="text-neutral-600 font-menu text-xs text-center">
+		Infos zu dieser Website, wann und von wem gebaut ...
+	</p>
+	<p class="text-neutral-600 font-menu text-xs text-center">
+		copyrightinfo | c3labs 2025 on behalf of subway
 	</p>
 </footer>
 
