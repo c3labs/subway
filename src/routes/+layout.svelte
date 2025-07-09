@@ -68,26 +68,42 @@
 </main>
 
 <footer class="relative z-11 bg-neutral-900">
-	<div class="container flex flex-col-reverse lg:flex-row text-neutral-400 font-menu text-sm p-6">
-		<div class="logo w-1/2">
-			logo
+	<div class="container flex flex-col-reverse lg:flex-row justify-center text-neutral-500 font-menu text-sm p-6">
+		<div class="logo w-1/3 flex _justify-center place-content-center items-center">
+			<ul class="flex flex-wrap place-content-center gap-y-1 md:max-w-lg">
+				<li class="px-2">TREK LOGO</li>
+				<li class="px-2">CUBE LOGO</li>
+				<li class="px-2">BONTRAGER LOGO</li>
+				<li class="px-2">DIAMANT LOGO</li>
+				<li class="px-2">SONSTIGES LOGO</li>
+			</ul>
 		</div>
-		<div class="infos w-1/2">
-			<ul>
-				<li>anschrift/inhaber</li>
-				<li>oeffnungszeiten</li>
-				<li>coordinates lat/long</li>
-				<li>impressum/datenschutz</li>
-				<li>kontaktdaten/tel/fax?/mail</li>
-				<li>batteriegesetz?</li>
+		<div class="infos w-1/3 flex justify-center_">
+			<ul class="flex flex-wrap place-content-center gap-y-1 md:max-w-lg text-neutral-400">
+				<li class="px-2">oeffnungszeiten</li>
+				<li class="px-2">coordinates lat/long</li>
+				<li class="px-2">impressum/datenschutz</li>
+				<li class="px-2">kontaktdaten/tel/fax?/mail</li>
+				<li class="px-2">batteriegesetz?</li>
+			</ul>
+		</div>
+		<div class="infos w-1/3 flex justify-center">
+			<ul class="flex flex-col justify-end gap-y-1 md:max-w-lg text-right">
+				<li class="px-2 mb-1.5 text-xs text-neutral-400">SUBWAY - RADSPORT WAGNER</li>
+				<li class="px-2 text-xs">Inhaber: G. Lohner</li>
+				<li class="px-2 text-xs">Hubmannstraße 10</li>
+				<li class="px-2 mb-1.5 text-xs">D-86551 Aichach</li>
+				<li class="px-2 mb-1.5 text-xs">USt-IdNr.: DE359553289</li>
+				<li class="px-2 text-xs">tele: +49 8251 81081</li>
+				<li class="px-2 text-xs"><a href="mailto://info@radsportwagner.com">info@radsportwagner.com</a></li>
 			</ul>
 		</div>
 	</div>
 	<p class="text-neutral-600 font-menu text-xs text-center">
-		Infos zu dieser Website, wann und von wem gebaut ...
+		c3labs.de ©2025 All Rights Reserved
 	</p>
-	<p class="text-neutral-600 font-menu text-xs text-center">
-		copyrightinfo | c3labs 2025 on behalf of subway
+	<p class="text-neutral-800 font-menu text-xs text-center pb-3">
+		DIESE WEBSITE VERWENDET NEDIALE INHALTE UNTER FREUNDLICHER GENEHMIGUNG VON TREK | CUBE | usw...
 	</p>
 </footer>
 
