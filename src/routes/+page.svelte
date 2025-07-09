@@ -41,7 +41,7 @@
 	});
 
 	onMount(() => {
-		animateScroll.scrollToTop({ duration: 1000, delay: 250, offset: 250 });
+		// animateScroll.scrollToTop({ duration: 1000, delay: 250, offset: 250 });
         // animateScroll.scrollToTop({ duration: 1, delay: 250, offset: 20 });
         // console.log('[    reset scroll position  # home   ] - onMount');
     });
@@ -153,7 +153,7 @@
 		<!-- </div> -->
 	<!-- </div> -->
 <!-- </div> -->
-<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-200 relative h-[50vh]" data-uipref="dark" data-stagepart="3">
+<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-200 relative h-[50vh]" data-uipref="dark" data-stagepart="4">
 	<div class="heading">
 		<h1 class=" font-headline text-neutral-300">SUBWAY - Development Server</h1>
 	</div>
@@ -162,21 +162,21 @@
 		<p>CURRENTLY IMPLEMENTING ->> +page video cutting </p>
 	</div>
 </div>
-<div class="fixed z-50 bottom-0 right-4 transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 landscape:max-lg:w-full landscape:max-lg:left-0 font-menu text-xs tracking-wider" transition:fade>
+<div class="fixed z-50 {uiobserver.stagepart === 4 ? 'bottom-30' : 'bottom-0'} bottom-0 right-4 transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 landscape:max-lg:w-full landscape:max-lg:left-0 font-menu text-xs tracking-wider" transition:fade>
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 landscape:max-lg:py-4 sm:block">
 		<div class="flex flex-col landscape:max-lg:flex-row align-bottom items-end landscape:max-lg:justify-center gap-1">
 			<!-- {#if uiobserver.stagepart >= 1} -->
-				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 1 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/bikes')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 1 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/55 z-20 outline-dashed' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-dashed'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">FINDE DEIN BIKE | TECH/BIKES</div>
 				</button>
 			<!-- {/if}
 			{#if uiobserver.stagepart >= 2} -->
-				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 2 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 2 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/55 z-20 outline-dashed' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-dashed'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
 				</button>
 			<!-- {/if}
 			{#if uiobserver.stagepart >= 3} -->
-				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-colors {uiobserver.stagepart === 3 ? 'bg-[var(--bg-menu-color)]/48' : 'bg-[var(--bg-menu-color)]/28'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 3 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/55 z-20 outline-dashed' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-dashed'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
 				</button>
 			<!-- {/if} -->
