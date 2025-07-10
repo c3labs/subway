@@ -2,8 +2,8 @@
 	
 	// import madone from '$lib/assets/images/trek_pone_modone.jpg?enhanced';
 	// import hiscroller from '$lib/assets/video/subway.800_30_na.mp4';
-	import hiscroller from '$lib/assets/video/subway.testpart5_800.mp4';
-	import loscroller from '$lib/assets/video/subway.testpart5_400.mp4';
+	import hiscroller from '$lib/assets/video/subway.testpart6_800.mp4';
+	import loscroller from '$lib/assets/video/subway.testpart6_400.mp4';
 	import { fly, fade } from 'svelte/transition';
 	import { intersect } from '@svelte-put/intersect';
 	import { uiobserver, onIntersect, navigate } from '$lib/uiobserver.svelte';
