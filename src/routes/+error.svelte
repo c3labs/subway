@@ -3,6 +3,13 @@
     import { fade, fly } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
 	import { uiobserver , onIntersect } from "$lib/uiobserver.svelte";
+    import { animateScroll } from 'svelte-scrollto-element';
+	import { onMount } from 'svelte';
+
+    onMount(() => {
+        animateScroll.scrollToTop({ duration: 1, delay: 250 });
+        console.log('[    reset scroll position  # error   ] - onMount');
+    })
 </script>
 
 

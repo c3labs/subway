@@ -10,7 +10,7 @@
 	<div class="corner">
 		<ul class="flex flex-col items-end xl:flex-row gap-x-12">
 			<li class="lg:hidden pb-1 {uiobserver.navstate ? 'opacity-30' : 'opacity-90'}">
-				<button onclick={() => uiobserver.toggleNav()}>{uiobserver.navstate ? '-' : '+'}NAV {uiobserver.uistate}</button>
+				<button onclick={() => uiobserver.toggleNav()}>{uiobserver.navstate ? '-' : '+'}MENU</button>
 			</li>
 			<li aria-current={page.url.pathname === '/bikes' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
 				<button onclick={() => navigate('/bikes')} class="cursor-pointer">TECH/BIKES</button>
