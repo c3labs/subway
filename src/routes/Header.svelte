@@ -12,14 +12,14 @@
 			<li class="lg:hidden pb-1 {uiobserver.navstate ? 'opacity-30' : 'opacity-90'}">
 				<button onclick={() => uiobserver.toggleNav()}>{uiobserver.navstate ? '-' : '+'}MENU</button>
 			</li>
-			<li aria-current={page.url.pathname === '/bikes' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
+			<li aria-current={page.url.pathname === '/bikes' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
 				<button onclick={() => navigate('/bikes')} class="cursor-pointer">TECH/BIKES</button>
 				<!-- <button onclick={uiobserver.toggleUi}>UISTATE: {uiobserver.uistate}</button> -->
 			</li>
-			<li aria-current={page.url.pathname === '/projectone' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
+			<li aria-current={page.url.pathname === '/projectone' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
 				<button onclick={() => navigate("/projectone")} class="cursor-pointer">PROJECT ONE</button>
 			</li>
-			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
+			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
 				<button onclick={() => navigate('/leasing')} class="cursor-pointer">LEASING</button>
 			</li>
 		</ul>
@@ -32,7 +32,7 @@
 	</div>
 	<div class="corner">
 		<ul class="flex flex-col items-end xl:flex-row gap-x-12">
-			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
+			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
 				<button onclick={() => navigate('/workbench')} class="cursor-pointer">+SERVICE/WORKBENCH</button>
 			</li>
 			<li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300" >

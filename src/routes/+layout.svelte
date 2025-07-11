@@ -8,6 +8,11 @@
 	// import '@fontsource/titillium-web/900.css';
 
 	import logo from '$lib/assets/images/logo/subway.logo.v01.svg?raw';
+	import logo_trek from '$lib/assets/images/logo/manufacturer/trek.svg?raw';
+	import logo_cube from '$lib/assets/images/logo/manufacturer/cube.optimized.svg?raw';
+	import logo_diamant from '$lib/assets/images/logo/manufacturer/diamant.svg?raw';
+	import logo_bontrager from '$lib/assets/images/logo/manufacturer/bontrager.svg?raw';
+	import logo_electra from '$lib/assets/images/logo/manufacturer/electra.svg?raw';
 
 	import Header from './Header.svelte';
 
@@ -67,43 +72,58 @@
 	{/if}
 </main>
 
-<footer class="relative z-11 bg-neutral-900">
-	<div class="container flex flex-col-reverse lg:flex-row justify-center text-neutral-500 font-menu text-sm p-6">
-		<div class="logo w-1/3 flex _justify-center place-content-center items-center">
-			<ul class="flex flex-wrap place-content-center gap-y-1 md:max-w-lg">
-				<li class="px-2">TREK LOGO</li>
-				<li class="px-2">CUBE LOGO</li>
-				<li class="px-2">BONTRAGER LOGO</li>
-				<li class="px-2">DIAMANT LOGO</li>
-				<li class="px-2">SONSTIGES LOGO</li>
+<footer class="relative z-11 bg-neutral-900 flex flex-col items-center">
+	<div class="container flex flex-col md:flex-row justify-center text-neutral-600 font-menu text-xs p-6">
+
+		<div class="_w-1/3 flex-none order-3 md:order-1 _justify-center max-md:pb-6">
+			<ul class="flex flex-col max-md:items-center gap-y-1 md:max-w-lg">
+				<li class="px-2 mb-1.5 text-neutral-400 uppercase">Öffnungszeiten:</li>
+				<li class="px-2">Montag	09:00–12:00, 14:00–18:00</li>
+				<li class="px-2">Dienstag	09:00–12:00, 14:00–18:00</li>
+				<li class="px-2">Mittwoch	09:00–12:00, 14:00–18:00</li>
+				<li class="px-2">Donnerstag	09:00–12:00, 14:00–18:00</li>
+				<li class="px-2">Freitag	09:00–12:00, 14:00–18:00</li>
+				<li class="px-2">Samstag	09:00–13:00</li>
+				
+				<li class="px-2 mt-1.5 text-neutral-500 hover:text-neutral-300 transition-colors duration-300"><a href="//maps.app.goo.gl/XSHnkLPzBnqJbCFi7" target="_blank">48.459421, 11.1300627 - [lat/lon]</a></li>
+
+				<!-- <li class="px-2">? impressum ?</li>
+				<li class="px-2">? agb ?</li>
+				<li class="px-2">? datenschutz ?</li>
+				<li class="px-2">? batteriegesetz ?</li> -->
 			</ul>
 		</div>
-		<div class="infos w-1/3 flex justify-center_">
-			<ul class="flex flex-wrap place-content-center gap-y-1 md:max-w-lg text-neutral-400">
-				<li class="px-2">oeffnungszeiten</li>
-				<li class="px-2">coordinates lat/long</li>
-				<li class="px-2">impressum/datenschutz</li>
-				<li class="px-2">kontaktdaten/tel/fax?/mail</li>
-				<li class="px-2">batteriegesetz?</li>
+		<div class="_w-1/3 flex-auto order-1 md:order-2 _justify-center place-content-center items-center max-md:pb-10">
+			
+			<ul class="flex _max-md:flex-col flex-wrap place-content-center gap-y-1 _md:max-w-lg">
+				<!-- <li class="px-2 w-[100px] mb-1.5 text-neutral-400 uppercase flex-none">Hersteller:</li> -->
+				<li class="px-2 w-[100px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_trek}</li>
+				<li class="px-2 w-[110px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_cube}</li>
+				<li class="px-2 w-[120px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_bontrager}</li>
+				<li class="px-2 w-[100px] h-10 text-neutral-600 hover:text-neutral-300 -translate-y-1 transition-colors duration-300">{@html logo_diamant}</li>
+				<li class="px-2 w-[95px] h-10 text-neutral-600 hover:text-neutral-300 -translate-y-0.5 transition-colors duration-300">{@html logo_electra}</li>
 			</ul>
 		</div>
-		<div class="infos w-1/3 flex justify-center">
-			<ul class="flex flex-col justify-end gap-y-1 md:max-w-lg text-right">
+		<div class="flex-none order-2 md:order-3 justify-center lg:justify-end max-md:pb-10">
+			<ul class="flex flex-col gap-y-1 md:max-w-lg text-center md:text-right">
 				<li class="px-2 mb-1.5 text-xs text-neutral-400">SUBWAY - RADSPORT WAGNER</li>
 				<li class="px-2 text-xs">Inhaber: G. Lohner</li>
 				<li class="px-2 text-xs">Hubmannstraße 10</li>
 				<li class="px-2 mb-1.5 text-xs">D-86551 Aichach</li>
 				<li class="px-2 mb-1.5 text-xs">USt-IdNr.: DE359553289</li>
 				<li class="px-2 text-xs">tele: +49 8251 81081</li>
-				<li class="px-2 text-xs"><a href="mailto://info@radsportwagner.com">info@radsportwagner.com</a></li>
+				<li class="px-2 text-xs text-neutral-500 hover:text-neutral-300 transition-colors duration-300"><a href="mailto:info@radsportwagner.com">info@radsportwagner.com</a></li>
 			</ul>
 		</div>
 	</div>
-	<p class="text-neutral-600 font-menu text-xs text-center">
-		c3labs.de ©2025 All Rights Reserved
-	</p>
-	<p class="text-neutral-800 font-menu text-xs text-center pb-3">
-		DIESE WEBSITE VERWENDET NEDIALE INHALTE UNTER FREUNDLICHER GENEHMIGUNG VON TREK | CUBE | usw...
-	</p>
+	<div class="container">
+		<p class="text-neutral-600  font-menu text-xs text-center">
+			© 2025 <a href="https://c3labs.de" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-300">c3labs.de</a> | All Rights Reserved
+		</p>
+		<p class="text-neutral-700 font-menu text-xs text-center p-3">
+			DIESE WEBSITE VERWENDET NEDIALE INHALTE UNTER FREUNDLICHER GENEHMIGUNG VON TREK | CUBE | usw...
+		</p>
+	</div>
+	
 </footer>
 

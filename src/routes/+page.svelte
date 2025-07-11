@@ -162,7 +162,7 @@
 		<p>CURRENTLY IMPLEMENTING ->> +page video cutting </p>
 	</div>
 </div>
-<div class="fixed z-50 {uiobserver.stagepart === 4 ? 'bottom-30' : 'bottom-0'} bottom-0 right-4 transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 landscape:max-lg:w-full landscape:max-lg:left-0 font-menu text-xs tracking-wider" transition:fade>
+<div class="fixed z-50 {uiobserver.stagepart === 4 ? 'bottom-30 hidden' : 'bottom-0'} bottom-0 right-4 transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 landscape:max-lg:w-full landscape:max-lg:left-0 font-menu text-xs tracking-wider" transition:fade>
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 landscape:max-lg:py-4 sm:block">
 		<div class="flex flex-col landscape:max-lg:flex-row align-bottom items-end landscape:max-lg:justify-center gap-1">
 			<!-- {#if uiobserver.stagepart >= 1} -->
