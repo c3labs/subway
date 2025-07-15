@@ -25,6 +25,33 @@
 	let { children } = $props();
 	let countdown = $state(10);
 	let timerId = $state(0);
+	let date = new Date();
+	let weekday = date.getDay();
+	let currentHour = date.getHours();
+	let currentMinute = date.getMinutes();
+	let opened = $state(false);
+
+	const openingHours = [
+    //    { day: 0, open: '09:00', close: '18:00' }, // Sunday
+       { day: 1, open: '09:00', close: '18:00' }, // Monday
+       { day: 2, open: '09:00', close: '18:00' }, // Tuesday
+       { day: 3, open: '09:00', close: '18:00' }, // Wednesday
+       { day: 4, open: '09:00', close: '18:00' }, // Thursday
+       { day: 5, open: '09:00', close: '18:00' }, // Friday
+       { day: 6, open: '09:00', close: '13:00' }, // Saturday 
+	];
+
+	let openingHoursToday = openingHours.find(item => item.day === weekday);
+
+    if (openingHoursToday) {
+    	const [openHour, openMinute] = openingHoursToday.open.split(':').map(Number);
+    	const [closeHour, closeMinute] = openingHoursToday.close.split(':').map(Number);
+    	if (currentHour > openHour || (currentHour === openHour && currentMinute >= openMinute)) {
+			if (currentHour < closeHour || (currentHour === closeHour && currentMinute < closeMinute)) {
+				opened = true;
+        	}
+    	}
+    }
 
 	$effect(() => {
 		if(countdown === 0) {
@@ -75,17 +102,17 @@
 <footer class="relative z-11 bg-neutral-900 flex flex-col items-center">
 	<div class="container flex flex-col md:flex-row justify-center text-neutral-600 font-menu text-xs p-6">
 
-		<div class="_w-1/3 flex-none order-3 md:order-1 _justify-center max-md:pb-6">
-			<ul class="flex flex-col max-md:items-center gap-y-1 md:max-w-lg">
-				<li class="px-2 mb-1.5 text-neutral-400 uppercase">Öffnungszeiten:</li>
-				<li class="px-2">Montag	09:00–12:00, 14:00–18:00</li>
-				<li class="px-2">Dienstag	09:00–12:00, 14:00–18:00</li>
-				<li class="px-2">Mittwoch	09:00–12:00, 14:00–18:00</li>
-				<li class="px-2">Donnerstag	09:00–12:00, 14:00–18:00</li>
-				<li class="px-2">Freitag	09:00–12:00, 14:00–18:00</li>
-				<li class="px-2">Samstag	09:00–13:00</li>
+		<div class="flex-none order-3 md:order-1 max-md:pb-6">
+			<ul class="flex flex-col _max-md:items-center gap-y-1 md:max-w-lg">
+				<li class="px-2 mb-1.5 max-md:text-center text-neutral-400 uppercase">Öffnungszeiten: {opened ? '... wir sind am Start!' : '... Feierabend!'}</li>
+				<li class="px-2 flex justify-between {weekday === 1 ? 'text-neutral-400' : ''}">Montag<span class="text-right">09:00–12:00, 14:00–18:00</span></li>
+				<li class="px-2 flex justify-between {weekday === 2 ? 'text-neutral-400' : ''}">Dienstag<span class="text-right">09:00–12:00, 14:00–18:00</span></li>
+				<li class="px-2 flex justify-between {weekday === 3 ? 'text-neutral-400' : ''}">Mittwoch<span class="text-right">09:00–12:00, 14:00–18:00</span></li>
+				<li class="px-2 flex justify-between {weekday === 4 ? 'text-neutral-400' : ''} gap-x-3">Donnerstag<span class="text-right">09:00–12:00, 14:00–18:00</span></li>
+				<li class="px-2 flex justify-between {weekday === 5 ? 'text-neutral-400' : ''}">Freitag<span class="text-right">09:00–12:00, 14:00–18:00</span></li>
+				<li class="px-2 flex justify-between {weekday === 6 ? 'text-neutral-400' : ''}">Samstag<span class="text-right">09:00–13:00</span></li>
 				
-				<li class="px-2 mt-1.5 text-neutral-500 hover:text-neutral-300 transition-colors duration-300"><a href="//maps.app.goo.gl/XSHnkLPzBnqJbCFi7" target="_blank">48.459421, 11.1300627 - [lat/lon]</a></li>
+				<li class="px-2 mt-1.5 max-md:text-center text-neutral-500 hover:text-neutral-300 transition-colors duration-300"><a href="//maps.app.goo.gl/XSHnkLPzBnqJbCFi7" target="_blank">48.459421, 11.1300627 - [lat/lon]</a></li>
 
 				<!-- <li class="px-2">? impressum ?</li>
 				<li class="px-2">? agb ?</li>
@@ -93,10 +120,9 @@
 				<li class="px-2">? batteriegesetz ?</li> -->
 			</ul>
 		</div>
-		<div class="_w-1/3 flex-auto order-1 md:order-2 _justify-center place-content-center items-center max-md:pb-10">
+		<div class="flex-auto order-1 md:order-2 place-content-center items-center max-md:pb-10">
 			
-			<ul class="flex _max-md:flex-col flex-wrap place-content-center gap-y-1 _md:max-w-lg">
-				<!-- <li class="px-2 w-[100px] mb-1.5 text-neutral-400 uppercase flex-none">Hersteller:</li> -->
+			<ul class="flex flex-wrap place-content-center gap-y-1">
 				<li class="px-2 w-[100px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_trek}</li>
 				<li class="px-2 w-[110px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_cube}</li>
 				<li class="px-2 w-[120px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_bontrager}</li>
@@ -121,7 +147,7 @@
 			© 2025 <a href="https://c3labs.de" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-300">c3labs.de</a> | All Rights Reserved
 		</p>
 		<p class="text-neutral-700 font-menu text-xs text-center p-3">
-			DIESE WEBSITE VERWENDET NEDIALE INHALTE UNTER FREUNDLICHER GENEHMIGUNG VON TREK | CUBE | usw...
+			DIESE WEBSITE FUNKTIONIERT OHNE COOKIES - SAMMELT KEINE DATEN - VERWENDET NEDIALE INHALTE MIT FREUNDLICHER GENEHMIGUNG VON TREK | CUBE | usw...
 		</p>
 	</div>
 	
