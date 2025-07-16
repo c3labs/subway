@@ -28,15 +28,20 @@
             <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_Madone_SL_SLR Gen_8.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" />
             <div class="absolute h-full w-full top-0">
                 {#if postep === 1}
-                <h2 class="absolute _bottom-30 left-[50%] top-[50%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" transition:fade>DU BIST EINZIGARTIG.
+                <h2 class="absolute left-[50%] top-[50%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" transition:fade>DU BIST EINZIGARTIG.
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
                         <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">UND DEIN BIKE</span>
                     </span>
                     SOLLTE ES AUCH SEIN.
                 </h2>
+                <div class="_bg-neutral-100 text-neutral-600 w-full text-right rounded-xl absolute left-[50%] _top-[70%] -bottom-[25%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12">
+                    Hebe dich mit einem unverwechselbaren Custombike von Project One von der Masse ab.
+                    <!-- Jedes TREK Project One Bike wird von einem Team aus talentierten Künstlern und erfahrenen Bikebuildern einzeln von Hand lackiert und aufgebaut.  -->
+                    <!-- Du wählst aus den branchenweit besten Komponenten und passt dein Bike perfekt an deine Wünsche und Ansprüche an. -->
+                </div>
                 {/if}
                 {#if postep === 2}
-                <h2 class="absolute _bottom-30 left-[50%] top-[50%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>WIR ZEIGEN DIR
+                <h2 class="absolute left-[50%] top-[50%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>WIR ZEIGEN DIR
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
                         <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">WIE DU ZU DEINEM TRAUMBIKE</span>
                     </span>
@@ -44,16 +49,15 @@
                 </h2>
                 {/if}
             </div>
-            <div class="absolute -bottom-[25%] left-[50%] -translate-x-1/2 container mx-auto px-4 text-center">
-                <div class="text-neutral-100 font-headline font-bold text-3xl lg:text-4xl xl:text-5xl" transition:fade>
+            <div class="absolute _-bottom-[25%] bottom-2 left-[50%] -translate-x-1/2 container mx-auto px-4 text-center">
+                <!-- <button class="bg-[var(--bg-state-color)]/30 transition-colors hover:bg-[var(--bg-state-color)]/20 rounded-md px-7 py-3 m-4 backdrop-blur-md cursor-pointer" onclick={() => {postep++}}>NEXT STEP: {postep}</button> -->
+                <div class="text-neutral-100 font-headline font-bold text-4xl lg:text-4xl xl:text-5xl" transition:fade>
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 1 ? 'text-neutral-100' : 'text-neutral-600'}" onclick={() => {postep = 1}}>1</button> - 
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 2 ? 'text-neutral-100' : 'text-neutral-600'}" onclick={() => {postep = 2}}>2</button> - 
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 3 ? 'text-neutral-100' : 'text-neutral-600'}" onclick={() => {postep = 3}}>3</button> - 
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 4 ? 'text-neutral-100' : 'text-neutral-600'}" onclick={() => {postep = 4}}>4</button> - 
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 5 ? 'text-neutral-100' : 'text-neutral-600'}" onclick={() => {postep = 5}}>5</button>
                 </div>
-                
-                <button class="bg-[var(--bg-state-color)]/30 transition-colors hover:bg-[var(--bg-state-color)]/20 rounded-md px-7 py-3 m-4 backdrop-blur-md cursor-pointer" onclick={() => {postep++}}>NEXT STEP: {postep}</button>
             </div>
             <!-- <div class=" grid grid-cols-6 gap-2 container place-items-center h-screen">
                 
