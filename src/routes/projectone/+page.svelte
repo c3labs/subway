@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    // import projectOne01 from '$lib/assets/images/bikes/projectOne/MY25_Madone_SL_SLR Gen_8.jpg';
+    // import projectOne01 from '$lib/assets/images/trek_pone_modone.jpg';
 	import { fade, fly } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
 	import { uiobserver , onIntersect } from "$lib/uiobserver.svelte";
@@ -25,7 +25,12 @@
     <div class="relative h-[100vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
         <div class="sticky top-0 left-0 z-10 h-[75vh] w-full bg-neutral-800" in:fade={{ duration: 300, delay: 500 }} out:fade>
             <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>IN NUR FÜNF STEPS ZU DEINEM COSTOM BIKE | <span class="font-bold"> TREK - PROJECT ONE</span></h1>
-            <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_Madone_SL_SLR Gen_8.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" />
+            {#if postep === 1}
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_Madone_SL_SLR Gen_8.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade/>
+            {/if}
+            {#if postep === 2}
+                <enhanced:img src="../../lib/assets/images/trek_pone_modone.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade/>
+            {/if}
             <div class="absolute h-full w-full top-0">
                 {#if postep === 1}
                 <h2 class="absolute left-[50%] top-[50%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" transition:fade>DU BIST EINZIGARTIG.
@@ -51,7 +56,7 @@
             </div>
             <div class="absolute _-bottom-[25%] bottom-2 left-[50%] -translate-x-1/2 container mx-auto px-4 text-center">
                 <!-- <button class="bg-[var(--bg-state-color)]/30 transition-colors hover:bg-[var(--bg-state-color)]/20 rounded-md px-7 py-3 m-4 backdrop-blur-md cursor-pointer" onclick={() => {postep++}}>NEXT STEP: {postep}</button> -->
-                <div class="text-neutral-100 font-headline font-bold text-4xl lg:text-4xl xl:text-5xl" transition:fade>
+                <div class="text-neutral-100 font-headline font-bold text-4xl sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl" transition:fade>
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 1 ? 'text-neutral-100' : 'text-neutral-600'}" onclick={() => {postep = 1}}>1</button> - 
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 2 ? 'text-neutral-100' : 'text-neutral-600'}" onclick={() => {postep = 2}}>2</button> - 
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 3 ? 'text-neutral-100' : 'text-neutral-600'}" onclick={() => {postep = 3}}>3</button> - 
