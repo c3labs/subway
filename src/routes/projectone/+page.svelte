@@ -8,7 +8,7 @@
 	import { animateScroll } from 'svelte-scrollto-element';
 	import { onMount } from "svelte";
 
-    let postep = $state(1);
+    let postep = $state(0);
 
     onMount(() => {
         animateScroll.scrollToTop({ duration: 1, delay: 300 });
@@ -24,34 +24,77 @@
 <!-- <div class="c3:outher_box"> -->
     <div class="relative h-[100vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
         <div class="sticky top-0 left-0 z-10 h-[75vh] w-full bg-neutral-800" in:fade={{ duration: 300, delay: 500 }} out:fade>
-            <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>IN NUR FÜNF STEPS ZU DEINEM COSTOM BIKE | <span class="font-bold"> TREK - PROJECT ONE</span></h1>
-            {#if postep === 1}
-                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_Madone_SL_SLR Gen_8.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade/>
+            <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>IN NUR FÜNF STEPS ZU DEINEM COSTOM BIKE | <span class="font-bold"> TREK - PROJECT ONE</span></h1>
+            {#if postep === 0}
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_0.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade />
             {/if}
-            {#if postep === 2}
-                <enhanced:img src="../../lib/assets/images/trek_pone_modone.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade/>
+            {#if postep === 1} 
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
+            {/if}
+            {#if postep === 2} 
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_2.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
+            {/if}
+            {#if postep === 3} 
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_3.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light" />
+            {/if}
+            {#if postep === 4} 
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_4.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
+            {/if}
+            {#if postep === 5} 
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_5.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade  use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light" />
             {/if}
             <div class="absolute h-full w-full top-0">
-                {#if postep === 1}
-                <h2 class="absolute left-[50%] top-[50%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" transition:fade>DU BIST EINZIGARTIG.
+                {#if postep === 0}
+                <h2 class="absolute left-[50%] top-[55%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" transition:fade>DU BIST EINZIGARTIG.
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
                         <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">UND DEIN BIKE</span>
                     </span>
                     SOLLTE ES AUCH SEIN.
                 </h2>
-                <div class="_bg-neutral-100 text-neutral-600 w-full text-right rounded-xl absolute left-[50%] _top-[70%] -bottom-[25%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12">
+                <div class="_bg-neutral-100 text-neutral-500 w-full text-right font-regular text-base rounded-xl absolute left-[50%] _top-[70%] -bottom-[25%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12" transition:fade>
                     Hebe dich mit einem unverwechselbaren Custombike von Project One von der Masse ab.
                     <!-- Jedes TREK Project One Bike wird von einem Team aus talentierten Künstlern und erfahrenen Bikebuildern einzeln von Hand lackiert und aufgebaut.  -->
                     <!-- Du wählst aus den branchenweit besten Komponenten und passt dein Bike perfekt an deine Wünsche und Ansprüche an. -->
                 </div>
                 {/if}
-                {#if postep === 2}
-                <h2 class="absolute left-[50%] top-[50%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>WIR ZEIGEN DIR
+                {#if postep === 1}
+                <h2 class="absolute left-[50%] top-[40%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-800/90 translate-x-0.5 -translate-y-4">Step 1 # </span> Such dir  
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">WIE DU ZU DEINEM TRAUMBIKE</span>
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">deine Rennmaschine</span>
                     </span>
-                    KOMMST.
+                    aus dem TREK RENNRAD LINEUP.
                 </h2>
+                <div class="_bg-neutral-100 text-neutral-500 w-full text-right font-regular text-base rounded-xl absolute left-[50%] _top-[70%] -bottom-[25%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12" transition:fade>
+                    Mit Project One kannst du dein Traumbike genau nach deinen Vorstellungen, Wünschen und Anforderungen erschaffen. Zur Auswahl stehen dir: Madone - Domane - Domane+ - Checkmate - Speed Concept
+                    <!-- Jedes TREK Project One Bike wird von einem Team aus talentierten Künstlern und erfahrenen Bikebuildern einzeln von Hand lackiert und aufgebaut.  -->
+                    <!-- Du wählst aus den branchenweit besten Komponenten und passt dein Bike perfekt an deine Wünsche und Ansprüche an. -->
+                </div>
+                {/if}
+                {#if postep === 2}
+                <h2 class="absolute left-[50%] top-[70%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-800/90 translate-x-0.5 -translate-y-4">Step 2 # </span> Wähle deinen STYLE aus einer nahezu   
+                    <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">endlosen Palette</span>
+                    </span>
+                    an Lackierungen und DESIGNS.
+                </h2>
+                <div class="_bg-neutral-100 text-neutral-500 w-full text-right font-regular text-base rounded-xl absolute left-[50%] _top-[70%] -bottom-[25%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12" transition:fade>
+                    <!-- Hebe dich mit einem unverwechselbaren Custombike von Project One von der Masse ab. -->
+                    Jedes TREK Project One Bike wird von einem Team aus talentierten Künstlern und erfahrenen Bikebuildern einzeln von Hand lackiert und aufgebaut. 
+                    <!-- Du wählst aus den branchenweit besten Komponenten und passt dein Bike perfekt an deine Wünsche und Ansprüche an. -->
+                </div>
+                {/if}
+                {#if postep === 3}
+                <h2 class="absolute left-[50%] top-[65%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-800/90 translate-x-0.5 -translate-y-4">Step 3 # </span> Bestücke dein Traumbike mit   
+                    <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">TOP Komponenten</span>
+                    </span>
+                    von TREK, SRAM und SHIMANO.
+                </h2>
+                <div class="_bg-neutral-100 text-neutral-500 w-full text-right font-regular text-base rounded-xl absolute left-[50%] _top-[70%] -bottom-[25%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12" transition:fade>
+                    <!-- Hebe dich mit einem unverwechselbaren Custombike von Project One von der Masse ab. -->
+                    <!-- Jedes TREK Project One Bike wird von einem Team aus talentierten Künstlern und erfahrenen Bikebuildern einzeln von Hand lackiert und aufgebaut.  -->
+                    Du wählst aus den branchenweit besten Komponenten und passt dein Bike perfekt an deine Wünsche und Ansprüche an.
+                </div>
                 {/if}
             </div>
             <div class="absolute _-bottom-[25%] bottom-2 left-[50%] -translate-x-1/2 container mx-auto px-4 text-center">
