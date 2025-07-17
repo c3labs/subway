@@ -24,7 +24,7 @@
 <!-- <div class="c3:outher_box"> -->
     <div class="relative h-[100vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
         <div class="sticky top-0 left-0 z-10 h-[75vh] w-full bg-neutral-800" in:fade={{ duration: 300, delay: 500 }} out:fade>
-            <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>IN NUR FÜNF STEPS ZU DEINEM COSTOM BIKE | <span class="font-bold"> TREK - PROJECT ONE</span></h1>
+            <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>IN NUR FÜNF STEPS ZU DEINEM COSTOM BIKE | <span class="font-bold"> TREK - PROJECT ONE</span></h1>
             {#if postep === 0}
                 <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_0.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade />
             {/if}
@@ -45,9 +45,9 @@
             {/if}
             <div class="absolute h-full w-full top-0">
                 {#if postep === 0}
-                <h2 class="absolute left-[50%] top-[55%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800" transition:fade>DU BIST EINZIGARTIG.
+                <h2 class="absolute left-[50%] top-[55%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800 uppercase text-shadow-lg" transition:fade>DU BIST EINZIGARTIG.
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">UND DEIN BIKE</span>
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">UND DEIN BIKE</span>
                     </span>
                     SOLLTE ES AUCH SEIN.
                 </h2>
@@ -58,9 +58,9 @@
                 </div>
                 {/if}
                 {#if postep === 1}
-                <h2 class="absolute left-[50%] top-[40%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4">Step 1 # </span> Such dir  
+                <h2 class="absolute left-[50%] top-[40%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 1 # </span> Such dir  
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">deine Rennmaschine</span>
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">deine Rennmaschine</span>
                     </span>
                     aus dem TREK RENNRAD LINEUP.
                 </h2>
@@ -71,9 +71,9 @@
                 </div>
                 {/if}
                 {#if postep === 2}
-                <h2 class="absolute left-[50%] top-[70%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4">Step 2 # </span> Wähle deinen STYLE aus einer nahezu   
+                <h2 class="absolute left-[50%] top-[70%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 2 # </span> Wähle deinen STYLE aus einer nahezu   
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">endlosen Palette</span>
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">endlosen Palette</span>
                     </span>
                     an Lackierungen und DESIGNS.
                 </h2>
@@ -84,9 +84,9 @@
                 </div>
                 {/if}
                 {#if postep === 3}
-                <h2 class="absolute left-[50%] top-[65%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4">Step 3 # </span> Bestücke dein Traumbike mit   
+                <h2 class="absolute left-[50%] top-[65%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 3 # </span> Bestücke dein Traumbike mit   
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">TOP Komponenten</span>
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">TOP Komponenten</span>
                     </span>
                     von TREK, SRAM und SHIMANO.
                 </h2>
@@ -97,9 +97,9 @@
                 </div>
                 {/if}
                 {#if postep === 4}
-                <h2 class="absolute left-[50%] top-[80%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-900 uppercase" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-100/70 translate-x-0.5 -translate-y-4">Step 4 # </span> Stimme deine
+                <h2 class="absolute left-[50%] top-[80%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-900 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-100/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 4 # </span> Stimme deine
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">perfekte Passform</span>
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">perfekte Passform</span>
                     </span>
                     mit uns ab.
                 </h2>
@@ -110,9 +110,9 @@
                 </div>
                 {/if}
                 {#if postep === 5}
-                <h2 class="absolute left-[50%] top-[70%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4">Step 5 # </span> Jetzt darfst du dich 
+                <h2 class="absolute left-[50%] top-[70%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 5 # </span> Jetzt darfst du dich 
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">vier Wochen</span>
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">vier Wochen</span>
                     </span>
                     auf dein Traumbike freuen.
                 </h2>
