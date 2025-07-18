@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    // import projectOne01 from '$lib/assets/images/trek_pone_modone.jpg';
+    import projectOne01 from '$lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 7.jpeg';
 	import { fade, fly } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
 	import { uiobserver , onIntersect } from "$lib/uiobserver.svelte";
@@ -26,22 +26,22 @@
         <div class="sticky top-0 left-0 z-10 h-[75vh] w-full bg-neutral-800" in:fade={{ duration: 300, delay: 500 }} out:fade>
             <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>IN NUR FÜNF STEPS ZU DEINEM COSTOM BIKE | <span class="font-bold"> TREK - PROJECT ONE</span></h1>
             {#if postep === 0}
-                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_0.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade />
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_0.jpg?format=avif;webp" alt="Project One - Madone Hero Shot" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade />
             {/if}
             {#if postep === 1} 
-                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne.jpg?format=avif;webp" alt="Project One - Step 1 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
             {/if}
             {#if postep === 2} 
-                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_2.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_2.jpg?format=avif;webp" alt="Project One - Step 2 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
             {/if}
             {#if postep === 3} 
-                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_3.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light" />
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_3.jpg?format=avif;webp" alt="Project One - Step 3 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light" />
             {/if}
             {#if postep === 4} 
-                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_4.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_4.jpg?format=avif;webp" alt="Project One - Step 4 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
             {/if}
             {#if postep === 5} 
-                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_5.jpg?format=avif;webp" alt="madone alt text" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade  use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light" />
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_5.jpg?format=avif;webp" alt="Project One - Step 5 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade  use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light" />
             {/if}
             <div class="absolute h-full w-full top-0">
                 {#if postep === 0}
@@ -133,19 +133,13 @@
                     <button class="transition-colors px-2 py-2 cursor-pointer {postep === 5 ? 'text-neutral-100 hover:text-neutral-100' : 'text-neutral-900/70 hover:text-neutral-100/40'} active:text-neutral-100/50" onclick={() => {postep = 5}}>5</button>
                 </div>
             </div>
-            <!-- <div class=" grid grid-cols-6 gap-2 container place-items-center h-screen">
-                
-            </div> -->
-        </div>
-        <div class="top-24 _flex _h-full _w-full _flex-col _items-stretch _justify-center _overflow-hidden">
-            <!-- <div class="_col-span-6 text-red-400" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>ProjectONE - first section - should show a hero image with headlines H1 first with H2_#1 scrollable to H2_#2</div> -->
         </div>
     </div>
     <div class="relative h-[150vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-uiwidth="50">
         <div class="sticky top-0 left-0 z-10 h-screen w-full bg-neutral-100" out:fade>
-            <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE BIKE VISIONEN - SO INDIVIDUELL WIE IHRE BESITZER | <span class="font-bold">PROJECT ONE SHOW</span></h1>
+            <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE BIKE VISIONEN - SO INDIVIDUELL WIE IHRE BESITZER | <span class="font-bold">PROJECT ONE OWNERS CLUB</span></h1>
             <div class="noscrollbar lg:scroll-smooth_ flex h-full cursor-grab touch-pan-y touch-pinch-zoom select-none overflow-x-scroll max-sm:touch-pan-x snap-x_ snap-proximity_" use:dragscroll id="scrollstage">
-                <div class=" relative h-full shrink-0 overflow-hidden transition-[width] duration-700 ease-in-out {uiobserver.wchange ? 'w-[85vw] lg:w-[60vw]' : 'w-full'}  pb-[15vh] pt-[15vh] snap-start">
+                <!-- <div class=" relative h-full shrink-0 overflow-hidden transition-[width] duration-700 ease-in-out {uiobserver.wchange ? 'w-[85vw] lg:w-[60vw]' : 'w-full'}  pb-[15vh] pt-[15vh] snap-start">
                     <div class="text-neutral-900" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage1">ProjectONE - second section part #1- brief explainer how to get one of these projektONEs implemented as horizontal slider
                         <p>
                             <button onclick={() => animateScroll.scrollTo({element: '#stage2', scrollX: true, container: '#scrollstage'})}> Scroll to stage2 </button>
@@ -154,31 +148,68 @@
                             <button onclick={() => animateScroll.scrollToTop()}> Scroll to top </button>
                         </p>
                     </div>
-                </div>
+                </div> -->
                 <div class="flex h-full w-max transform gap-8 px-8 pb-[15vh] pt-[15vh]">
-                    <div class="w-full h-full text-neutral-400 bg-neutral-300 snap-center_" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage2">
-                        <div class="w-[414px]">
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage2">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 3.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                        <!-- <div class="w-[414px]">
                             ProjectONE - second section part #2 - sections #1 how to do it
                             <p>
                                 <button onclick={() => animateScroll.scrollTo({element: '#stage3', scrollX: true, container: '#scrollstage',})}> Scroll to stage3 </button>
                             </p>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="w-full h-full text-neutral-400 bg-neutral-300 snap-center_" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage3">
-                        <div class="w-[100vh]">
-                            ProjectONE - second section part #2 - sections #2 how to do it
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage3">
+                        <!-- <div class="w-[100vh]"> -->
+                            <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 1.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                             <!-- <img src={projectOne01} alt="nettes Bild" class="h-full w-full object-cover object-center _aspect-4/9"> -->
+                            <!-- ProjectONE - second section part #2 - sections #2 how to do it
                             <p>
                                 <button onclick={() => animateScroll.scrollTo({element: '#stage4', scrollX: true, container: '#scrollstage',})}> Scroll to stage4 </button>
-                            </p>
-                        </div>
+                            </p> -->
+                        <!-- </div> -->
                     </div>
-                    <div class="w-full h-full text-neutral-400 bg-neutral-300 snap-end_" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
-                        <div class="w-[414px]" id="stage1a">
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 2.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                        <!-- <div class="w-[414px]" id="stage1a">
                             ProjectONE - second section part #2 - sections #3 how to do it
                             <p>
                                 <button onclick={() => animateScroll.scrollTo({element: '#stage1', scrollX: true, container: '#scrollstage'})}> Scroll to stage1 </button>
                             </p>
-                        </div>
+                        </div> -->
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 4.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 5.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 6.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 7.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 8.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 9.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 10.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 11.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 12.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 13.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    </div>
+                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 14.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
                 </div>
             </div>
