@@ -138,7 +138,7 @@
     <div class="relative h-[110vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-uiwidth="50">
         <div class="sticky top-0 left-0 z-10 h-screen w-full bg-neutral-100" out:fade>
             <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE BIKE VISIONEN - SO INDIVIDUELL WIE IHRE BESITZER | <span class="font-bold">PROJECT ONE OWNERS CLUB</span></h1>
-            <div class="noscrollbar lg:scroll-smooth_ flex h-full cursor-grab touch-pan-y touch-pinch-zoom select-none overflow-x-scroll max-sm:touch-pan-x snap-x_ snap-proximity_" use:dragscroll id="scrollstage">
+            <div class="noscrollbar flex h-full cursor-grab touch-pan-y touch-pinch-zoom select-none overflow-x-scroll max-sm:touch-pan-x" use:dragscroll id="scrollstage">
                 <!-- <div class=" relative h-full shrink-0 overflow-hidden transition-[width] duration-700 ease-in-out {uiobserver.wchange ? 'w-[85vw] lg:w-[60vw]' : 'w-full'}  pb-[15vh] pt-[15vh] snap-start">
                     <div class="text-neutral-900" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage1">ProjectONE - second section part #1- brief explainer how to get one of these projektONEs implemented as horizontal slider
                         <p>
@@ -150,7 +150,7 @@
                     </div>
                 </div> -->
                 <div class="flex h-full w-max transform gap-4 px-4 lg:gap-8 lg:px-8 pb-[20vh] pt-[18vh] lg:pb-[15vh] lg:pt-[15vh] shrink-0 grow-0">
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage2">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage2">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 3.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                         <!-- <div class="w-[414px]">
                             ProjectONE - second section part #2 - sections #1 how to do it
@@ -159,7 +159,7 @@
                             </p>
                         </div> -->
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage3">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage3">
                         <!-- <div class="w-[100vh]"> -->
                             <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 1.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                              <!-- <img src={projectOne01} alt="nettes Bild" class="h-full w-full object-cover object-center _aspect-4/9"> -->
@@ -169,7 +169,7 @@
                             </p> -->
                         <!-- </div> -->
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 2.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                         <!-- <div class="w-[414px]" id="stage1a">
                             ProjectONE - second section part #2 - sections #3 how to do it
@@ -178,37 +178,37 @@
                             </p>
                         </div> -->
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 4.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 5.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 6.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 7.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 8.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 9.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 10.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 11.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 12.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 13.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
+                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 14.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                     </div>
                 </div>
