@@ -45,7 +45,7 @@
             {/if}
             <div class="absolute h-full w-full top-0">
                 {#if postep === 0}
-                <h2 class="absolute left-[50%] top-[55%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800 uppercase text-shadow-lg" transition:fade>DU BIST EINZIGARTIG.
+                <h2 class="absolute left-[50%] top-[45%] lg:top-[48%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-800 uppercase text-shadow-lg" transition:fade>DU BIST EINZIGARTIG.
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
                         <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">UND DEIN BIKE</span>
                     </span>
@@ -84,7 +84,7 @@
                 </div>
                 {/if}
                 {#if postep === 3}
-                <h2 class="absolute left-[50%] top-[65%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 3 # </span> Bestücke dein Traumbike mit   
+                <h2 class="absolute left-[50%] top-[55%] lg:top-[35%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 3 # </span> Bestücke dein Traumbike mit   
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
                         <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">TOP Komponenten</span>
                     </span>
@@ -97,7 +97,7 @@
                 </div>
                 {/if}
                 {#if postep === 4}
-                <h2 class="absolute left-[50%] top-[80%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-900 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-100/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 4 # </span> Stimme deine
+                <h2 class="absolute left-[50%] top-[80%] lg:top-[70%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-900 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-100/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 4 # </span> Stimme deine
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
                         <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">perfekte Passform</span>
                     </span>
