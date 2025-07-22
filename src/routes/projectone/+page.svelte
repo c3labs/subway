@@ -149,7 +149,7 @@
                         </p>
                     </div>
                 </div> -->
-                <div class="flex h-full w-max transform gap-4 px-4 lg:gap-8 lg:px-8 pb-[20vh] pt-[18vh] lg:pb-[15vh] lg:pt-[15vh]">
+                <div class="flex h-full w-max transform gap-4 px-4 lg:gap-8 lg:px-8 pb-[20vh] pt-[18vh] lg:pb-[15vh] lg:pt-[15vh] shrink-0 grow-0">
                     <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage2">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 3.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                         <!-- <div class="w-[414px]">
