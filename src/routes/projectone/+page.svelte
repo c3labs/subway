@@ -135,7 +135,7 @@
             </div>
         </div>
     </div>
-    <div class="relative h-[150vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-uiwidth="50">
+    <div class="relative h-[110vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-uiwidth="50">
         <div class="sticky top-0 left-0 z-10 h-screen w-full bg-neutral-100" out:fade>
             <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE BIKE VISIONEN - SO INDIVIDUELL WIE IHRE BESITZER | <span class="font-bold">PROJECT ONE OWNERS CLUB</span></h1>
             <div class="noscrollbar lg:scroll-smooth_ flex h-full cursor-grab touch-pan-y touch-pinch-zoom select-none overflow-x-scroll max-sm:touch-pan-x snap-x_ snap-proximity_" use:dragscroll id="scrollstage">
@@ -149,7 +149,7 @@
                         </p>
                     </div>
                 </div> -->
-                <div class="flex h-full w-max transform gap-8 px-8 pb-[15vh] pt-[15vh]">
+                <div class="flex h-full w-max transform gap-4 px-4 lg:gap-8 lg:px-8 pb-[20vh] pt-[18vh] lg:pb-[15vh] lg:pt-[15vh]">
                     <div class="shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage2">
                         <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 3.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
                         <!-- <div class="w-[414px]">
