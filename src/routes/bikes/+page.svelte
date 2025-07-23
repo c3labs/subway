@@ -31,17 +31,19 @@
             </div>
 
 
-            <ul class="max-h-[500px] w-full space-y-10 overflow-hidden overflow-y-auto p-4 col-span-6" bind:this={ulElement} >
+            <ul class="max-h-[50vh] w-full space-y-4 overflow-hidden overflow-y-auto p-4 col-span-6" bind:this={ulElement} >
                 {#each Object.keys(intersectionMap) as key (key)}
-                    {#key intersectionMap[key]}
+                    <!-- {#key intersectionMap[key]} -->
                         <li
-                            class=" odd:bg-neutral-100 even:bg-hero h-[200px] marker:content-none"
-                            class:invisible={!intersectionMap[key]}
-                            in:fly={{ y: 100, duration: 250 }}
-                            use:intersect={{ threshold: 0.4 }}
-                            onintersect={() => (intersectionMap[key] = true)}
+                            class=" odd:bg-neutral-100 even:bg-hero h-[200px] marker:content-none transition-opacity {!intersectionMap[key] ? 'opacity-0' : 'opacity-100"'} duration-500"
+
+                            use:intersect={{ threshold: 0.4, root: ulElement }}
+                            onintersect={(event) => (
+                                intersectionMap[key] = event.detail.entries[0].isIntersecting,
+                                console.log(event.detail)
+                                 )}
                         ></li>
-                    {/key}
+                    <!-- {/key} -->
                 {/each}
             </ul>
         </div>
