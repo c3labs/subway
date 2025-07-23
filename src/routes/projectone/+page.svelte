@@ -52,7 +52,7 @@
                     SOLLTE ES AUCH SEIN.
                 </h2>
                 <div class="_bg-neutral-100 text-neutral-500 w-full text-right font-regular text-base rounded-xl absolute left-[50%] _top-[70%] -bottom-[25%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12" transition:fade>
-                    Hebe dich mit einem unverwechselbaren Custombike von Project One von der Masse ab.
+                    Hebe dich mit einem unverwechselbaren Custombike von Project One von der Masse ab. Hier eine kurze Übersicht welche Steps dich deinem Traumbike näher bringen.
                     <!-- Jedes TREK Project One Bike wird von einem Team aus talentierten Künstlern und erfahrenen Bikebuildern einzeln von Hand lackiert und aufgebaut.  -->
                     <!-- Du wählst aus den branchenweit besten Komponenten und passt dein Bike perfekt an deine Wünsche und Ansprüche an. -->
                 </div>
@@ -119,7 +119,7 @@
                 <div class="_bg-neutral-100 text-neutral-500 w-full text-right font-regular text-base rounded-xl absolute left-[50%] _top-[70%] -bottom-[28%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12" transition:fade>
                     <!-- Hebe dich mit einem unverwechselbaren Custombike von Project One von der Masse ab. -->
                     <!-- Jedes TREK Project One Bike wird von einem Team aus talentierten Künstlern und erfahrenen Bikebuildern einzeln von Hand lackiert und aufgebaut.  -->
-                    Nach nur vier Wochen treffen wir uns hier wieder und machen ein nettes Bild mit dir und deinem Traumbike für unsere Project One Show. Übrigens gibts da auch eine tolle Funktion auf der TREK Website wo man sich seine Konfiguration als link speichern kann falls du dich schon ausführlich mit einem Custom Bike beschäftigt hast.
+                    Nach nur vier Wochen treffen wir uns hier wieder und machen ein nettes Bild mit dir und deinem Traumbike für unseren Project One Owners Club. Übrigens gibts da auch eine tolle Funktion auf der TREK Website wo man sich seine Konfiguration als link speichern kann falls du dich schon ausführlich mit einem Custom Bike beschäftigt hast.
                 </div>
                 {/if}
             </div>
@@ -217,8 +217,8 @@
     </div>
     <div class="relative h-screen" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark">
         <div class="sticky top-0 left-0 z-10 h-screen w-full bg-neutral-800" in:fade={{duration: 300, delay: 500 }} out:fade>
-            <div class=" grid grid-cols-6 gap-2 container place-items-center h-screen">
-                <div class="col-span-6 text-neutral-400" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>ProjectONE - third section - what goes on here?</div>
+            <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-screen">
+                <div class="col-span-6 text-neutral-400" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>ProjectONE - # 3 section - anything else to say here?</div>
             </div>
         </div>
     </div>
