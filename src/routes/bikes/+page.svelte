@@ -89,7 +89,13 @@
         {#if sectionStep === 3}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_3.jpg?format=avif;webp" alt="Bikes - Hero Shot - Gravelbikes" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
-        <div class="bg-hero w-full h-44 absolute top-1/3 mix-blend-multiply"></div>
+        <div class="flex gap-40 w-full h-80 absolute top-1/2 scale-100_ overflow-hidden overflow-x-scroll noscrollbar">
+            <div class="absolute top-0 left-0 bg-hero w-full h-full mix-blend-multiply z-10"></div>
+            <button class="font-headline font-bold text-neutral-50 text-[240px] uppercase tracking-tighter z-11">Mountain</button>
+            <button class="font-headline font-bold text-neutral-50 text-[240px] uppercase -tracking-[.05em] z-11">Road</button>
+            <button class="font-headline font-bold text-neutral-50 text-[240px] uppercase -tracking-[.03em] z-11">City</button>
+            <button class="font-headline font-bold text-neutral-50 text-[240px] uppercase -tracking-[.03em] z-11">Gravel</button>
+        </div>
         <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-screen">
             <div class="col-span-6 w-full" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
                 <p>
