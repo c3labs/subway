@@ -89,6 +89,7 @@
         {#if sectionStep === 3}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_3.jpg?format=avif;webp" alt="Bikes - Hero Shot - Gravelbikes" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
+        <div class="bg-hero w-full h-44 absolute top-1/3 mix-blend-multiply"></div>
         <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-screen">
             <div class="col-span-6 w-full" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
                 <p>
@@ -101,7 +102,7 @@
                     {#each Object.keys(mountainIntersectionMap) as key (key)}
                         <!-- {#key intersectionMap[key]} -->
                             <li
-                                class=" odd:bg-neutral-100 even:bg-hero even:mix-blend-multiply h-[200px] marker:content-none transition-all {!mountainIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100"'} duration-500"
+                                class=" odd:bg-neutral-100 even:bg-hero even:mix-blend-multiply h-[200px] marker:content-none transition-all {!mountainIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                 use:intersect={{ threshold: 0.99, root: mountainUlElement }}
                                 onintersect={(event) => (
                                     mountainIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
@@ -115,7 +116,7 @@
                     {#each Object.keys(racerIntersectionMap) as key (key)}
                         <!-- {#key intersectionMap[key]} -->
                             <li
-                                class=" odd:bg-neutral-100 even:bg-hero even:mix-blend-multiply h-[200px] marker:content-none transition-all {!racerIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100"'} duration-500"
+                                class=" odd:bg-neutral-100 even:bg-hero even:mix-blend-multiply h-[200px] marker:content-none transition-all {!racerIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                 use:intersect={{ threshold: 0.99, root: racerUlElement }}
                                 onintersect={(event) => (
                                     racerIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
@@ -128,7 +129,7 @@
                     {#each Object.keys(gravelIntersectionMap) as key (key)}
                         <!-- {#key intersectionMap[key]} -->
                             <li
-                                class=" odd:bg-neutral-100 even:bg-hero even:mix-blend-multiply h-[200px] marker:content-none transition-all duration-500"
+                                class=" odd:bg-neutral-100 even:bg-hero even:mix-blend-multiply h-[200px] marker:content-none transition-all {!gravelIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                 use:intersect={{ threshold: 0.99, root: gravelUlElement }}
                                 onintersect={(event) => (
                                     gravelIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
