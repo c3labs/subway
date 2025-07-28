@@ -90,7 +90,8 @@
 		}
 
 		// @ts-ignore
-		var maxScrollY = techstage?.scrollHeight - window.innerHeight + techOverflow;
+		// var maxScrollY = techstage?.scrollHeight - window.innerHeight + techOverflow;
+        var maxScrollY = techstage?.scrollHeight - window.innerHeight;
 
 		scrollQuot = 1 / maxScrollY * scrollY;
 
