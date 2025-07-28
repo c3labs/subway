@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<title>ProjectOne - SUBWAY - Radsport Wagner | We just ride!</title>
+	<title>ProjectOne | SUBWAY - Radsport Wagner | We just ride!</title>
 </svelte:head>
 
 <!-- <div class="c3:outher_box"> -->

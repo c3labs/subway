@@ -9,6 +9,11 @@
     let racerUlElement: HTMLUListElement | undefined = $state();
     let gravelUlElement: HTMLUListElement | undefined = $state();
 
+    let scrollY = $state(0);
+	let scrollQuot = $state(0);
+    let scrollYWidth: number = $state(0);
+
+
     interface bikeInfo {
         price: string;
         manufacturer: string;
@@ -70,14 +75,47 @@
         animateScroll.scrollToTop({ duration: 1, delay: 250 });
         console.log('[    reset scroll position  # bikes   ] - onMount');
     })
+
+	$effect(() => {
+		const techstage: HTMLElement | null = document.getElementById("techstage");
+		const scrollYstage: HTMLElement | null = document.getElementById("scrollyStage");
+        // @ts-ignore
+        scrollYWidth = scrollYstage?.scrollWidth - scrollYstage?.clientWidth;
+        // scrollYWidth = scrollYstage?.scrollWidth;
+
+        // @ts-ignore
+		var techOverflow = document.body.scrollHeight - techstage.scrollHeight;
+		if (techOverflow > window.innerHeight) {
+			techOverflow = window.innerHeight;
+		}
+
+		// @ts-ignore
+		var maxScrollY = techstage?.scrollHeight - window.innerHeight + techOverflow;
+
+		scrollQuot = 1 / maxScrollY * scrollY;
+
+        scrollYstage?.scroll({
+            left: (scrollYWidth * scrollQuot),
+            behavior: "instant",
+        });
+        // console.log(scrollYWidth);
+        // console.log(scrollQuot);
+
+	});
+
 </script>
 
-<div class="relative h-[300vh] _h-screen" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark">
+<svelte:head>
+	<title>TECH/BIKES | SUBWAY - Radsport Wagner | We just ride!</title>
+</svelte:head>
+<svelte:window bind:scrollY />
+
+<div class="relative h-[300vh] _h-screen" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" id="techstage">
     <div class="sticky top-0 left-0 z-10 h-screen w-full bg-hero_">
         <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>WIR HABEN FÜR JEDEN DEINER TRAILS DAS PASSENDE BIKE | <span class="font-bold"> TECH/BIKES</span></h1>
         {#if sectionStep === 0}
         <div class=" ">
-            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_4.jpg?format=avif;webp" alt="Bikes - Hero Shot - Übersicht" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center _mix-blend-multiply brightness-110 contrast-115" in:fade={{duration: 300}} out:fade />
+            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_4.jpg?format=avif;webp" alt="Bikes - Hero Shot - Übersicht" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center _mix-blend-multiply brightness-120 contrast-115" in:fade={{duration: 300}} out:fade />
         </div>
         {/if}
         {#if sectionStep === 1}
@@ -89,12 +127,16 @@
         {#if sectionStep === 3}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_3.jpg?format=avif;webp" alt="Bikes - Hero Shot - Gravelbikes" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
-        <div class="flex gap-40 w-full h-80 absolute top-1/2 scale-100_ overflow-hidden overflow-x-scroll noscrollbar">
-            <div class="absolute top-0 left-0 bg-hero w-full h-full mix-blend-multiply z-10"></div>
-            <button class="font-headline font-bold text-neutral-50 text-[240px] uppercase tracking-tighter z-11">Mountain</button>
-            <button class="font-headline font-bold text-neutral-50 text-[240px] uppercase -tracking-[.05em] z-11">Road</button>
-            <button class="font-headline font-bold text-neutral-50 text-[240px] uppercase -tracking-[.03em] z-11">City</button>
-            <button class="font-headline font-bold text-neutral-50 text-[240px] uppercase -tracking-[.03em] z-11">Gravel</button>
+        <div class="absolute left-0 bottom-0 overflow-hidden  h-40 lg:h-80 w-full">
+            <div class="absolute top-0 left-0 bg-hero w-full h-full mix-blend-multiply z-10 -rotate-6_ scale-60_"></div>
+            <div class="absolute flex gap-20 lg:gap-40 w-full h-40 lg:h-80 top-1/2_ bottom-0 overflow-hidden overflow-x-scroll_ noscrollbar" id="scrollyStage">    
+                <button class="font-headline font-bold text-neutral-50 text-8xl lg:text-[240px] uppercase tracking-tighter z-11">Mountain</button>
+                <button class="font-headline font-bold text-neutral-50 text-8xl lg:text-[240px] uppercase -tracking-[.05em] z-11">Road</button>
+                <button class="font-headline font-bold text-neutral-50 text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">Gravel</button>
+                <button class="font-headline font-bold text-neutral-50 text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">City</button>
+                <button class="font-headline font-bold text-neutral-50 text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">Trekking</button>
+                <button class="font-headline font-bold text-neutral-50 text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">Kids</button>
+            </div>
         </div>
         <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-screen">
             <div class="col-span-6 w-full" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
