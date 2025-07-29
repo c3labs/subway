@@ -136,7 +136,8 @@
         {#if sectionStep === 3}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_3.jpg?format=avif;webp" alt="Bikes - Hero Shot - Gravelbikes" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
-        <div class="absolute left-0 bottom-0 overflow-hidden  h-40 lg:h-80 w-full" style="transform: translateY(-{viewportWidthDiv}px);">
+        <!-- <div class="absolute left-0 bottom-0 overflow-hidden h-40 lg:h-80 w-full" style="transform: translateY(-{viewportWidthDiv}px);"> -->
+        <div class="absolute left-0 bottom-0_ {viewportWidthDiv > 0 ? 'bottom-10' : 'bottom-0'} overflow-hidden h-40 lg:h-80 w-full">
             <div class="absolute top-0 left-0 bg-hero w-full h-full mix-blend-multiply z-10 -rotate-6_ scale-60_"></div>
             <div class="absolute flex gap-20 lg:gap-40 w-full h-40 lg:h-80 top-1/2_ bottom-0 overflow-hidden overflow-x-scroll_ noscrollbar" id="scrollyStage">    
                 <button class="font-headline font-bold text-neutral-50 text-8xl lg:text-[240px] uppercase tracking-tighter z-11 pl-20">Mountain</button>
