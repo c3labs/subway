@@ -204,8 +204,8 @@
                                 >
                                 {#if mountainIntersectionMap[key].imgpath != ""}
                                         image: {mountainIntersectionMap[key].imgpath} 
-                                    <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].imgpath}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" />
-                                    <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainPic_1}  class="_" draggable="false" /> -->
+                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].imgpath}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                    <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainPic_1}  class="_" draggable="false" />
                                 {/if}
                                     <div>Detail: {key} | {mountainIntersectionMap[key].price} | {mountainIntersectionMap[key].manufacturer}</div>
                             </li>
