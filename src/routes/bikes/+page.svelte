@@ -1,5 +1,6 @@
 <script lang="ts">
-    import mountainPic_1 from '$lib/assets/images/bikes/heros/bikeHero_0.jpg?enhanced'
+    import mountainPic_1 from '$lib/assets/images/bikes/heros/bikeHero_0.jpg?enhanced';
+    import mountainPic_4 from '$lib/assets/images/bikes/heros/bikeHero_4.jpg?enhanced';
 
 	import { fade, fly } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
@@ -17,6 +18,8 @@
 	let scrollQuot = $state(0);
     let scrollYWidth: number = $state(0);
 
+    // @ts-ignore
+    type enhPicture = Picture;
 
     interface bikeInfo {
         price: string;
@@ -25,32 +28,33 @@
         motor: string;
         watt: string;
         imgpath: string;
+        piclink: enhPicture;
         visible: boolean;
     }
 
 	let mountainIntersectionMap: Record<string, bikeInfo> = $state({
-		"Rail+": { price: "7.499", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "bikeHero_0.jpg", visible: false},
-		"Slash+": { price: "6.999", manufacturer: "Trek", suspension: "FULL - F: 170 - B: 170", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Powerfly+ FS": { price: "5.299", manufacturer: "Trek", suspension: "FULL - F: 130 - B: 120", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Powerfly+ Equipped": { price: "4.799", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "600W", imgpath: "", visible: false},
-		"Powerfly FS+ Gen4": { price: "3.999", manufacturer: "Trek", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Stereo Hybrid One44": { price: "4.999", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Reaction Hybrid PRO": { price: "3.199", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Reaction Hybrid RACE": { price: "3.599", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Reaction Hybrid ALLROAD": { price: "4.199", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
+		"Rail+": { price: "7.499", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "bikeHero_0.jpg", piclink: mountainPic_1, visible: false},
+		"Slash+": { price: "6.999", manufacturer: "Trek", suspension: "FULL - F: 170 - B: 170", motor: "Bosch", watt: "800W", imgpath: "bikeHero_0.jpg", piclink: mountainPic_4, visible: false},
+		"Powerfly+ FS": { price: "5.299", manufacturer: "Trek", suspension: "FULL - F: 130 - B: 120", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Powerfly+ Equipped": { price: "4.799", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "600W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Powerfly FS+ Gen4": { price: "3.999", manufacturer: "Trek", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Stereo Hybrid One44": { price: "4.999", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Reaction Hybrid PRO": { price: "3.199", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Reaction Hybrid RACE": { price: "3.599", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Reaction Hybrid ALLROAD": { price: "4.199", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
 	});
 
     let roadIntersectionMap: Record<string, bikeInfo> = $state({
-        "Madone": { price: "9.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Speed Conceot": { price: "9.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Domane SLR": { price: "10.699", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Domane+ SLR": { price: "13.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Checkmate SLR": { price: "12.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
+        "Madone": { price: "9.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Speed Conceot": { price: "9.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Domane SLR": { price: "10.699", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Domane+ SLR": { price: "13.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Checkmate SLR": { price: "12.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
 	});
 
     let gravelIntersectionMap: Record<string, bikeInfo> = $state({
-        "Checkpoint": { price: "6.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
-		"Checkmate SLR": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", visible: false},
+        "Checkpoint": { price: "6.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
+		"Checkmate SLR": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainPic_1, visible: false},
 	});
 
     let sectionMap: Record<number, boolean> = $state({
@@ -205,7 +209,8 @@
                                 {#if mountainIntersectionMap[key].imgpath != ""}
                                         image: {mountainIntersectionMap[key].imgpath} 
                                     <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].imgpath}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
-                                    <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainPic_1}  class="_" draggable="false" />
+                                    <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainPic_1}  class="_" draggable="false" /> -->
+                                    <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainIntersectionMap[key].piclink}  class="_" draggable="false" />
                                 {/if}
                                     <div>Detail: {key} | {mountainIntersectionMap[key].price} | {mountainIntersectionMap[key].manufacturer}</div>
                             </li>
