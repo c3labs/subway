@@ -97,29 +97,33 @@
 		scrollQuot = 1 / maxScrollY * scrollY;
         var scrollSection = Math.floor(scrollQuot * 100);
 
-        if (scrollSection >= 0 && scrollSection < 16) {
+        if (scrollSection >= 0 && scrollSection < 7) {
             if (prevStep != 0) {
                 setSection(0);
             }
-        } else if (scrollSection >= 16 && scrollSection < 35) {
+        } else if (scrollSection >= 7 && scrollSection < 23) {
             if (prevStep != 1) {
                 setSection(1);
             }
-        } else if (scrollSection >= 35 && scrollSection < 52) {
+        } else if (scrollSection >= 23 && scrollSection < 43) {
             if (prevStep != 2) {
                 setSection(2);
             }
-        } else if (scrollSection >= 52 && scrollSection < 71) {
+        } else if (scrollSection >= 43 && scrollSection < 58) {
             if (prevStep != 3) {
                 setSection(3);
             }
-        } else if (scrollSection >= 71 && scrollSection < 91) {
+        } else if (scrollSection >= 58 && scrollSection < 79) {
             if (prevStep != 4) {
                 setSection(4);
             }
-        } else {
+        } else if (scrollSection >= 79 && scrollSection < 94) {
             if (prevStep != 5) {
                 setSection(5);
+            }
+        } else {
+            if (prevStep != 6) {
+                setSection(6);
             }
         }
         
@@ -128,7 +132,7 @@
             behavior: "auto",
         });
 
-        console.log(sectionStep);
+        // console.log(scrollSection);
         // console.log(scrollQuot);
 
 	});
@@ -140,7 +144,7 @@
 </svelte:head>
 <svelte:window bind:scrollY />
 
-<div class="relative h-[300vh] _h-screen" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" id="techstage">
+<div class="relative h-[400vh] _h-screen" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" id="techstage" in:fade={{duration: 300, delay: 250}} out:fade >
     <div class="sticky top-0 left-0 z-10 h-screen w-full bg-hero_">
         <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>WIR HABEN FÜR JEDEN DEINER TRAILS DAS PASSENDE BIKE | <span class="font-bold"> TECH/BIKES</span></h1>
         {#if sectionStep === 0}
@@ -158,15 +162,23 @@
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_3.jpg?format=avif;webp" alt="Bikes - Hero Shot - Gravelbikes" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
         <!-- <div class="absolute left-0 bottom-0 overflow-hidden h-40 lg:h-80 w-full" style="transform: translateY(-{viewportWidthDiv}px);"> -->
-        <div class="absolute left-0 bottom-0 overflow-hidden h-40 lg:h-80 w-full">
-            <div class="absolute top-0 left-0 bg-hero w-full h-full mix-blend-multiply z-10 -rotate-6_ scale-60_"></div>
-            <div class="absolute flex gap-20 lg:gap-40 w-full h-40 lg:h-80 top-1/2_ bottom-0 overflow-hidden overflow-x-scroll_ noscrollbar" id="scrollyStage">    
-                <button class="font-headline font-bold {sectionStep === 0 ? 'text-white' : 'text-neutral-800'} text-8xl lg:text-[240px] uppercase tracking-tighter z-11 pl-20">Mountain</button>
-                <button class="font-headline font-bold {sectionStep === 1 ? 'text-white' : 'text-neutral-800'} text-8xl lg:text-[240px] uppercase -tracking-[.05em] z-11">Road</button>
-                <button class="font-headline font-bold {sectionStep === 2 ? 'text-white' : 'text-neutral-800'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">Gravel</button>
-                <button class="font-headline font-bold {sectionStep === 3 ? 'text-white' : 'text-neutral-800'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">City</button>
-                <button class="font-headline font-bold {sectionStep === 4 ? 'text-white' : 'text-neutral-800'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">Trekking</button>
-                <button class="font-headline font-bold {sectionStep === 5 ? 'text-white' : 'text-neutral-800'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11 pr-20">Kids</button>
+        <div class="absolute left-0 {sectionStep === 0 ? 'bottom-60' : 'bottom-0'} overflow-hidden h-40 lg:h-80 w-full transition-all duration-1000 ease-in-out">
+            {#if sectionStep === 0}
+                <h2 class="relative left-[30%] top-[45%] lg:top-10 -translate-1/2 z-12 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white uppercase _text-shadow-lg" in:fly={{ y:50, duration: 300, delay: 600 }} out:fade >WELCHEN
+                    <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">TRAIL</span>
+                    </span>
+                    NIMMST DU HEUTE?
+                </h2>
+            {/if}
+            <div class="absolute top-0 left-0 bg-hero w-full h-full mix-blend-multiply z-10 -rotate-6_ scale-60_" in:fade={{duration: 300, delay: 600}} out:fade ></div>
+            <div class="absolute flex gap-20 lg:gap-40 w-full h-40 lg:h-80 top-1/2_ bottom-0 overflow-hidden overflow-x-scroll_ noscrollbar" id="scrollyStage" in:fly={{x: 200, duration: 300, delay: 800}} out:fade >    
+                <button class="font-headline font-bold {sectionStep === 1 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase tracking-tighter z-11 pl-80 lg:pl-220">Mountain</button>
+                <button class="font-headline font-bold {sectionStep === 2 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.05em] z-11">Road</button>
+                <button class="font-headline font-bold {sectionStep === 3 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">Gravel</button>
+                <button class="font-headline font-bold {sectionStep === 4 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">City</button>
+                <button class="font-headline font-bold {sectionStep === 5 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">Trekking</button>
+                <button class="font-headline font-bold {sectionStep === 6 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11 pr-20 lg:pr-70">Kids</button>
             </div>
         </div>
         <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-screen">
@@ -176,7 +188,7 @@
                     <button class="bg-[var(--bg-state-color)]/30 transition-colors hover:bg-[var(--bg-state-color)]/20 rounded-md px-7 py-3 m-4 backdrop-blur-md cursor-pointer text-neutral-300" onclick={() => { setSection(2) }}> RENNRAD </button>
                     <button class="bg-[var(--bg-state-color)]/30 transition-colors hover:bg-[var(--bg-state-color)]/20 rounded-md px-7 py-3 m-4 backdrop-blur-md cursor-pointer text-neutral-300" onclick={() => { setSection(3) }}> GRAVELBIKES </button>
                 </p> -->
-                {#if sectionStep === 0}
+                {#if sectionStep === 1}
                     <ul class="max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500" bind:this={mountainUlElement} >
                         {#each Object.keys(mountainIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
@@ -192,7 +204,7 @@
                         {/each}
                     </ul>
                 {/if}
-                {#if sectionStep === 1}
+                {#if sectionStep === 2}
                     <ul class="max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500" bind:this={racerUlElement} >
                         {#each Object.keys(racerIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
@@ -207,7 +219,7 @@
                         {/each}
                     </ul>
                 {/if}
-                {#if sectionStep === 2}
+                {#if sectionStep === 3}
                     <ul class="max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500" bind:this={gravelUlElement} >
                         {#each Object.keys(gravelIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
@@ -222,13 +234,13 @@
                         {/each}
                     </ul>
                 {/if}
-                {#if sectionStep === 3}
+                {#if sectionStep === 4}
                     CITY
                 {/if}
-                {#if sectionStep === 4}
+                {#if sectionStep === 5}
                     TREKKING
                 {/if}
-                {#if sectionStep === 5}
+                {#if sectionStep === 6}
                     KIDS
                 {/if}
             </div>
