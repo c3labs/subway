@@ -35,7 +35,7 @@
                 <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_2.jpg?format=avif;webp" alt="Project One - Step 2 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
             {/if}
             {#if postep === 3} 
-                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_3.jpg?format=avif;webp" alt="Project One - Step 3 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light" />
+                <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_3new.jpg?format=avif;webp" alt="Project One - Step 3 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light" />
             {/if}
             {#if postep === 4} 
                 <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_4.jpg?format=avif;webp" alt="Project One - Step 4 #" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" />
