@@ -9,7 +9,11 @@
     import roadDetail_3 from '$lib/assets/images/bikes/road/trek_25_MadoneSL6AXS.png?enhanced';
     import roadDetail_4 from '$lib/assets/images/bikes/road/trek_25_DomaneAL5.png?enhanced';
 
-    import mountainPic_4 from '$lib/assets/images/bikes/mountain/trek_25_FuelEXe.png?enhanced';
+    import gravelDetail_1 from '$lib/assets/images/bikes/gravel/trek_25_CheckmateSLR9AXS_A.png?enhanced';
+    import gravelDetail_2 from '$lib/assets/images/bikes/gravel/trek_25_CheckmateSLR9AXS_B.png?enhanced';
+    import gravelDetail_3 from '$lib/assets/images/bikes/gravel/trek_25_CheckmateSLR9AXS_C.png?enhanced';
+    import gravelDetail_4 from '$lib/assets/images/bikes/gravel/trek_25_CheckpointSL5AXS.png?enhanced';
+    import gravelDetail_5 from '$lib/assets/images/bikes/gravel/trek_25_CheckpointSL6.png?enhanced';
 
 	import { fade, fly } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
@@ -62,8 +66,11 @@
 	});
 
     let gravelIntersectionMap: Record<string, bikeInfo> = $state({
-        "Checkpoint": { price: "6.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainDetail_1, visible: false},
-		"Checkmate SLR": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "", piclink: mountainDetail_1, visible: false},
+        "Checkmate SLR9AXS A": { price: "6.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_1, visible: false},
+		"Checkmate SLR9AXS B": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_2, visible: false},
+        "Checkmate SLR9AXS c": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_3, visible: false},
+        "Checkpoint SL5": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_4, visible: false},
+        "Checkpoint SL6": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_5, visible: false},
 	});
 
     let sectionMap: Record<number, boolean> = $state({
@@ -241,7 +248,7 @@
                         {#each Object.keys(roadIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
                             <li
-                                    class="bg-neutral-100 h-[400px] min-w-[400px] marker:content-none transition-all {!roadIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    class="bg-neutral-600 h-[400px] min-w-[400px] marker:content-none transition-all {!roadIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                     use:intersect={{ threshold: 0.6, root: racerUlElement }}
                                     onintersect={(event) => (
                                         roadIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
@@ -263,13 +270,22 @@
                     <ul class="max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={gravelUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(gravelIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
-                                <li
-                                    class="bg-neutral-100 h-[400px] min-w-[400px] marker:content-none transition-all {!gravelIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
-                                    use:intersect={{ threshold: 0.6, root: gravelUlElement }}
+                            <li
+                                    class="bg-neutral-600 h-[400px] min-w-[400px] marker:content-none transition-all {!gravelIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    use:intersect={{ threshold: 0.3, root: gravelUlElement }}
                                     onintersect={(event) => (
                                         gravelIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
                                         )}
-                                >Bike Detail: {key} | {gravelIntersectionMap[key].price} | {gravelIntersectionMap[key].manufacturer}</li>
+                                >
+                                {#if gravelIntersectionMap[key].imgpath != ""}
+                                        <!-- image: {mountainIntersectionMap[key].imgpath}  -->
+                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].imgpath}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                    <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
+                                    <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="_" draggable="false" />
+                                {/if}
+                                
+                                <div> Detail: {key} | {gravelIntersectionMap[key].price} | {gravelIntersectionMap[key].manufacturer}</div>
+                            </li>
                             <!-- {/key} -->
                         {/each}
                     </ul>
