@@ -250,7 +250,7 @@
                                     <svg data-width="1211" data-height="453" viewBox="0 0 1211 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-5 lg:top-0 left-0 fill-neutral-300/86 max-lg:origin-top max-lg:scale-y-300 max-lg:translate-y-1/3">
                                         <path d="M157.33 52.0575L1089.12 0L1211 400.442L965.033 448.996L0 453L44.3184 91.1005L157.33 52.0575Z" />
                                     </svg>
-                                    <svg data-width="547" data-height="453" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-1/2 -translate-x-1/2 lg:-translate-x-2/3 text-white max-lg:origin-top max-lg:translate-y-1/3 max-lg:scale-150">
+                                    <svg data-width="547" data-height="453" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-1/2 -translate-x-1/2 lg:-translate-x-2/3 text-white max-lg:origin-top max-lg:translate-y-1/3 max-lg:hidden">
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if mountainIntersectionMap[key].imgpath != ""}
