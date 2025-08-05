@@ -24,6 +24,10 @@
     import cityDetail_2 from '$lib/assets/images/bikes/city/diamant_25_ZingTripCoreLS.png?enhanced';
     import cityDetail_3 from '$lib/assets/images/bikes/city/diamant_25_ZingTripCoreMS.png?enhanced';
 
+    import trekkingDetail_1 from '$lib/assets/images/bikes/trekking/cube_25_KathmanduSLX.png?enhanced';
+
+    import kubike from '$lib/assets/images/logo/manufacturer/logo_kubikes_transparent_logo_logo.png'
+
 	import { fade, fly } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
 	import { uiobserver , onIntersect } from "$lib/uiobserver.svelte";
@@ -36,6 +40,7 @@
     let racerUlElement: HTMLUListElement | undefined = $state();
     let gravelUlElement: HTMLUListElement | undefined = $state();
     let cityUlElement: HTMLUListElement | undefined = $state();
+    let trekkingUlElement: HTMLUListElement | undefined = $state();
 
     let scrollY = $state(0);
 	let scrollQuot = $state(0);
@@ -87,6 +92,10 @@
         "Suvea": { price: "6.899", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "City-Hybrid-Bike", description: "Infos und link zur Herstellerseite...", piclink: cityDetail_1, visible: false},
 		"Zing Trip Core LS": { price: "7.999", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "City-Hybrid-Bike", description: "Infos und link zur Herstellerseite...", piclink: cityDetail_2, visible: false},
         "Zing Trip Core MS": { price: "7.999", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "City-Hybrid-Bike", description: "Infos und link zur Herstellerseite...", piclink: cityDetail_3, visible: false},
+	});
+
+    let trekkingIntersectionMap: Record<string, bikeInfo> = $state({
+        "Kathmandu SLX": { price: "4.899", manufacturer: "Cube", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "City-Hybrid-Bike", description: "Infos und link zur Herstellerseite...", piclink: trekkingDetail_1, visible: false},
 	});
 
     let sectionMap: Record<number, boolean> = $state({
@@ -500,10 +509,76 @@
                     </ul>
                 {/if}
                 {#if sectionStep === 5}
-                    TREKKING
+                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={trekkingUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                        {#each Object.keys(trekkingIntersectionMap) as key (key)}
+                            <!-- {#key intersectionMap[key]} -->
+                                <li
+                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!trekkingIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    use:intersect={{ threshold: 0.2, root: trekkingUlElement }}
+                                    onintersect={(event) => (
+                                        trekkingIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
+                                        console.log(event.detail)
+                                        )}
+                                >
+                                    <svg data-width="1211" data-height="453" viewBox="0 0 1211 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-5 lg:top-0 left-0 fill-neutral-300/86 max-lg:origin-top max-lg:scale-y-300 max-lg:translate-y-1/3">
+                                        <path d="M157.33 52.0575L1089.12 0L1211 400.442L965.033 448.996L0 453L44.3184 91.1005L157.33 52.0575Z" />
+                                    </svg>
+                                    <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
+                                        <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
+                                    </svg>
+                                    {#if trekkingIntersectionMap[key].category != ""}
+                                            <!-- image: {mountainIntersectionMap[key].category}  -->
+                                        <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                        <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={trekkingIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
+                                    {/if}
+
+                                    <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
+                                        <div class="basis-1/2 bg-amber-600/50_">
+                                             <!-- [ img-placeholder ] -->
+                                        </div>
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                            <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
+                                                {key}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <span class="uppercase font-semibold text-neutral-50">Category </span> {trekkingIntersectionMap[key].category}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-35">
+                                                <span class="uppercase font-semibold text-neutral-100">Marke </span> {trekkingIntersectionMap[key].manufacturer}
+                                            </div>
+                                            <div class="grow text-sm ml-8 lg:ml-38">
+                                                <span class="uppercase font-semibold text-neutral-100">Suspension </span> {trekkingIntersectionMap[key].suspension}
+                                            </div>
+                                            <div class="grow ml-8 mb-3 lg:ml-38">
+                                                <span class="text-xs">{trekkingIntersectionMap[key].description}</span>
+                                            </div>
+                                            {#if trekkingIntersectionMap[key].motor}
+                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {trekkingIntersectionMap[key].motor}
+                                                </div>
+                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {trekkingIntersectionMap[key].watth}
+                                                </div>    
+                                            {/if}
+                                            
+                                            <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
+                                               <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {trekkingIntersectionMap[key].price}
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                            </li>
+                            <!-- {/key} -->
+                        {/each}
+                    </ul>
                 {/if}
                 {#if sectionStep === 6}
-                    KIDS
+                    <div class=" container mx-auto w-full flex flex-col md:flex-row bg-neutral-300/86 font-regular text-sm/5 text-neutral-800" in:fade={{duration: 200, delay: 500 }}>
+                        <div class="w-full md:w-75 p-5 bg-neutral-950 content-center"><img src={kubike} alt="kubike Kinderfahrräder Logo"></div>
+                        <div class="text-center p-3 content-center justify-items-center w-full"><span class="font-semibold text-base/7 uppercase ">Große Qualität auch für kleine BIKER</span><br><a class="text-hero after:content-['_↗']" href="https://www.kubikes.de/kubikes_shop/" target="_blank">Kubike Bikes</a> gibts bei uns im Laden zu bewundern - schaut einfach vorbei!</div>
+                    </div>
                 {/if}
             </div>
         </div>
