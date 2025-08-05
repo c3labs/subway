@@ -57,7 +57,7 @@
     }
 
 	let mountainIntersectionMap: Record<string, bikeInfo> = $state({
-		"TopFuel": { price: "7.499", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "", watth: "800 Wh", category: "Trial-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_1, visible: false},
+		"Top Fuel": { price: "7.499", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "", watth: "800 Wh", category: "Trial-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_1, visible: false},
 		"Fuel EXe": { price: "6.999", manufacturer: "Trek", suspension: "FULL - F: 170 - B: 170", motor: "Bosch", watth: "800 Wh", category: "E-Trial-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_2, visible: false},
 		"Procaliber FS": { price: "5.299", manufacturer: "Trek", suspension: "FULL - F: 130 - B: 120", motor: "", watth: "800 Wh", category: "Cross Country-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_3, visible: false},
 		"Procaliber6": { price: "4.799", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "", watth: "600 Wh", category: "Cross Country-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_4, visible: false},
@@ -186,7 +186,7 @@
 <svelte:window bind:scrollY />
 
 <div class="relative h-[400vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" id="techstage" in:fade={{duration: 300, delay: 250}} out:fade >
-    <div class="sticky top-0 left-0 z-10 h-screen w-full bg-hero_">
+    <div class="sticky top-0 left-0 z-10 h-screen w-full">
         <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>WIR HABEN FÜR JEDEN DEINER TRAILS DAS PASSENDE BIKE | <span class="font-bold"> TECH/BIKES</span></h1>
         {#if sectionStep === 0}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_overview.jpg?format=avif;webp" alt="Bikes - Hero Shot - Overview" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center _mix-blend-multiply brightness-120 contrast-115" in:fade={{duration: 300}} out:fade />
@@ -228,7 +228,7 @@
                 <button class="font-headline font-bold {sectionStep === 6 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11 pr-20 lg:pr-70">Kids</button>
             </div>
         </div>
-        <div class="+container +mx-auto absolute top-0 grid grid-cols-6 gap-2 place-items-center h-screen">
+        <div class="+container +mx-auto w-full absolute top-0 grid grid-cols-6 gap-2 place-items-center h-screen">
             <div class="col-span-6 w-full" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
                 <!-- <p>
                     <button class="bg-[var(--bg-state-color)]/30 transition-colors hover:bg-[var(--bg-state-color)]/20 rounded-md px-7 py-3 m-4 backdrop-blur-md cursor-pointer text-neutral-300" onclick={() => { setSection(1) }}> E-BIKES </button>
@@ -247,7 +247,6 @@
                                         console.log(event.detail)
                                         )}
                                 >
-                                <!-- <div class="_relative"> -->
                                     <svg data-width="1211" data-height="453" viewBox="0 0 1211 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-5 lg:top-0 left-0 fill-neutral-300/86 max-lg:origin-top max-lg:scale-y-300 max-lg:translate-y-1/3">
                                         <path d="M157.33 52.0575L1089.12 0L1211 400.442L965.033 448.996L0 453L44.3184 91.1005L157.33 52.0575Z" />
                                     </svg>
@@ -297,80 +296,204 @@
                                         
                                         
                                     </div>
-                                <!-- </div> -->
                             </li>
                             <!-- {/key} -->
                         {/each}
                     </ul>
                 {/if}
                 {#if sectionStep === 2}
-                    <ul class="max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={racerUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={racerUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(roadIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
-                            <li
-                                    class="bg-neutral-600 h-[400px] min-w-[400px] marker:content-none transition-all {!roadIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
-                                    use:intersect={{ threshold: 0.6, root: racerUlElement }}
+                                <li
+                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!roadIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    use:intersect={{ threshold: 0.2, root: racerUlElement }}
                                     onintersect={(event) => (
-                                        roadIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
+                                        roadIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
+                                        console.log(event.detail)
                                         )}
                                 >
-                                {#if roadIntersectionMap[key].category != ""}
-                                        <!-- image: {mountainIntersectionMap[key].category}  -->
-                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
-                                    <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
-                                    <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={roadIntersectionMap[key].piclink} class="_" draggable="false" />
-                                {/if}
-                                <div>Bike Detail: {key} | {roadIntersectionMap[key].price} | {roadIntersectionMap[key].manufacturer}</div>
+                                    <svg data-width="1211" data-height="453" viewBox="0 0 1211 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-5 lg:top-0 left-0 fill-neutral-300/86 max-lg:origin-top max-lg:scale-y-300 max-lg:translate-y-1/3">
+                                        <path d="M157.33 52.0575L1089.12 0L1211 400.442L965.033 448.996L0 453L44.3184 91.1005L157.33 52.0575Z" />
+                                    </svg>
+                                    <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
+                                        <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
+                                    </svg>
+                                    {#if roadIntersectionMap[key].category != ""}
+                                            <!-- image: {mountainIntersectionMap[key].category}  -->
+                                        <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                        <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={roadIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
+                                    {/if}
+
+                                    <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
+                                        <div class="basis-1/2 bg-amber-600/50_">
+                                             <!-- [ img-placeholder ] -->
+                                        </div>
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                            <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
+                                                {key}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <span class="uppercase font-semibold text-neutral-50">Category </span> {roadIntersectionMap[key].category}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-35">
+                                                <span class="uppercase font-semibold text-neutral-100">Marke </span> {roadIntersectionMap[key].manufacturer}
+                                            </div>
+                                            <div class="grow text-sm ml-8 lg:ml-38">
+                                                <span class="uppercase font-semibold text-neutral-100">Suspension </span> {roadIntersectionMap[key].suspension}
+                                            </div>
+                                            <div class="grow ml-8 mb-3 lg:ml-38">
+                                                <span class="text-xs">{roadIntersectionMap[key].description}</span>
+                                            </div>
+                                            {#if roadIntersectionMap[key].motor}
+                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {roadIntersectionMap[key].motor}
+                                                </div>
+                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {roadIntersectionMap[key].watth}
+                                                </div>    
+                                            {/if}
+                                            
+                                            <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
+                                               <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {roadIntersectionMap[key].price}
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
                             </li>
                             <!-- {/key} -->
                         {/each}
                     </ul>
                 {/if}
                 {#if sectionStep === 3}
-                    <ul class="max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={gravelUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={gravelUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(gravelIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
-                            <li
-                                    class="bg-neutral-600 h-[400px] min-w-[400px] marker:content-none transition-all {!gravelIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
-                                    use:intersect={{ threshold: 0.3, root: gravelUlElement }}
+                                <li
+                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!gravelIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    use:intersect={{ threshold: 0.2, root: gravelUlElement }}
                                     onintersect={(event) => (
-                                        gravelIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
+                                        gravelIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
+                                        console.log(event.detail)
                                         )}
                                 >
-                                {#if gravelIntersectionMap[key].category != ""}
-                                        <!-- image: {mountainIntersectionMap[key].category}  -->
-                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
-                                    <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
-                                    <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="_" draggable="false" />
-                                {/if}
-                                
-                                <div> Detail: {key} | {gravelIntersectionMap[key].price} | {gravelIntersectionMap[key].manufacturer}</div>
+                                    <svg data-width="1211" data-height="453" viewBox="0 0 1211 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-5 lg:top-0 left-0 fill-neutral-300/86 max-lg:origin-top max-lg:scale-y-300 max-lg:translate-y-1/3">
+                                        <path d="M157.33 52.0575L1089.12 0L1211 400.442L965.033 448.996L0 453L44.3184 91.1005L157.33 52.0575Z" />
+                                    </svg>
+                                    <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
+                                        <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
+                                    </svg>
+                                    {#if gravelIntersectionMap[key].category != ""}
+                                            <!-- image: {mountainIntersectionMap[key].category}  -->
+                                        <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                        <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
+                                    {/if}
+
+                                    <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
+                                        <div class="basis-1/2 bg-amber-600/50_">
+                                             <!-- [ img-placeholder ] -->
+                                        </div>
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                            <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
+                                                {key}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <span class="uppercase font-semibold text-neutral-50">Category </span> {gravelIntersectionMap[key].category}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-35">
+                                                <span class="uppercase font-semibold text-neutral-100">Marke </span> {gravelIntersectionMap[key].manufacturer}
+                                            </div>
+                                            <div class="grow text-sm ml-8 lg:ml-38">
+                                                <span class="uppercase font-semibold text-neutral-100">Suspension </span> {gravelIntersectionMap[key].suspension}
+                                            </div>
+                                            <div class="grow ml-8 mb-3 lg:ml-38">
+                                                <span class="text-xs">{gravelIntersectionMap[key].description}</span>
+                                            </div>
+                                            {#if gravelIntersectionMap[key].motor}
+                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {gravelIntersectionMap[key].motor}
+                                                </div>
+                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {gravelIntersectionMap[key].watth}
+                                                </div>    
+                                            {/if}
+                                            
+                                            <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
+                                               <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {gravelIntersectionMap[key].price}
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
                             </li>
                             <!-- {/key} -->
                         {/each}
                     </ul>
                 {/if}
                 {#if sectionStep === 4}
-                    <ul class="max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={cityUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={cityUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(cityIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
-                            <li
-                                    class="h-[400px] min-w-[400px] max-w-[401px] marker:content-none transition-all {!cityIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
-                                    use:intersect={{ threshold: 0.3, root: gravelUlElement }}
+                                <li
+                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!cityIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    use:intersect={{ threshold: 0.2, root: cityUlElement }}
                                     onintersect={(event) => (
-                                        cityIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
+                                        cityIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
+                                        console.log(event.detail)
                                         )}
                                 >
-                                {#if cityIntersectionMap[key].category != ""}
-                                        <!-- image: {mountainIntersectionMap[key].category}  -->
-                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
-                                    <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
-                                    <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={cityIntersectionMap[key].piclink} class="_" draggable="false" />
-                                {/if}
+                                    <svg data-width="1211" data-height="453" viewBox="0 0 1211 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-5 lg:top-0 left-0 fill-neutral-300/86 max-lg:origin-top max-lg:scale-y-300 max-lg:translate-y-1/3">
+                                        <path d="M157.33 52.0575L1089.12 0L1211 400.442L965.033 448.996L0 453L44.3184 91.1005L157.33 52.0575Z" />
+                                    </svg>
+                                    <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
+                                        <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
+                                    </svg>
+                                    {#if cityIntersectionMap[key].category != ""}
+                                            <!-- image: {mountainIntersectionMap[key].category}  -->
+                                        <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                        <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={cityIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
+                                    {/if}
 
-
-
-                                <div> Detail: {key} | {cityIntersectionMap[key].price} | {cityIntersectionMap[key].manufacturer}</div>
+                                    <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
+                                        <div class="basis-1/2 bg-amber-600/50_">
+                                             <!-- [ img-placeholder ] -->
+                                        </div>
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                            <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
+                                                {key}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <span class="uppercase font-semibold text-neutral-50">Category </span> {cityIntersectionMap[key].category}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-35">
+                                                <span class="uppercase font-semibold text-neutral-100">Marke </span> {cityIntersectionMap[key].manufacturer}
+                                            </div>
+                                            <div class="grow text-sm ml-8 lg:ml-38">
+                                                <span class="uppercase font-semibold text-neutral-100">Suspension </span> {cityIntersectionMap[key].suspension}
+                                            </div>
+                                            <div class="grow ml-8 mb-3 lg:ml-38">
+                                                <span class="text-xs">{cityIntersectionMap[key].description}</span>
+                                            </div>
+                                            {#if cityIntersectionMap[key].motor}
+                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {cityIntersectionMap[key].motor}
+                                                </div>
+                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {cityIntersectionMap[key].watth}
+                                                </div>    
+                                            {/if}
+                                            
+                                            <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
+                                               <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {cityIntersectionMap[key].price}
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
                             </li>
                             <!-- {/key} -->
                         {/each}
