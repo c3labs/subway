@@ -49,43 +49,44 @@
         manufacturer: string;
         suspension: string;
         motor: string;
-        watt: string;
-        imgpath: string;
+        watth: string;
+        category: string;
+        description: string;
         piclink: enhPicture;
         visible: boolean;
     }
 
 	let mountainIntersectionMap: Record<string, bikeInfo> = $state({
-		"TopFuel": { price: "7.499", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "bikeHero_0.jpg", piclink: mountainDetail_1, visible: false},
-		"Fuel EXe": { price: "6.999", manufacturer: "Trek", suspension: "FULL - F: 170 - B: 170", motor: "Bosch", watt: "800W", imgpath: "bikeHero_0.jpg", piclink: mountainDetail_2, visible: false},
-		"Procaliber FS": { price: "5.299", manufacturer: "Trek", suspension: "FULL - F: 130 - B: 120", motor: "Bosch", watt: "800W", imgpath: "something", piclink: mountainDetail_3, visible: false},
-		"Procaliber6": { price: "4.799", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "600W", imgpath: "something", piclink: mountainDetail_4, visible: false},
-		"Powerfly FS+ Gen4": { price: "3.999", manufacturer: "Trek", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "something", piclink: mountainDetail_5, visible: false},
-		"Rail99XX AXS": { price: "4.999", manufacturer: "Trek", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "something", piclink: mountainDetail_6, visible: false},
-		"Stereo Hybrid ONE44": { price: "3.199", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "something", piclink: mountainDetail_7, visible: false},
-		"Reaction Hybrid RACE": { price: "3.599", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "something", piclink: mountainDetail_8, visible: false},
-		"Reaction Hybrid ALLROAD": { price: "4.199", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watt: "800W", imgpath: "something", piclink: mountainDetail_9, visible: false},
+		"TopFuel": { price: "7.499", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "", watth: "800 Wh", category: "Trial-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_1, visible: false},
+		"Fuel EXe": { price: "6.999", manufacturer: "Trek", suspension: "FULL - F: 170 - B: 170", motor: "Bosch", watth: "800 Wh", category: "E-Trial-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_2, visible: false},
+		"Procaliber FS": { price: "5.299", manufacturer: "Trek", suspension: "FULL - F: 130 - B: 120", motor: "", watth: "800 Wh", category: "Cross Country-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_3, visible: false},
+		"Procaliber6": { price: "4.799", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "", watth: "600 Wh", category: "Cross Country-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_4, visible: false},
+		"Powerfly FS+ Gen4": { price: "3.999", manufacturer: "Trek", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watth: "800 Wh", category: "E-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_5, visible: false},
+		"Rail99XX AXS": { price: "4.999", manufacturer: "Trek", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watth: "800 Wh", category: "E-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_6, visible: false},
+		"Stereo Hybrid ONE44": { price: "3.199", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watth: "800 Wh", category: "Trial-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_7, visible: false},
+		"Reaction Hybrid RACE": { price: "3.599", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watth: "800 Wh", category: "Trial-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_8, visible: false},
+		"Reaction Hybrid ALLROAD": { price: "4.199", manufacturer: "Cube", suspension: "FULL - F: xxx - B: xxx", motor: "Bosch", watth: "800 Wh", category: "Cross Country-MTB", description: "Infos und link zur Herstellerseite...", piclink: mountainDetail_9, visible: false},
 	});
 
     let roadIntersectionMap: Record<string, bikeInfo> = $state({
-        "Madone SL5": { price: "9.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: roadDetail_1, visible: false},
-		"Madone SL6": { price: "9.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: roadDetail_2, visible: false},
-		"Madone SL6 AXS": { price: "10.699", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: roadDetail_3, visible: false},
-		"Domane+ AL5": { price: "13.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: roadDetail_4, visible: false},
+        "Madone SL5": { price: "9.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Performance-Rennrad", description: "Infos und link zur Herstellerseite...", piclink: roadDetail_1, visible: false},
+		"Madone SL6": { price: "9.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Performance-Rennrad", description: "Infos und link zur Herstellerseite...", piclink: roadDetail_2, visible: false},
+		"Madone SL6 AXS": { price: "10.699", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Performance-Rennrad", description: "Infos und link zur Herstellerseite...", piclink: roadDetail_3, visible: false},
+		"Domane+ AL5": { price: "13.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: " E-All-Road", description: "Infos und link zur Herstellerseite...", piclink: roadDetail_4, visible: false},
 	});
 
     let gravelIntersectionMap: Record<string, bikeInfo> = $state({
-        "Checkmate SLR9AXS A": { price: "6.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_1, visible: false},
-		"Checkmate SLR9AXS B": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_2, visible: false},
-        "Checkmate SLR9AXS c": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_3, visible: false},
-        "Checkpoint SL5 AXS": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_4, visible: false},
-        "Checkpoint SL6": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: gravelDetail_5, visible: false},
+        "Checkmate SLR9AXS A": { price: "6.899", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Gravel-Rennrad", description: "Infos und link zur Herstellerseite...", piclink: gravelDetail_1, visible: false},
+		"Checkmate SLR9AXS B": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Gravel-Rennrad", description: "Infos und link zur Herstellerseite...", piclink: gravelDetail_2, visible: false},
+        "Checkmate SLR9AXS c": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Gravel-Rennrad", description: "Infos und link zur Herstellerseite...", piclink: gravelDetail_3, visible: false},
+        "Checkpoint SL5 AXS": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Endurance Gravel-Bike", description: "Infos und link zur Herstellerseite...", piclink: gravelDetail_4, visible: false},
+        "Checkpoint SL6": { price: "7.999", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Endurance Gravel-Bike", description: "Infos und link zur Herstellerseite...", piclink: gravelDetail_5, visible: false},
 	});
 
     let cityIntersectionMap: Record<string, bikeInfo> = $state({
-        "Suvea": { price: "6.899", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: cityDetail_1, visible: false},
-		"Zing Trip Core LS": { price: "7.999", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: cityDetail_2, visible: false},
-        "Zing Trip Core MS": { price: "7.999", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watt: "800W", imgpath: "something", piclink: cityDetail_3, visible: false},
+        "Suvea": { price: "6.899", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "City-Hybrid-Bike", description: "Infos und link zur Herstellerseite...", piclink: cityDetail_1, visible: false},
+		"Zing Trip Core LS": { price: "7.999", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "City-Hybrid-Bike", description: "Infos und link zur Herstellerseite...", piclink: cityDetail_2, visible: false},
+        "Zing Trip Core MS": { price: "7.999", manufacturer: "Diamant", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "City-Hybrid-Bike", description: "Infos und link zur Herstellerseite...", piclink: cityDetail_3, visible: false},
 	});
 
     let sectionMap: Record<number, boolean> = $state({
@@ -239,7 +240,7 @@
                         {#each Object.keys(mountainIntersectionMap) as key (key)}
                             <!-- {#key intersectionMap[key]} -->
                                 <li
-                                    class="relative font-regular text-white h-screen min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!mountainIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!mountainIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                     use:intersect={{ threshold: 0.2, root: mountainUlElement }}
                                     onintersect={(event) => (
                                         mountainIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
@@ -250,17 +251,52 @@
                                     <svg data-width="1211" data-height="453" viewBox="0 0 1211 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-5 lg:top-0 left-0 fill-neutral-300/86 max-lg:origin-top max-lg:scale-y-300 max-lg:translate-y-1/3">
                                         <path d="M157.33 52.0575L1089.12 0L1211 400.442L965.033 448.996L0 453L44.3184 91.1005L157.33 52.0575Z" />
                                     </svg>
-                                    <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ h-full_ -translate-x-1/2 lg:-translate-x-2/3 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
+                                    <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
-                                    {#if mountainIntersectionMap[key].imgpath != ""}
-                                            <!-- image: {mountainIntersectionMap[key].imgpath}  -->
-                                        <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].imgpath}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                    {#if mountainIntersectionMap[key].category != ""}
+                                            <!-- image: {mountainIntersectionMap[key].category}  -->
+                                        <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
                                         <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8 min-lg:w-2/3 min-lg:-translate-x-1/2" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
                                     {/if}
 
-                                    <div>Detail: {key} | {mountainIntersectionMap[key].price} | {mountainIntersectionMap[key].manufacturer}</div>
+                                    <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
+                                        <div class="basis-1/2 bg-amber-600/50_">
+                                             <!-- [ img-placeholder ] -->
+                                        </div>
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                            <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
+                                                {key}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <span class="uppercase font-semibold text-neutral-50">Category </span> {mountainIntersectionMap[key].category}
+                                            </div>
+                                            <div class="flex-none text-sm ml-8 lg:ml-35">
+                                                <span class="uppercase font-semibold text-neutral-100">Marke </span> {mountainIntersectionMap[key].manufacturer}
+                                            </div>
+                                            <div class="grow text-sm ml-8 lg:ml-38">
+                                                <span class="uppercase font-semibold text-neutral-100">Suspension </span> {mountainIntersectionMap[key].suspension}
+                                            </div>
+                                            <div class="grow ml-8 mb-3 lg:ml-38">
+                                                <span class="text-xs">{mountainIntersectionMap[key].description}</span>
+                                            </div>
+                                            {#if mountainIntersectionMap[key].motor}
+                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {mountainIntersectionMap[key].motor}
+                                                </div>
+                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {mountainIntersectionMap[key].watth}
+                                                </div>    
+                                            {/if}
+                                            
+                                            <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
+                                               <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {mountainIntersectionMap[key].price}
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
                                 <!-- </div> -->
                             </li>
                             <!-- {/key} -->
@@ -278,9 +314,9 @@
                                         roadIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
                                         )}
                                 >
-                                {#if roadIntersectionMap[key].imgpath != ""}
-                                        <!-- image: {mountainIntersectionMap[key].imgpath}  -->
-                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].imgpath}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                {#if roadIntersectionMap[key].category != ""}
+                                        <!-- image: {mountainIntersectionMap[key].category}  -->
+                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
                                     <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
                                     <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={roadIntersectionMap[key].piclink} class="_" draggable="false" />
                                 {/if}
@@ -301,9 +337,9 @@
                                         gravelIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
                                         )}
                                 >
-                                {#if gravelIntersectionMap[key].imgpath != ""}
-                                        <!-- image: {mountainIntersectionMap[key].imgpath}  -->
-                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].imgpath}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                {#if gravelIntersectionMap[key].category != ""}
+                                        <!-- image: {mountainIntersectionMap[key].category}  -->
+                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
                                     <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
                                     <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="_" draggable="false" />
                                 {/if}
@@ -325,9 +361,9 @@
                                         cityIntersectionMap[key].visible = event.detail.entries[0].isIntersecting
                                         )}
                                 >
-                                {#if cityIntersectionMap[key].imgpath != ""}
-                                        <!-- image: {mountainIntersectionMap[key].imgpath}  -->
-                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].imgpath}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
+                                {#if cityIntersectionMap[key].category != ""}
+                                        <!-- image: {mountainIntersectionMap[key].category}  -->
+                                    <!-- <img src="{'/src/lib/assets/images/bikes/heros/' + mountainIntersectionMap[key].category}" alt="Bikes - Hero Shot - Übersicht" class="_" draggable="false" /> -->
                                     <!-- <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainDetail_1}  class="_" draggable="false" /> -->
                                     <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={cityIntersectionMap[key].piclink} class="_" draggable="false" />
                                 {/if}
