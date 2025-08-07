@@ -43,8 +43,10 @@
 		]
 	},
 	"dependencies": {
+		"@arisbh/marqueeck": "^0.5.1",
 		"@fontsource/anta": "^5.2.5",
 		"@fontsource/titillium-web": "^5.2.5",
+		"@lucide/svelte": "^0.536.0",
 		"svelte-scrollto-element": "^3.1.0"
 	}
 }

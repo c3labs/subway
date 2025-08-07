@@ -26,7 +26,8 @@
 
     import trekkingDetail_1 from '$lib/assets/images/bikes/trekking/cube_25_KathmanduSLX.png?enhanced';
 
-    import kubike from '$lib/assets/images/logo/manufacturer/logo_kubikes_transparent_logo_logo.png'
+    import kubike from '$lib/assets/images/logo/manufacturer/logo_kubikes_transparent_logo_logo.png';
+    import ExternalLink from '@lucide/svelte/icons/external-link';
 
 	import { fade, fly } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
@@ -207,16 +208,16 @@
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_road.jpg?format=avif;webp" alt="Bikes - Hero Shot - ROAD" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
         {#if sectionStep === 3}
-            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_gravel.jpg?format=avif;webp" alt="Bikes - Hero Shot - City" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
+            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_gravel.jpg?format=avif;webp" alt="Bikes - Hero Shot - Gravel" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
         {#if sectionStep === 4}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_city.jpg?format=avif;webp" alt="Bikes - Hero Shot - City" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
         {#if sectionStep === 5}
-            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_trekking.jpg?format=avif;webp" alt="Bikes - Hero Shot - City" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
+            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_trekking.jpg?format=avif;webp" alt="Bikes - Hero Shot - Trekking" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
         {#if sectionStep === 6}
-            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_kids.jpg?format=avif;webp" alt="Bikes - Hero Shot - City" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
+            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_kids.jpg?format=avif;webp" alt="Bikes - Hero Shot - Kids" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
         <div class="fixed mix-blend-hard-light z-20 left-0 {sectionStep === 0 ? 'bottom-1/4' : 'bottom-0'} overflow-hidden h-40 lg:h-70 w-full transition-all duration-1000 ease-in-out" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" >
             {#if sectionStep === 0}
@@ -577,7 +578,7 @@
                 {#if sectionStep === 6}
                     <div class=" container mx-auto w-full flex flex-col md:flex-row bg-neutral-300/86 font-regular text-sm/5 text-neutral-800" in:fade={{duration: 200, delay: 500 }}>
                         <div class="w-full md:w-75 p-5 bg-neutral-950 content-center"><img src={kubike} alt="kubike Kinderfahrräder Logo"></div>
-                        <div class="text-center p-3 content-center justify-items-center w-full"><span class="font-semibold text-base/7 uppercase ">Große Qualität auch für kleine BIKER</span><br><a class="text-hero after:content-['_↗']" href="https://www.kubikes.de/kubikes_shop/" target="_blank">Kubike Bikes</a> gibts bei uns im Laden zu bewundern - schaut einfach vorbei!</div>
+                        <div class="text-center p-3 content-center justify-items-center w-full"><span class="font-semibold text-base/7 uppercase ">Große Qualität auch für kleine BIKER</span><br><a class="text-hero inline-flex" href="https://www.kubikes.de/kubikes_shop/" target="_blank">Kubike Bikes  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a> gibts bei uns im Laden zu bewundern - schaut einfach vorbei!</div>
                     </div>
                 {/if}
             </div>

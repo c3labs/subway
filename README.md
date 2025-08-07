@@ -16,6 +16,8 @@ added pnpm packages:
 - @svelte-put/dragscroll 4.0.0
 - @svelte-put/intersect 4.0.0
 - svelte-scrollto-element 3.1.0
+- @lucide/svelte
+- @arisbh/marqueeck
 
 ## sv
 
