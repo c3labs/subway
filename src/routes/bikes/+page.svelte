@@ -199,7 +199,7 @@
     <div class="sticky top-0 left-0 z-10 h-screen w-full">
         <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>WIR HABEN FÜR JEDEN DEINER TRAILS DAS PASSENDE BIKE | <span class="font-bold"> TECH/BIKES</span></h1>
         {#if sectionStep === 0}
-            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_overview.jpg?format=avif;webp" alt="Bikes - Hero Shot - Overview" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center _mix-blend-multiply brightness-120 contrast-115" in:fade={{duration: 300}} out:fade />
+            <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_overview.jpg?format=avif;webp" alt="Bikes - Hero Shot - Overview" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center brightness-120 contrast-115" in:fade={{duration: 300}} out:fade />
         {/if}
         {#if sectionStep === 1}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_mountain.jpg?format=avif;webp" alt="Bikes - Hero Shot - MOUNTAIN" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />

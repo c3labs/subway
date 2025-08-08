@@ -6,6 +6,7 @@
     --font-regular: Titillium Web, sans-serif;
 
     --color-hero: #a51111;
+    --color-stepper: #588FD7;
 
     --radius-special: 0.9rem;
 }
@@ -20,4 +21,5 @@
     .noscrollbar {
         scrollbar-width: none;
     }
+
 }
