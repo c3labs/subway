@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { fade, fly } from "svelte/transition";
+	import { fade, fly, slide } from "svelte/transition";
     import { intersect } from '@svelte-put/intersect';
 	import { uiobserver , onIntersect } from "$lib/uiobserver.svelte";
 	import { animateScroll } from 'svelte-scrollto-element';
 	import { onMount } from 'svelte';
     import Marqueeck from '@arisbh/marqueeck';
+    import { Accordion } from "bits-ui";
     
     import IconArrowLeft from '@lucide/svelte/icons/chevron-left';
     import IconArrowRight from '@lucide/svelte/icons/chevron-right';
+    import CaretDown from '@lucide/svelte/icons/chevron-down';
     import CheckMark from '@lucide/svelte/icons/check';
 
     import lp_bikeleasing from '$lib/assets/images/logo/leasingpartner/bikeleasing-logo.png';
@@ -20,7 +22,28 @@
     import lp_leaseabike from '$lib/assets/images/logo/leasingpartner/leaseabike-logo.png';
     import lp_linexo from '$lib/assets/images/logo/leasingpartner/linexo-logo.webp';
 
-    // Source Data
+    // FAQ - Source Data
+    const faqItems = [
+        { value: "1", title: "Was ist ein Fahrradleasing über den Arbeitgeber?",
+        content: "Fahrradleasing ermöglicht es Dir, Fahrräder bequem und kostengünstig über deinen Arbeitgeber zu beziehen. Diese Fahrräder können nicht nur beruflich, sondern auch privat genutzt werden und die Zahlungen erfolgen über Deine monatliche Gehaltsabrechnung."},
+        { value: "2", title: "Wie funktioniert das Leasing über einen Arbeitgeber?",
+        content: "Dein Arbeitgeber least ein Fahrrad oder ein E-Bike und überlässt es dir als Arbeitnehmer zur Nutzung. Entscheidend ist hier: Das Rad kann auch privat genutzt werden. Die Leasingraten werden durch eine Gehaltsumwandlung von deinem Bruttogehalt abgezogen, wodurch sich dein Lohnsteueranteil verringert."},
+        { value: "3", title: "Was bedeutet Gehaltsumwandlung?",
+        content: "Gehaltsumwandlung bedeutet, dass dir ein Teil deines Bruttogehaltes nicht ausgezahlt, sondern in einen Sachbezug gesteckt wird. Im konkreten Fall wäre dies das Fahrrad oder E-Bike. Dadurch verringert sich dein zu versteuerndes Bruttogehalt und deine Steuer- und Sozialabgaben werden weniger."},
+        { value: "4", title: "Wie komme ich an mein Traumfahrrad?",
+        content: "Du machst einfach einen Beratungstermin aus und kommst bei uns vorbei. Unsere Jungs finden dann mit dir gemeinsam dein Traumfahrrad."},
+        { value: "5", title: "Wie läuft die Beantragung eines Fahrradleasing ab?",
+        content: "Nachdem du dein Wunschfahrrad gefunden hast, managen wir für dich die Beantragung des Fahrradleasings. Vorher musst du dich auf dem Leasingportal des Leasinganbieters deines Arbeitgebers registrieren oder hast einen Code für die Beantragung erhalten. Diese Daten fragen wir bei dir ab und stellen anschließend ein Leasingangebot in das entsprechende Portal ein."},
+        { value: "6", title: "Über welchen Leasinganbieter läuft das Fahrradleasing?",
+        content: "Das hängt von deinem Arbeitgeber ab. Frage hierzu bitte in deiner Firma nach, mit welchem Anbieter zusammengearbeitet wird. Sollte dein Arbeitgeber noch keinen Rahmenvertrag abgeschlossen haben, beraten wir dich gerne über die Unterschiede der einzelnen Anbieter."},
+        { value: "7", title: "Wie lange läuft das Fahrradleasing über den Arbeitgeber?",
+        content: "Das Fahrradleasing läuft immer über 36 Monate. Danach erhältst du in der Regel ein Angebot zur Übernahme des Fahrrades von deinem Leasinganbieter."},
+        { value: "8", title: "Wann kann ich mein Fahrrad abholen und losfahren?",
+        content: "Bevor du das Rad abholen und losfahren kannst, muss der Leasingantrag freigegeben werden. Dies erfolgt durch eine vertraglich geregelte Übernahme des Fahrrades oder E-Bikes mit deinem Arbeitgeber. Sobald dies erfolgt ist und wir dein Rad fahrbereit gemacht haben, erhältst du einen Anruf von uns und wir vereinbaren gemeinsam einen Abholtermin."
+        }        
+    ];
+
+    // Stepper - Source Data
     const steps = [
         { label: 'Rücksprache mit dem Arbeitgeber', description: 'Gibt es schon einen Leasingpartner? <b>Wenn nein:</b> Termin bei uns ausmachen und Informationen über die Leasinganbeiter einholen.' },
         { label: 'Traumbike auswählen', description: 'Schau dich bei uns um und such dir dein Traumrad aus unserem Line-up aus. Wir haben für jeden deiner Trails das passende Bike.' },
@@ -62,15 +85,17 @@
 
 </script>
 
-<div class="relative h-screen" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark">
+<svelte:head>
+	<title>BIKE LEASING | SUBWAY - Radsport Wagner | We just ride!</title>
+</svelte:head>
+
+<div class="relative h-screen" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
     <h1 class="container mx-auto px-4 pb-8 z-11 sticky grid-cols-none top-32 lg:top-48 xl:top-44 col-span-6 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>DER KOMFORTABLE WEG ZUM TRAUMRAD | <span class="font-bold"> BIKE LEASING</span></h1>
     <enhanced:img src="/src/lib/assets/images/leasing/hero_leasing.jpg?format=avif;webp" alt="Bikes - Hero Shot - Bike-Leasing" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" in:fade={{duration: 300}} out:fade />
     <!-- <div class="absolute sticky_ top-0 left-0 z-10 h-screen w-full"> -->
-        <div class="container mx-auto w-full grid grid-cols-6 gap-2 place-items-center h-full">
-            <div class="col-span-2 row-span-2 text-neutral-300 " in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><p>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema Fahrrad-Mitarbeiterleasing geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die professionelle Beratung bei der Suche nach deinem Traumbike, bis hin zur unkomplizierten Abwicklung von Service- und Reparaturaufträgen im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei allen Fragen.</p></div>
-            <div class="col-span-2 text-neutral-300 "><p>............... irgendwas anderes ..............</p></div>
-            <div class="col-span-2 text-neutral-300 "><p>BIKELEASING MADE EASY!!</p></div>
-            <div class="col-span-4 text-neutral-300 w-3/4">
+        <div class="container mx-auto w-full grid grid-cols-6 gap-2 place-items-center h-full px-4">
+            <div class="col-span-6 lg:col-span-2 text-neutral-300 " in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><p>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema Fahrrad-Mitarbeiterleasing geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die professionelle Beratung bei der Suche nach deinem Traumbike, bis hin zur unkomplizierten Abwicklung von Service- und Reparaturaufträgen im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei allen Fragen.</p></div>
+            <div class="col-span-6 lg:col-span-4 text-neutral-300 lg:w-3/4">
                 <div class="w-full">
                 <!-- Stepper -->
                     <div class="space-y-8 w-[600px]_">
@@ -81,13 +106,13 @@
                                 {#each steps as step, i}
                                 <!-- Numeral Button -->
                                 <button
-                                    class="btn-icon btn-icon-2xl rounded-full border-3 cursor-pointer {isCurrentStep(i) ? 'bg-stepper border-stepper' : 'bg-neutral-800/40 border-neutral-100/50'} {currentStep > i ? 'bg-stepper/90 border-stepper' : ''}"
+                                    class="btn-icon btn-icon-2xl rounded-full border-2 cursor-pointer {isCurrentStep(i) ? 'bg-stepper border-stepper' : 'bg-neutral-800/50 border-neutral-500/50'} {currentStep > i ? 'bg-stepper/70 border-stepper' : ''}"
                                     onclick={() => setStep(i)}
                                     title={step.label}
                                 >
-                                    <span class="font-bold {currentStep < i ? 'text-neutral-100/50' : 'text-neutral-100 '}">
+                                    <span class="font-bold {currentStep < i ? 'text-neutral-300/50' : 'text-neutral-100 '}">
                                         {#if currentStep > i }
-                                            <CheckMark size={20} strokeWidth={4}/>    
+                                            <CheckMark size={24} strokeWidth={3}/>    
                                         {:else}
                                             {i + 1}
                                         {/if}
@@ -96,7 +121,7 @@
                                 </button>
                                 <!-- Line -->
                                 {#if i < steps.length-1}
-                                    <div class=" {currentStep < i+1 ? 'bg-neutral-100/50' : 'bg-stepper'} h-1 grow scroll-ms-2_"></div>
+                                    <div class=" {currentStep < i+1 ? 'bg-neutral-500/50' : 'bg-stepper'} h-0.5 grow scroll-ms-2_"></div>
                                 {/if}
                                 {/each}
                             </div>
@@ -128,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-span-6 text-neutral-300 w-full h-14 mb-10 mix-blend-luminosity hover:mix-blend-normal">
+            <div class="col-span-6 text-neutral-300 w-full h-14 mb-10 mix-blend-luminosity hover:mix-blend-normal overflow-hidden">
                 <Marqueeck options={{ direction: "left", speed: 20, hoverSpeed: 0, brakeDuration: 300, onHover: "stop", gap: 60 }} >
                     <!-- <p> MARQUEE AREA </p> -->
                     <img src={lp_bikeleasing} alt="Logo bikeleasing" class="h-14 object-contain">
@@ -145,7 +170,55 @@
         </div>
     <!-- </div> -->
 </div>
-
+<div class="relative h-[115vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
+    <!-- <h1 class="container mx-auto px-4 pb-8 z-11 pt-4 sticky top-28 grid-cols-none lg:top-48 xl:top-44 col-span-6 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>ALLES WAS DU SONST NOCH WISSEN WOLLTEST | <span class="font-bold"> BIKE LEASING</span></h1> -->
+    <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>ALLES WAS DU SONST NOCH WISSEN WOLLTEST | <span class="font-bold"> BIKE LEASING</span></h1>
+        <div class="sticky top-0 left-0 z-10 h-screen w-full bg-neutral-800" in:fade={{duration: 300, delay: 500 }} out:fade>
+            <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-screen">
+                <div class="col-span-6 lg:col-span-2 text-neutral-400" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>BIKE LEASING - # 2 section -FAQ#s.</div>
+                    <Accordion.Root class="w-full sm:max-w-[70%] col-span-6 lg:col-span-4 text-neutral-400 font-regular" type="single">
+                        {#each faqItems as item (item.value)}
+                            <Accordion.Item
+                            value={item.value}
+                            class="border-dark-10 group border-b px-1.5"
+                            >
+                            <Accordion.Header>
+                                <Accordion.Trigger
+                                class="flex w-full flex-1 select-none items-center justify-between py-5 text-[15px] font-bold uppercase transition-all duration-500 cursor-pointer [&[data-state=open]>span>svg]:rotate-180"
+                                >
+                                <span class="w-full text-left">
+                                    {item.title}
+                                </span>
+                                <span
+                                    class="hover:bg-neutral-900 inline-flex size-8 items-center justify-center rounded-[7px] bg-transparent"
+                                >
+                                    <CaretDown class="size-[18px] transition-transform duration-500" />
+                                </span>
+                                </Accordion.Trigger>
+                            </Accordion.Header>
+                            <Accordion.Content
+                                forceMount={true} 
+                                class="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm tracking-[-0.01em] transition-all duration-500"
+                            >
+                                <!-- <div class="pb-[25px]">
+                                {item.content}
+                                </div> -->
+                                {#snippet child({ props, open })}
+                                    {#if open}
+                                        <div {...props} transition:slide={{ duration: 500 }}>
+                                        <div class="pb-[25px]">
+                                            {item.content}
+                                        </div>
+                                        </div>
+                                    {/if}
+                                {/snippet}
+                            </Accordion.Content>
+                            </Accordion.Item>
+                        {/each}
+                    </Accordion.Root>
+            </div>
+        </div>
+</div>
 <style>
 
 .btn-icon {
@@ -162,7 +235,7 @@
 }
 
 .btn-icon-2xl {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     width: var(--text-2xl);
     height: var(--text-2xl);
     padding: calc(var(--spacing) * 1.5);
