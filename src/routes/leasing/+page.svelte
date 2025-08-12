@@ -94,8 +94,15 @@
     <enhanced:img src="/src/lib/assets/images/leasing/hero_leasing.jpg?format=avif;webp" alt="Bikes - Hero Shot - Bike-Leasing" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" in:fade={{duration: 300}} out:fade />
     <!-- <div class="absolute sticky_ top-0 left-0 z-10 h-screen w-full"> -->
         <div class="container mx-auto w-full grid grid-cols-6 gap-2 place-items-center h-full px-4">
-            <div class="col-span-6 lg:col-span-2 text-neutral-300 font-regular text-base" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema Fahrrad-Mitarbeiterleasing geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die professionelle Beratung bei der Suche nach deinem Traumbike, bis hin zur unkomplizierten Abwicklung von Service- und Reparaturaufträgen im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei allen Fragen.</div>
-            <div class="col-span-6 lg:col-span-4 text-neutral-300 lg:w-3/4">
+            <div class="col-span-6 lg:col-span-2 text-neutral-300 font-regular text-base self-center" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
+                <h2 class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center_ font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">NUR
+					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
+						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold"># 6 SCHRITTE</span>
+					</span>
+					UND SCHON GEHTS LOS!
+				</h2>
+            </div>
+            <div class="col-span-6 lg:col-span-4 text-neutral-300 lg:w-3/4 self-end">
                 <div class="w-full">
                 <!-- Stepper -->
                     <div class="space-y-8 w-[600px]_">
@@ -131,7 +138,7 @@
                         <!-- Filter to current step only -->
                         {#if isCurrentStep(i)}
                             <!-- Individual steps -->
-                            <div class="rounded-2xl bg-neutral-800 p-10 space-y-8 text-center">
+                            <div class="rounded-2xl bg-neutral-800 p-10 h-80 lg:h-60 space-y-8 text-center">
                                 <h2 class="font-headline text-2xl uppercase"><span class=" text-neutral-600 font-bold text-6xl mr-2"># {i+1} | </span> {@html step.label}</h2>
                                 <p class="font-regular text-base">{@html step.description }</p>
                             </div>
@@ -140,12 +147,12 @@
                         <!-- Navigation -->
                         <nav class="flex justify-between items-center gap-4">
                             <!-- Back Button -->
-                            <button type="button" class="btn preset-tonal hover:preset-filled flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all text-[var(--bg-state-color)]/77 bg-[var(--bg-menu-color)]/38 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 cursor-pointer disabled:cursor-not-allowed disabled:opacity-35 duration-300" onclick={prevStep} disabled={isFirstStep}>
+                            <button type="button" class="btn preset-tonal hover:preset-filled flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all text-[var(--bg-state-color)]/77 bg-[var(--bg-menu-color)]/38 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 {isLastStep ? 'outline-5 outline-offset-2 outline-hero/65 z-20 outline-dashed' : 'outline-1 outline-offset-0 outline-hero/0 outline-dashed'} cursor-pointer disabled:cursor-not-allowed disabled:opacity-35 duration-300" onclick={prevStep} disabled={isFirstStep}>
                                 <IconArrowLeft size={18} strokeWidth={3} />
                                 <span>zurück</span>
                             </button>
                             <!-- Next Button -->
-                            <button type="button" class="btn preset-tonal hover:preset-filled flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all text-[var(--bg-state-color)]/77 bg-[var(--bg-menu-color)]/38 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 cursor-pointer disabled:cursor-not-allowed disabled:opacity-35 duration-300" onclick={nextStep} disabled={isLastStep}>
+                            <button type="button" class="btn preset-tonal hover:preset-filled flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all text-[var(--bg-state-color)]/77 bg-[var(--bg-menu-color)]/38 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 {isFirstStep ? 'outline-5 outline-offset-2 outline-hero/65 z-20 outline-dashed' : 'outline-1 outline-offset-0 outline-hero/0 outline-dashed'} cursor-pointer disabled:cursor-not-allowed disabled:opacity-35 duration-300" onclick={nextStep} disabled={isLastStep}>
                                 <span>weiter</span>
                                 <IconArrowRight size={18} />
                             </button>
@@ -170,52 +177,48 @@
         </div>
     <!-- </div> -->
 </div>
-<div class="relative h-[115vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
-    <!-- <h1 class="container mx-auto px-4 pb-8 z-11 pt-4 sticky top-28 grid-cols-none lg:top-48 xl:top-44 col-span-6 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>ALLES WAS DU SONST NOCH WISSEN WOLLTEST | <span class="font-bold"> BIKE LEASING</span></h1> -->
+<div class="relative h-[215vh] lg:h-[115vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
     <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>ALLES WAS DU SONST NOCH WISSEN WOLLTEST | <span class="font-bold"> BIKE LEASING</span></h1>
-        <div class="sticky top-0 left-0 z-10 h-screen w-full bg-neutral-800" in:fade={{duration: 300, delay: 500 }} out:fade>
-            <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-screen">
-                <div class="col-span-6 lg:col-span-2 text-neutral-400" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>BIKE LEASING - # 2 section -FAQ#s.</div>
-                    <Accordion.Root class="w-full sm:max-w-[70%] col-span-6 lg:col-span-4 text-neutral-400 font-regular" type="single">
-                        {#each faqItems as item (item.value)}
-                            <Accordion.Item
-                            value={item.value}
-                            class="border-dark-10 group border-b px-1.5"
+        <div class="sticky top-0 left-0 z-10 h-[200vh] lg:h-screen w-full bg-neutral-800" in:fade={{duration: 300, delay: 500 }} out:fade>
+            <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-full lg:h-screen">
+                <div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-600 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema <span class="text-neutral-400">Fahrrad-Mitarbeiterleasing</span> geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die <span class="text-neutral-400">professionelle Beratung</span> bei der Suche nach deinem <span class="text-neutral-400">Traumbike</span>, bis hin zur unkomplizierten Abwicklung von <span class="text-neutral-400">Service- und Reparaturaufträgen</span> im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei <span class="text-neutral-400">allen Fragen</span>.</div>
+                <Accordion.Root class="w-full sm:max-w-[70%]_ max-lg:h-full pt-30 pl-0 lg:pl-14 xl:pl-10 col-span-6 lg:col-span-3 text-neutral-400 font-regular" type="single">
+                    {#each faqItems as item (item.value)}
+                        <Accordion.Item
+                        value={item.value}
+                        class="border-dark-10 text-neutral-700 group border-b px-1.5"
+                        >
+                        <Accordion.Header>
+                            <Accordion.Trigger
+                            class="flex w-full flex-1 select-none items-center justify-between py-5 text-neutral-500 hover:text-neutral-200 text-lg font-medium uppercase transition-all duration-500 cursor-pointer [&[data-state=open]>span>svg]:rotate-180"
                             >
-                            <Accordion.Header>
-                                <Accordion.Trigger
-                                class="flex w-full flex-1 select-none items-center justify-between py-5 text-[15px] font-bold uppercase transition-all duration-500 cursor-pointer [&[data-state=open]>span>svg]:rotate-180"
-                                >
-                                <span class="w-full text-left">
-                                    {item.title}
-                                </span>
-                                <span
-                                    class="hover:bg-neutral-900 inline-flex size-8 items-center justify-center rounded-[7px] bg-transparent"
-                                >
-                                    <CaretDown class="size-[18px] transition-transform duration-500" />
-                                </span>
-                                </Accordion.Trigger>
-                            </Accordion.Header>
-                            <Accordion.Content
-                                forceMount={true} 
-                                class="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm tracking-[-0.01em] transition-all duration-500"
+                            <span class="w-full text-left">
+                                {item.title}
+                            </span>
+                            <span
+                                class="hover:bg-neutral-900 inline-flex size-8 items-center justify-center rounded-[7px] bg-transparent"
                             >
-                                <!-- <div class="pb-[25px]">
-                                {item.content}
-                                </div> -->
-                                {#snippet child({ props, open })}
-                                    {#if open}
-                                        <div {...props} transition:slide={{ duration: 500 }}>
-                                        <div class="pb-[25px]">
-                                            {item.content}
-                                        </div>
-                                        </div>
-                                    {/if}
-                                {/snippet}
-                            </Accordion.Content>
-                            </Accordion.Item>
-                        {/each}
-                    </Accordion.Root>
+                                <CaretDown class="size-[18px] transition-transform duration-500" />
+                            </span>
+                            </Accordion.Trigger>
+                        </Accordion.Header>
+                        <Accordion.Content
+                            forceMount={true} 
+                            class="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm tracking-[-0.01em] text-neutral-400"
+                        >
+                            {#snippet child({ props, open })}
+                                {#if open}
+                                    <div {...props} transition:slide={{ duration: 500 }}>
+                                    <div class="pb-[25px]">
+                                        {item.content}
+                                    </div>
+                                    </div>
+                                {/if}
+                            {/snippet}
+                        </Accordion.Content>
+                        </Accordion.Item>
+                    {/each}
+                </Accordion.Root>
             </div>
         </div>
 </div>
