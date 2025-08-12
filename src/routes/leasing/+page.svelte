@@ -94,7 +94,7 @@
     <enhanced:img src="/src/lib/assets/images/leasing/hero_leasing.jpg?format=avif;webp" alt="Bikes - Hero Shot - Bike-Leasing" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" in:fade={{duration: 300}} out:fade />
     <!-- <div class="absolute sticky_ top-0 left-0 z-10 h-screen w-full"> -->
         <div class="container mx-auto w-full grid grid-cols-6 gap-2 place-items-center h-full px-4">
-            <div class="col-span-6 lg:col-span-2 text-neutral-300 " in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><p>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema Fahrrad-Mitarbeiterleasing geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die professionelle Beratung bei der Suche nach deinem Traumbike, bis hin zur unkomplizierten Abwicklung von Service- und Reparaturaufträgen im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei allen Fragen.</p></div>
+            <div class="col-span-6 lg:col-span-2 text-neutral-300 font-regular text-base" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema Fahrrad-Mitarbeiterleasing geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die professionelle Beratung bei der Suche nach deinem Traumbike, bis hin zur unkomplizierten Abwicklung von Service- und Reparaturaufträgen im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei allen Fragen.</div>
             <div class="col-span-6 lg:col-span-4 text-neutral-300 lg:w-3/4">
                 <div class="w-full">
                 <!-- Stepper -->
