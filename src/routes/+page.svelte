@@ -9,6 +9,12 @@
 	import { uiobserver, onIntersect, navigate } from '$lib/uiobserver.svelte';
 	import { animateScroll } from 'svelte-scrollto-element';
 	import { onMount } from 'svelte';
+	import { Accordion } from "bits-ui";
+
+    import teampic_1 from '$lib/assets/images/team/team_1.jpg';
+    import teampic_2 from '$lib/assets/images/team/team_2.jpg';
+	import teampic_3 from '$lib/assets/images/team/team_3.jpg';
+	import teampic_4 from '$lib/assets/images/team/team_4.jpg';
 
 	// video timehead positioning based on current window scroll position
 	let time = $state(0);
@@ -17,6 +23,34 @@
 	let transitioning = $state(false);
 	// let scrollRelation = $state(0);
 	let scrollQuot =$state(0);
+	let value = $state("item-1");
+
+	const items = [
+    {
+      id: "item-1",
+      title: "Da Schutzblech-SCHORSCH",
+      image: teampic_1,
+      description: "Cheff vom Dienst"
+    },
+    {
+      id: "item-2",
+      title: "Da Radlbumpndrugger",
+      image: teampic_2,
+      description: ".. egal was geht - a bisserl geht imma!"
+    },
+    {
+      id: "item-3",
+      title: "Da Schraubnschlüßlheber",
+      image: teampic_3,
+      description: "Hab alles im Griff."
+    },
+    {
+      id: "item-4",
+      title: "Da Azubi",
+      image: teampic_4,
+      description: "... es war nicht leicht, ich hab's erreicht!"
+    }
+  ];
 	
 	$effect(() => {
 		const videostage: HTMLElement | null = document.getElementById("herostage");
@@ -153,14 +187,55 @@
 		<!-- </div> -->
 	<!-- </div> -->
 <!-- </div> -->
-<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-200 relative h-[50vh]" data-uipref="dark" data-stagepart="4">
-	<div class="heading">
-		<h1 class=" font-headline text-neutral-300">SUBWAY - Development Server</h1>
-	</div>
-	<div>
-		<p>LAST IMPLEMENTED ->> css responsiveness </p>
-		<p>CURRENTLY IMPLEMENTING ->> +page video cutting </p>
-	</div>
+<div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-200 relative h-full lg:h-[100vh]" data-uipref="dark" data-stagepart="4">
+	<h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>EUER FACHHÄNDLER FÜR BIKES IN AICHACH - RADSPORT WAGNER | <span class="font-bold">WE JUST RIDE!</span></h1>
+            <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-full lg:h-screen">
+               	<div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-400 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als <span class="text-neutral-600">Fachhändler</span> mitten im Herzen Aichachs brennen wir für alles was dein <span class="text-neutral-600">Biker-Herz</span> höher schlagen läßt. Unser Line-Up umfasst Bikes für <span class="text-neutral-600">Mountain</span> | <span class="text-neutral-600">Road</span> | <span class="text-neutral-600">Gravel</span> | <span class="text-neutral-600">City</span> | <span class="text-neutral-600">Trekking</span> mit und ohne <span class="text-neutral-600">E-Antrieb</span> sowie Zubehör, Ersatzteile und Radsportbekleidung. In unserer <span class="text-neutral-600">Werkstatt | Werkbank</span> bringen wir jedes Bike wieder <span class="text-neutral-600">Trail Ready</span> - egal was fehlt, <span class="text-neutral-600">unser Service passt</span>. Wir freuen uns über deinen Besuch!</div>
+				<Accordion.Root
+					type="single"
+					orientation="horizontal"
+					class="z-100 flex h-[500px] w-full gap-2 sm:flex-row max-lg:h-full pt-30 px-4 pb-10 lg:pl-14 xl:pl-10 col-span-6 lg:col-span-3 text-neutral-400 font-regular"
+					bind:value
+					>
+					{#each items as item (item.id)}
+						<Accordion.Item
+						value={item.id}
+						class="relative cursor-pointer overflow-hidden rounded-lg transition-all duration-500 ease-in-out data-[state=closed]:w-[20%] data-[state=open]:w-[100%] md:data-[state=closed]:w-[10%] [&:has(:focus-visible)]:ring-2"
+						onclick={() => (value = item.id)}
+						>
+						<img
+							src={item.image}
+							alt={item.title}
+							class="h-[400px] w-full object-cover"
+						/>
+						<div
+							class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4"
+						>
+							<div
+							class="transition-all duration-300 group-data-[state=closed]:translate-y-2 group-data-[state=open]:translate-y-0"
+							>
+							<Accordion.Header>
+								<Accordion.Trigger
+								class="focus-override text-left font-bold text-white transition-all duration-300 focus-visible:!outline-none data-[state=open]:mb-2 data-[state=closed]:text-sm data-[state=open]:text-base data-[state=closed]:opacity-0 data-[state=open]:opacity-100 md:data-[state=open]:text-xl"
+								>
+								{item.title}
+								</Accordion.Trigger>
+							</Accordion.Header>
+							<Accordion.Content
+								forceMount
+								class="max-h-0 overflow-hidden text-white/90 transition-all duration-700 data-[state=open]:max-h-[100px] data-[state=open]:text-xs data-[state=closed]:opacity-0 data-[state=open]:opacity-100 md:data-[state=open]:text-base"
+							>
+								{item.description}
+							</Accordion.Content>
+							<div
+								class="absolute bottom-0 left-0 h-1 w-full transition-all duration-300 group-data-[state=closed]:opacity-0 group-data-[state=open]:opacity-100"
+							></div>
+							</div>
+						</div>
+						</Accordion.Item>
+					{/each}
+					</Accordion.Root>
+            </div>
 </div>
 <div class="fixed z-50 {uiobserver.stagepart === 4 ? 'bottom-30 hidden' : 'bottom-0'} bottom-0 right-4 transition-all min-h-[1px] min-w-[1px] max-sm:w-full sm:right-12 md:right-18 landscape:max-lg:w-full landscape:max-lg:left-0 font-menu text-xs tracking-wider" transition:fade>
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 landscape:max-lg:py-4 sm:block">
