@@ -274,7 +274,7 @@
                                         <div class="basis-1/2 bg-amber-600/50_">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
@@ -340,7 +340,7 @@
                                         <div class="basis-1/2 bg-amber-600/50_">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
@@ -406,7 +406,7 @@
                                         <div class="basis-1/2 bg-amber-600/50_">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
@@ -472,7 +472,7 @@
                                         <div class="basis-1/2 bg-amber-600/50_">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
@@ -538,7 +538,7 @@
                                         <div class="basis-1/2 bg-amber-600/50_">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_">
+                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
