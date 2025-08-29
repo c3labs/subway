@@ -28,27 +28,27 @@
 	const items = [
     {
       id: "item-1",
-      title: "Da Schutzblech-SCHORSCH",
+      title: "Georg Lohner",
       image: teampic_1,
-      description: "Cheff vom Dienst"
+      description: "Inhaber - Beschreibender Text und/oder kurze Bio"
     },
     {
       id: "item-2",
-      title: "Da Radlbumpndrugger",
+      title: "Vorname Name",
       image: teampic_2,
-      description: ".. egal was geht - a bisserl geht imma!"
+      description: "Titel - Beschreibender Text und/oder kurze Bio"
     },
     {
       id: "item-3",
-      title: "Da Schraubnschlüßlheber",
+      title: "Vorname Name",
       image: teampic_3,
-      description: "Hab alles im Griff."
+      description: "Titel - Beschreibender Text und/oder kurze Bio"
     },
     {
       id: "item-4",
-      title: "Da Azubi",
+      title: "Vorname Name",
       image: teampic_4,
-      description: "... es war nicht leicht, ich hab's erreicht!"
+      description: "Auszubildender - Beschreibender Text und/oder kurze Bio"
     }
   ];
 	
@@ -194,7 +194,7 @@
 				<Accordion.Root
 					type="single"
 					orientation="horizontal"
-					class="z-100 flex h-[500px] w-full gap-2 sm:flex-row max-lg:h-full pt-30 px-4 pb-10 lg:pl-14 xl:pl-10 col-span-6 lg:col-span-3 text-neutral-400 font-regular"
+					class="z-10 flex h-[500px] w-full gap-2 sm:flex-row max-lg:h-full pt-30 px-4 pb-10 lg:pl-14 xl:pl-10 col-span-6 lg:col-span-3 text-neutral-400 font-regular"
 					bind:value
 					>
 					{#each items as item (item.id)}
