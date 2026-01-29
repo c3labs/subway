@@ -31,9 +31,9 @@
         { value: "3", title: "Was bedeutet Gehaltsumwandlung?",
         content: "Gehaltsumwandlung bedeutet, dass dir ein Teil deines Bruttogehaltes nicht ausgezahlt, sondern in einen Sachbezug gesteckt wird. Im konkreten Fall wäre dies das Fahrrad oder E-Bike. Dadurch verringert sich dein zu versteuerndes Bruttogehalt und deine Steuer- und Sozialabgaben werden weniger."},
         { value: "4", title: "Wie komme ich an mein Traumfahrrad?",
-        content: "Du machst einfach einen Beratungstermin aus und kommst bei uns vorbei. Unsere Jungs finden dann mit dir gemeinsam dein Traumfahrrad."},
+        content: "Du kommst für eine Beratung bei uns vorbei und suchst dir vor Ort gemeinsam mit unserem Team dein Traumfahrrad aus."},
         { value: "5", title: "Wie läuft die Beantragung eines Fahrradleasing ab?",
-        content: "Nachdem du dein Wunschfahrrad gefunden hast, managen wir für dich die Beantragung des Fahrradleasings. Vorher musst du dich auf dem Leasingportal des Leasinganbieters deines Arbeitgebers registrieren oder hast einen Code für die Beantragung erhalten. Diese Daten fragen wir bei dir ab und stellen anschließend ein Leasingangebot in das entsprechende Portal ein."},
+        content: "Nachdem du dein Wunschfahrrad gefunden hast, kümmern wir uns für dich um die Beantragung des Fahrradleasings. Vorher musst du dich auf dem Leasingportal des Leasinganbieters deines Arbeitgebers registrieren oder hast einen Code für die Beantragung erhalten. Diese Daten fragen wir bei dir ab und stellen anschließend ein Leasingangebot in das entsprechende Portal ein."},
         { value: "6", title: "Über welchen Leasinganbieter läuft das Fahrradleasing?",
         content: "Das hängt von deinem Arbeitgeber ab. Frage hierzu bitte in deiner Firma nach, mit welchem Anbieter zusammengearbeitet wird. Sollte dein Arbeitgeber noch keinen Rahmenvertrag abgeschlossen haben, beraten wir dich gerne über die Unterschiede der einzelnen Anbieter."},
         { value: "7", title: "Wie lange läuft das Fahrradleasing über den Arbeitgeber?",
@@ -46,8 +46,8 @@
     // Stepper - Source Data
     const steps = [
         { label: 'Rücksprache mit dem Arbeitgeber', description: 'Gibt es schon einen Leasingpartner? <b>Wenn nein:</b> Termin bei uns ausmachen und Informationen über die Leasinganbeiter einholen.' },
-        { label: 'Traumbike auswählen', description: 'Schau dich bei uns um und such dir dein Traumrad aus unserem Line-up aus. Wir haben für jeden deiner Trails das passende Bike.' },
-        { label: 'Angebot einholen', description: 'Wir erstellen Dir ein individuelles Angebot und laden es auf dem Portal des Leasinganbieters deiner Firma hoch.' },
+        { label: 'Traumbike auswählen', description: 'Schau dich bei uns um und such dir dein Traumrad aus. Wir haben für jeden Einsatzbereich das passende Bike.' },
+        { label: 'Angebot einholen', description: 'Wir erstellen gemeinsam mit Dir ein individuelles Angebot und laden es auf dem Portal des Leasinganbieters deiner Firma hoch.' },
         { label: 'Abschluss Leasingvertrag', description: 'Du bestätigst das Angebot und lässt es Dir von deinem Arbeitgeber freigeben.' },
         { label: 'Vertragsübergabe an Subway', description: 'Nachdem der Leasingvertrag bestätigt wurde, wird dieser an uns übergeben und wir starten mit dem Aufbau deines Bikes.' },
         { label: 'Dein Fahrrad ist abholbereit', description: 'Dein Fahrrad ist nun abholbereit und startklar! Du kannst es bei uns abholen und bekommst eine fachmännische Übergabe.' }
@@ -181,7 +181,7 @@
     <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>ALLES WAS DU SONST NOCH WISSEN WOLLTEST | <span class="font-bold"> BIKE LEASING</span></h1>
         <div class="sticky top-0 left-0 z-10 h-[200vh] lg:h-screen w-full bg-neutral-800" in:fade={{duration: 300, delay: 500 }} out:fade>
             <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-full lg:h-screen">
-                <div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-600 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema <span class="text-neutral-400">Fahrrad-Mitarbeiterleasing</span> geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die <span class="text-neutral-400">professionelle Beratung</span> bei der Suche nach deinem <span class="text-neutral-400">Traumbike</span>, bis hin zur unkomplizierten Abwicklung von <span class="text-neutral-400">Service- und Reparaturaufträgen</span> im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei <span class="text-neutral-400">allen Fragen</span>.</div>
+                <div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-600 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema <span class="text-neutral-400">Fahrrad-Mitarbeiterleasing</span> geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die <span class="text-neutral-400">professionelle Beratung</span> bei der Suche nach deinem <span class="text-neutral-400">Traumbike</span>, bis hin zur unkomplizierten Abwicklung von <span class="text-neutral-400">Serviceaufträgen</span> im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei <span class="text-neutral-400">allen Fragen</span>.</div>
                 <Accordion.Root class="w-full sm:max-w-[70%]_ max-lg:h-full pt-30 pl-0 lg:pl-14 xl:pl-10 col-span-6 lg:col-span-3 text-neutral-400 font-regular" type="single">
                     {#each faqItems as item (item.value)}
                         <Accordion.Item

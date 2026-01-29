@@ -191,13 +191,13 @@
 </script>
 
 <svelte:head>
-	<title>TECH/BIKES | SUBWAY - Radsport Wagner | We just ride!</title>
+	<title>FAHRRÄDER | SUBWAY - Radsport Wagner | We just ride!</title>
 </svelte:head>
 <svelte:window bind:scrollY />
 
 <div class="relative h-[400vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" id="techstage" in:fade={{duration: 300, delay: 250}} out:fade >
     <div class="sticky top-0 left-0 z-10 h-screen w-full">
-        <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>WIR HABEN FÜR JEDEN DEINER TRAILS DAS PASSENDE BIKE | <span class="font-bold"> TECH/BIKES</span></h1>
+        <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>WIR HABEN FÜR JEDEN DEINER TRAILS DAS PASSENDE BIKE | <span class="font-bold"> FAHRRÄDER</span></h1>
         {#if sectionStep === 0}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_overview.jpg?format=avif;webp" alt="Bikes - Hero Shot - Overview" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center brightness-120 contrast-115" in:fade={{duration: 300}} out:fade />
         {/if}

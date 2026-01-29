@@ -30,25 +30,25 @@
       id: "item-1",
       title: "Georg Lohner",
       image: teampic_1,
-      description: "Inhaber - Beschreibender Text und/oder kurze Bio"
+      description: "Inhaber - Leidenschaftlicher Rennradfahrer und Mountainbiker, im Team bekannt für sein enormes Fachwissen."
     },
     {
       id: "item-2",
-      title: "Vorname Name",
+      title: "Sebastian Miesl",
       image: teampic_2,
-      description: "Titel - Beschreibender Text und/oder kurze Bio"
+      description: "Verkauf/Werkstatt - Rennradbegeistert, lebensfroh und stets mit einem freundlichen Lächeln unterwegs."
     },
     {
       id: "item-3",
-      title: "Vorname Name",
+      title: "Philipp Baudrexl",
       image: teampic_3,
-      description: "Titel - Beschreibender Text und/oder kurze Bio"
+      description: "Verkauf/Werkstatt - Mountainbike- und Downhill-Fan, flinker Schrauber mit einem guten Gespür für Technik."
     },
     {
       id: "item-4",
-      title: "Vorname Name",
+      title: "Daniel Peters",
       image: teampic_4,
-      description: "Auszubildender - Beschreibender Text und/oder kurze Bio"
+      description: "Auszubildender Zweiradmechatroniker - Beigeistert von Rennrad und Gravel, bereits verkaufserfahren und motiviert in der Ausbildung zum Zweiradmechatroniker."
     }
   ];
 	
@@ -108,7 +108,7 @@
 	</div>
 	<div class="sticky top-0 left-0 z-10 h-screen w-full" transition:fade>
 		{#if scrollQuot >= 0.01 && scrollQuot < 0.33 && !transitioning}
-			<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE BIKES FÜR DEIN NÄCHSTES ADVENTURE | <span class="font-bold">WE JUST RIDE!</span></h1>
+			<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE FAHRRÄDER FÜR DEIN NÄCHSTES ADVENTURE | <span class="font-bold">WE JUST RIDE!</span></h1>
 		{/if}
 		{#if scrollQuot > 0.33 && scrollQuot < 0.66 && !transitioning}
 			<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>WIR LASSEN DEIN TRAUMBIKE WIRKLICHKEIT WERDEN | <span class="font-bold">PROJECT ONE</span></h1>
@@ -120,7 +120,7 @@
 				{#if scrollQuot > 0.01 && scrollQuot < 0.16 && !transitioning}
 				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">EGAL WELCHES 
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">BIKE ADVENTURE 2025 </span>
+						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">ADVENTURE 2026 </span>
 					</span>
 					AUF DICH WARTET ...
 				</h2>
@@ -132,13 +132,13 @@
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">IDEALEN BEGLEITER</span>
 					</span>
-					FÜR ALL DEINE TRAILS.
+					FÜR DEIN TERRAIN.
 				</h2>
 				{/if}
 		</div>
 		<div class="fixed top-0 flex h-full w-full flex-col items-stretch justify-center text-white overflow-hidden">
 				{#if scrollQuot > 0.34 && scrollQuot < 0.49 && !transitioning}
-				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">EINIGE UNSERER BIKES WURDEN
+				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="2" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">EINIGE UNSERER FAHRRÄDER WURDEN
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">IM WINDKANAL</span>
 					</span>
@@ -152,7 +152,7 @@
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">PROJECT ONE</span>
 					</span>
-					DREAM BIKES!
+					TRAUMRÄDER!
 				</h2>
 				{/if}
 		</div>
@@ -172,7 +172,7 @@
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">NEUEN WUNSCHBIKE</span>
 					</span>
-					IST, UND GESUND IST ES AUCH!
+					SEIN KANN!
 				</h2>
 				{/if}
 		</div>
@@ -188,7 +188,7 @@
 	<!-- </div> -->
 <!-- </div> -->
 <div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-200 relative h-full lg:h-[100vh]" data-uipref="dark" data-stagepart="4">
-	<h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>EUER FACHHÄNDLER FÜR BIKES IN AICHACH - RADSPORT WAGNER | <span class="font-bold">WE JUST RIDE!</span></h1>
+	<h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>EUER FACHHÄNDLER FÜR FAHRRÄDER UND ZUBEHÖR IN AICHACH - RADSPORT WAGNER | <span class="font-bold">WE JUST RIDE!</span></h1>
             <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-full lg:h-screen">
                	<div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-400 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als <span class="text-neutral-600">Fachhändler</span> mitten im Herzen Aichachs brennen wir für alles was dein <span class="text-neutral-600">Biker-Herz</span> höher schlagen läßt. Unser Line-Up umfasst Bikes für <span class="text-neutral-600">Mountain</span> | <span class="text-neutral-600">Road</span> | <span class="text-neutral-600">Gravel</span> | <span class="text-neutral-600">City</span> | <span class="text-neutral-600">Trekking</span> mit und ohne <span class="text-neutral-600">E-Antrieb</span> sowie Zubehör, Ersatzteile und Radsportbekleidung. In unserer <span class="text-neutral-600">Werkstatt | Werkbank</span> bringen wir jedes Bike wieder <span class="text-neutral-600">Trail Ready</span> - egal was fehlt, <span class="text-neutral-600">unser Service passt</span>. Wir freuen uns über deinen Besuch!</div>
 				<Accordion.Root
