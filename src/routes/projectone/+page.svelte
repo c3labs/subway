@@ -23,7 +23,7 @@
 
     <div class="relative h-[100vh]" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">
         <div class="sticky top-0 left-0 z-10 h-[75vh] w-full bg-neutral-800" in:fade={{ duration: 300, delay: 500 }} out:fade>
-            <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>IN NUR FÜNF STEPS ZU DEINEM COSTOM BIKE | <span class="font-bold"> TREK - PROJECT ONE</span></h1>
+            <h1 class="container mx-auto px-4 pb-8 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl text-shadow-sm" in:fade={{duration: 300, delay: 600 }} out:fade>IN NUR FÜNF SCHRITTEN ZU DEINEM CUSTOM FAHRRAD | <span class="font-bold"> TREK - PROJECT ONE</span></h1>
             {#if postep === 0}
                 <enhanced:img src="../../lib/assets/images/bikes/projectOne/MY25_ProjectOne_step_0.jpg?format=avif;webp" alt="Project One - Madone Hero Shot" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" out:fade />
             {/if}
