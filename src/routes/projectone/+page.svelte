@@ -55,11 +55,11 @@
                 </div>
                 {/if}
                 {#if postep === 1}
-                <h2 class="absolute left-[50%] top-[40%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 1 # </span> Such dir  
+                <h2 class="absolute left-[50%] top-[40%] -translate-1/2 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-neutral-100 uppercase text-shadow-lg" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade><span class="absolute text-lg font-bold text-neutral-900/70 translate-x-0.5 -translate-y-4 text-shadow-none">Step 1 # </span> Wähle  
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">deine Rennmaschine</span>
+                        <span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold text-shadow-none">dein Traumrad</span>
                     </span>
-                    aus dem TREK RENNRAD LINEUP.
+                    aus dem TREK PROJECT ONE KATALOG.
                 </h2>
                 <div class="_bg-neutral-100 text-neutral-500 w-full text-right font-regular text-base rounded-xl absolute left-[50%] _top-[70%] -bottom-[25%] -translate-x-1/2 container mx-auto px-4 pb-6 pt-12" transition:fade>
                     Mit Project One kannst du dein Traumbike genau nach deinen Vorstellungen, Wünschen und Anforderungen erschaffen. Zur Auswahl stehen dir: Madone - Domane - Domane+ - Checkmate - Speed Concept
