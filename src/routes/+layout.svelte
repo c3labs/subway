@@ -13,6 +13,9 @@
 	import logo_diamant from '$lib/assets/images/logo/manufacturer/diamant.svg?raw';
 	import logo_bontrager from '$lib/assets/images/logo/manufacturer/bontrager.svg?raw';
 	import logo_electra from '$lib/assets/images/logo/manufacturer/electra.svg?raw';
+	import logo_rapha from '$lib/assets/images/logo/manufacturer/rapha.svg?raw';
+	import logo_wilier from '$lib/assets/images/logo/manufacturer/wilier.svg?raw';
+	import logo_kubikes from '$lib/assets/images/logo/manufacturer/kubikes.svg?raw';
 
 	import Header from './Header.svelte';
 
@@ -112,7 +115,7 @@
 				<li class="px-2 flex justify-between {weekday === 5 ? 'text-neutral-400' : ''}">Freitag<span class="text-right">09:00–12:00, 14:00–18:00</span></li>
 				<li class="px-2 flex justify-between {weekday === 6 ? 'text-neutral-400' : ''}">Samstag<span class="text-right">09:00–13:00</span></li>
 				
-				<li class="px-2 mt-1.5 max-md:text-center text-neutral-500 hover:text-neutral-300 transition-colors duration-300"><a href="//maps.app.goo.gl/XSHnkLPzBnqJbCFi7" target="_blank">48.459421, 11.1300627 - [lat/lon]</a></li>
+				<li class="px-2 mt-1.5 max-md:text-center text-neutral-500 hover:text-neutral-300 transition-colors duration-300"><a href="//maps.app.goo.gl/XSHnkLPzBnqJbCFi7" target="_blank">STANDORT - [G-MAPS]</a></li>
 
 				<!-- <li class="px-2">? impressum ?</li>
 				<li class="px-2">? agb ?</li>
@@ -128,6 +131,9 @@
 				<li class="px-2 w-[120px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_bontrager}</li>
 				<li class="px-2 w-[100px] h-10 text-neutral-600 hover:text-neutral-300 -translate-y-1 transition-colors duration-300">{@html logo_diamant}</li>
 				<li class="px-2 w-[95px] h-10 text-neutral-600 hover:text-neutral-300 -translate-y-0.5 transition-colors duration-300">{@html logo_electra}</li>
+				<li class="px-2 w-[80px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_rapha}</li>
+				<li class="px-2 w-[110px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_wilier}</li>
+				<li class="px-2 w-[100px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_kubikes}</li>
 			</ul>
 		</div>
 		<div class="flex-none order-2 md:order-3 justify-center lg:justify-end max-md:pb-10">
@@ -144,7 +150,7 @@
 	</div>
 	<div class="container">
 		<p class="text-neutral-600  font-menu text-xs text-center">
-			© 2025 <a href="https://c3labs.de" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-300">c3labs.de</a> | All Rights Reserved
+			© 2026 <a href="https://c3labs.de" target="_blank" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-300">c3labs.de</a> | All Rights Reserved
 		</p>
 		<p class="text-neutral-700 font-menu text-xs text-center p-3">
 			DIESE WEBSITE FUNKTIONIERT OHNE COOKIES - SAMMELT KEINE DATEN - VERWENDET MEDIALE INHALTE MIT FREUNDLICHER GENEHMIGUNG VON TREK | CUBE | usw...
