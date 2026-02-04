@@ -19,9 +19,6 @@
 			<li aria-current={page.url.pathname === '/projectone' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
 				<button onclick={() => navigate("/projectone")} class="cursor-pointer">PROJECT ONE</button>
 			</li>
-			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
-				<button onclick={() => navigate('/leasing')} class="cursor-pointer">LEASING</button>
-			</li>
 		</ul>
 	</div>
 	<div class="absolute {uiobserver.navstate ? 'w-36 left-1/6 top-7' : 'w-18 left-1/12 top-5'} grow -translate-x-1/3 sm:left-1/8 lg:left-1/2 lg:-translate-x-1/2 lg:top-5 lg:w-28 transition-all duration-300 ease-out">
@@ -32,12 +29,15 @@
 	</div>
 	<div class="corner">
 		<ul class="flex flex-col items-end xl:flex-row gap-x-12">
+			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
+				<button onclick={() => navigate('/leasing')} class="cursor-pointer">LEASING</button>
+			</li>
 			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
-				<button onclick={() => navigate('/workbench')} class="cursor-pointer">+SERVICE/WORKBENCH</button>
+				<button onclick={() => navigate('/workbench')} class="cursor-pointer">SERVICE/WORKBENCH</button>
 			</li>
-			<li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300" >
+			<!-- <li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300" >
 				<button onclick={() => navigate('/info')} class="cursor-pointer">+INFORMATION</button>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 </header>

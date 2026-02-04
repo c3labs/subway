@@ -112,7 +112,7 @@
 				<li class="px-2 flex justify-between {weekday === 5 ? 'text-neutral-400' : ''}">Freitag<span class="text-right">09:00–12:00, 14:00–18:00</span></li>
 				<li class="px-2 flex justify-between {weekday === 6 ? 'text-neutral-400' : ''}">Samstag<span class="text-right">09:00–13:00</span></li>
 				
-				<li class="px-2 mt-1.5 max-md:text-center text-neutral-500 hover:text-neutral-300 transition-colors duration-300"><a href="//maps.app.goo.gl/XSHnkLPzBnqJbCFi7" target="_blank">48.459421, 11.1300627 - [lat/lon]</a></li>
+				<li class="px-2 mt-1.5 max-md:text-center text-neutral-500 hover:text-neutral-300 transition-colors duration-300"><a href="//maps.app.goo.gl/XSHnkLPzBnqJbCFi7" target="_blank">STANDORT - [G-MAPS]</a></li>
 
 				<!-- <li class="px-2">? impressum ?</li>
 				<li class="px-2">? agb ?</li>
@@ -144,7 +144,7 @@
 	</div>
 	<div class="container">
 		<p class="text-neutral-600  font-menu text-xs text-center">
-			© 2025 <a href="https://c3labs.de" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-300">c3labs.de</a> | All Rights Reserved
+			© 2026 <a href="https://c3labs.de" target="_blank" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-300">c3labs.de</a> | All Rights Reserved
 		</p>
 		<p class="text-neutral-700 font-menu text-xs text-center p-3">
 			DIESE WEBSITE FUNKTIONIERT OHNE COOKIES - SAMMELT KEINE DATEN - VERWENDET MEDIALE INHALTE MIT FREUNDLICHER GENEHMIGUNG VON TREK | CUBE | usw...
