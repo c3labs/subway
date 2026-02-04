@@ -13,6 +13,9 @@
 	import logo_diamant from '$lib/assets/images/logo/manufacturer/diamant.svg?raw';
 	import logo_bontrager from '$lib/assets/images/logo/manufacturer/bontrager.svg?raw';
 	import logo_electra from '$lib/assets/images/logo/manufacturer/electra.svg?raw';
+	import logo_rapha from '$lib/assets/images/logo/manufacturer/rapha.svg?raw';
+	import logo_wilier from '$lib/assets/images/logo/manufacturer/wilier.svg?raw';
+	import logo_kubikes from '$lib/assets/images/logo/manufacturer/kubikes.svg?raw';
 
 	import Header from './Header.svelte';
 
@@ -128,6 +131,9 @@
 				<li class="px-2 w-[120px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_bontrager}</li>
 				<li class="px-2 w-[100px] h-10 text-neutral-600 hover:text-neutral-300 -translate-y-1 transition-colors duration-300">{@html logo_diamant}</li>
 				<li class="px-2 w-[95px] h-10 text-neutral-600 hover:text-neutral-300 -translate-y-0.5 transition-colors duration-300">{@html logo_electra}</li>
+				<li class="px-2 w-[80px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_rapha}</li>
+				<li class="px-2 w-[110px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_wilier}</li>
+				<li class="px-2 w-[100px] h-10 text-neutral-600 hover:text-neutral-300 transition-colors duration-300">{@html logo_kubikes}</li>
 			</ul>
 		</div>
 		<div class="flex-none order-2 md:order-3 justify-center lg:justify-end max-md:pb-10">

@@ -241,17 +241,17 @@
 	<div class="block origin-bottom-right py-6 sm:py-14 md:py-18 landscape:max-lg:py-4 sm:block">
 		<div class="flex flex-col landscape:max-lg:flex-row align-bottom items-end landscape:max-lg:justify-center gap-1">
 			<!-- {#if uiobserver.stagepart >= 1} -->
-				<button onclick={() => navigate('/fahrraeder')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 1 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/65 z-20 outline-dashed' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-dashed'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/fahrraeder')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 1 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/65 z-20 outline-solid' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-solid'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">FINDE DEIN BIKE | FAHRRÄDER</div>
 				</button>
 			<!-- {/if}
 			{#if uiobserver.stagepart >= 2} -->
-				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 2 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/65 z-20 outline-dashed' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-dashed'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/projectone')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 2 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/65 z-20 outline-solid' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-solid'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DEIN DREAM BIKE PROJECT | PROJECT ONE</div>
 				</button>
 			<!-- {/if}
 			{#if uiobserver.stagepart >= 3} -->
-				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 3 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/65 z-20 outline-dashed' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-dashed'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
+				<button onclick={() => navigate('/leasing')} class="flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all {uiobserver.stagepart === 3 ? 'bg-[var(--bg-menu-color)]/38 outline-5 outline-offset-2 outline-hero/65 z-20 outline-solid' : 'bg-[var(--bg-menu-color)]/28 outline-1 outline-offset-0 outline-hero/0 outline-solid'} text-[var(--bg-state-color)]/77 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 duration-300 cursor-pointer">
 					<div class="relative">DER WEG ZUM FIRMENRAD | LEASING</div>
 				</button>
 			<!-- {/if} -->

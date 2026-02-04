@@ -95,7 +95,7 @@
     <!-- <div class="absolute sticky_ top-0 left-0 z-10 h-screen w-full"> -->
         <div class="container mx-auto w-full grid grid-cols-6 gap-2 place-items-center h-full px-4">
             <div class="col-span-6 lg:col-span-2 text-neutral-300 font-regular text-base self-center" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
-                <h2 class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center_ font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">NUR
+                <h2 class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right pt-30 font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">NUR
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
 						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold"># 6 SCHRITTE</span>
 					</span>
@@ -147,12 +147,12 @@
                         <!-- Navigation -->
                         <nav class="flex justify-between items-center gap-4">
                             <!-- Back Button -->
-                            <button type="button" class="btn preset-tonal hover:preset-filled flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all text-[var(--bg-state-color)]/77 bg-[var(--bg-menu-color)]/38 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 {isLastStep ? 'outline-5 outline-offset-2 outline-hero/65 z-20 outline-dashed' : 'outline-1 outline-offset-0 outline-hero/0 outline-dashed'} cursor-pointer disabled:cursor-not-allowed disabled:opacity-35 duration-300" onclick={prevStep} disabled={isFirstStep}>
+                            <button type="button" class="btn preset-tonal hover:preset-filled flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all text-[var(--bg-state-color)]/77 bg-[var(--bg-menu-color)]/38 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 {isLastStep ? 'outline-5 outline-offset-2 outline-hero/65 z-20 outline-solid' : 'outline-1 outline-offset-0 outline-hero/0 outline-solid'} cursor-pointer disabled:cursor-not-allowed disabled:opacity-35 duration-300" onclick={prevStep} disabled={isFirstStep}>
                                 <IconArrowLeft size={18} strokeWidth={3} />
                                 <span>zurück</span>
                             </button>
                             <!-- Next Button -->
-                            <button type="button" class="btn preset-tonal hover:preset-filled flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all text-[var(--bg-state-color)]/77 bg-[var(--bg-menu-color)]/38 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 {isFirstStep ? 'outline-5 outline-offset-2 outline-hero/65 z-20 outline-dashed' : 'outline-1 outline-offset-0 outline-hero/0 outline-dashed'} cursor-pointer disabled:cursor-not-allowed disabled:opacity-35 duration-300" onclick={nextStep} disabled={isLastStep}>
+                            <button type="button" class="btn preset-tonal hover:preset-filled flex min-w-[177px] items-center justify-center overflow-hidden whitespace-nowrap rounded-special px-6 py-3.5 backdrop-blur-sm transition-all text-[var(--bg-state-color)]/77 bg-[var(--bg-menu-color)]/38 hover:text-[var(--bg-state-color)]/100 hover:bg-[var(--bg-menu-color)]/60 active:bg-[var(--bg-menu-color)]/60 {isFirstStep ? 'outline-5 outline-offset-2 outline-hero/65 z-20 outline-solid' : 'outline-1 outline-offset-0 outline-hero/0 outline-solid'} cursor-pointer disabled:cursor-not-allowed disabled:opacity-35 duration-300" onclick={nextStep} disabled={isLastStep}>
                                 <span>weiter</span>
                                 <IconArrowRight size={18} />
                             </button>
