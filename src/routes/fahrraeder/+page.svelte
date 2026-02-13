@@ -85,20 +85,20 @@
 	});
 
     let gravelIntersectionMap: Record<string, bikeInfo> = $state({
-        "Checkpoint": { price: "6.899,-", manufacturer: "Trek", suspension: "", motor: "Bosch", watth: "800 Wh", category: "Gravelbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/performance-rennräder/madone/c/B213/", piclink: gravelDetail_1, visible: false},
-		"Checkmate SLR9AXS B": { price: "7.999,-", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "E-Gravelbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/performance-rennräder/madone/c/B213/", piclink: gravelDetail_2, visible: false},
-        "Checkmate SLR9AXS c": { price: "7.999,-", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Gravel-Racebike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/performance-rennräder/madone/c/B213/", piclink: gravelDetail_3, visible: false},
-        "Checkpoint SL5 AXS": { price: "7.999,-", manufacturer: "Trek", suspension: "FULL - F: 160 - B: 160", motor: "Bosch", watth: "800 Wh", category: "Fitnessbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/performance-rennräder/madone/c/B213/", piclink: gravelDetail_4, visible: false},
+        "Checkpoint": { price: "2.999,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Gravelbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/touren-und-bikepacking-fahrräder/checkpoint/c/B224/", piclink: gravelDetail_1, visible: false},
+		"Checkpoint+": { price: "4.999,-", manufacturer: "Trek", suspension: "", motor: "TQ", watth: "360 Wh", category: "E-Gravelbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/gravelbikes/e-gravelbikes/checkpoint/c/B224-5/", piclink: gravelDetail_2, visible: false},
+        "Checkmate": { price: "7.499,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Gravel-Racebike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/gravelbikes/gravelbikes-mit-rennlenker/checkmate/c/B225/", piclink: gravelDetail_3, visible: false},
+        "FX": { price: "1.999,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fitnessbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/alltagsräder/fitnessräder/fx/fxsport/c/B421-1/", piclink: gravelDetail_4, visible: false},
 	});
 
     let citytrekIntersectionMap: Record<string, bikeInfo> = $state({
-        "Suvea": { price: "6.899,-", manufacturer: "Diamant", suspension: "", motor: "Bosch", watth: "800 Wh", category: "E-SUV", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-e-bikes/diamant-suvea/c/DB365/", piclink: citytrekDetail_1, visible: false},
-		"Zing Trip Core LS": { price: "7.999,-", manufacturer: "Diamant", suspension: "", motor: "Bosch", watth: "800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-trekking/diamant-zing/c/DB450/", piclink: citytrekDetail_2, visible: false},
-        "Zing Trip Core MS": { price: "7.99,-9", manufacturer: "Diamant", suspension: "", motor: "Bosch", watth: "800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-trekking/diamant-zing/c/DB450/", piclink: citytrekDetail_3, visible: false},
-        "Kathmandu Hybrid": { price: "7.999,-", manufacturer: "Cube", suspension: "", motor: "Bosch", watth: "800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/e-bikes/trekking/tour/kathmandu-hybrid?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: citytrekDetail_4, visible: false},
-        "District+": { price: "7.999,-", manufacturer: "Trek", suspension: "", motor: "Bosch", watth: "800 Wh", category: "E-Citybike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/alltagsräder/elektrische-alltagsräder/district/c/B474/", piclink: citytrekDetail_5, visible: false},
-        "Mahon": { price: "7.999,-", manufacturer: "Diamant", suspension: "", motor: "", watth: "", category: "Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-bikes-ohne-motor/diamant-mahon/c/DB385/", piclink: citytrekDetail_6, visible: false},
-        "Nature": { price: "7.999,-", manufacturer: "Cube", suspension: "", motor: "", watth: "", category: "Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/bikes/trekking/tour/nature?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: citytrekDetail_7, visible: false},
+        "Suvea": { price: "4.599,-", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-SUV", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-e-bikes/diamant-suvea/c/DB365/", piclink: citytrekDetail_1, visible: false},
+		"Zing Trip Plus Lowstep": { price: "3.349,-", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-trekking/diamant-zing/c/DB450/", piclink: citytrekDetail_2, visible: false},
+        "Zing Trip Core Midstep": { price: "3.149,-", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-trekking/diamant-zing/c/DB450/", piclink: citytrekDetail_3, visible: false},
+        "Kathmandu Hybrid": { price: "3.599,-", manufacturer: "Cube", suspension: "", motor: "Bosch CX", watth: "800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/e-bikes/trekking/tour/kathmandu-hybrid?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: citytrekDetail_4, visible: false},
+        "District+": { price: "3.349,-", manufacturer: "Trek", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Citybike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/alltagsräder/elektrische-alltagsräder/district/c/B474/", piclink: citytrekDetail_5, visible: false},
+        "Mahon": { price: "1.199,-", manufacturer: "Diamant", suspension: "", motor: "", watth: "", category: "Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-bikes-ohne-motor/diamant-mahon/c/DB385/", piclink: citytrekDetail_6, visible: false},
+        "Nature": { price: "1.199,-", manufacturer: "Cube", suspension: "", motor: "", watth: "", category: "Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/bikes/trekking/tour/nature?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: citytrekDetail_7, visible: false},
 	});
     
     let sectionMap: Record<number, boolean> = $state({
@@ -250,8 +250,8 @@
                                     <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
-                                    {#if mountainIntersectionMap[key].category != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
+                                    {#if mountainIntersectionMap[key].piclink != ""}
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainIntersectionMap[key].piclink} class="absolute -top-15 min-lg:-top-25 min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
                                     {/if}
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
                                         <div class="basis-1/2 bg-amber-600/50_">
@@ -264,7 +264,7 @@
                                             <div class="flex-none text-sm ml-8 lg:ml-32">
                                                 <span class="uppercase font-semibold text-neutral-50">Kategorie </span> {mountainIntersectionMap[key].category}
                                             </div>
-                                            <div class="grow _flex-none text-sm ml-8 lg:ml-35">
+                                            <div class="grow text-sm ml-8 lg:ml-35">
                                                 <span class="uppercase font-semibold text-neutral-100">Hersteller </span> {mountainIntersectionMap[key].manufacturer}
                                             </div>
                                             {#if mountainIntersectionMap[key].suspension}
@@ -309,8 +309,8 @@
                                     <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
-                                    {#if roadIntersectionMap[key].category != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={roadIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
+                                    {#if roadIntersectionMap[key].piclink != ""}
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={roadIntersectionMap[key].piclink} class="absolute -top-15 min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
                                     {/if}
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
                                         <div class="basis-1/2 bg-amber-600/50_">
@@ -321,16 +321,18 @@
                                                 {key}
                                             </div>
                                             <div class="flex-none text-sm ml-8 lg:ml-32">
-                                                <span class="uppercase font-semibold text-neutral-50">Category </span> {roadIntersectionMap[key].category}
+                                                <span class="uppercase font-semibold text-neutral-50">Kategorie </span> {roadIntersectionMap[key].category}
                                             </div>
-                                            <div class="flex-none text-sm ml-8 lg:ml-35">
-                                                <span class="uppercase font-semibold text-neutral-100">Marke </span> {roadIntersectionMap[key].manufacturer}
+                                            <div class="grow text-sm ml-8 lg:ml-35">
+                                                <span class="uppercase font-semibold text-neutral-100">Hersteller </span> {roadIntersectionMap[key].manufacturer}
                                             </div>
-                                            <div class="grow text-sm ml-8 lg:ml-38">
-                                                <span class="uppercase font-semibold text-neutral-100">Suspension </span> {roadIntersectionMap[key].suspension}
-                                            </div>
-                                            <div class="grow ml-8 mb-3 lg:ml-38">
-                                                <span class="text-xs">{roadIntersectionMap[key].description}</span>
+                                            {#if roadIntersectionMap[key].suspension}
+                                                <div class="grow text-sm ml-8 lg:ml-38">
+                                                    <span class="uppercase font-semibold text-neutral-100">Suspension </span> {roadIntersectionMap[key].suspension}
+                                                </div>
+                                            {/if}
+                                            <div class="grow-2 ml-8 mb-3 lg:ml-38 mr-14 leading-5 text-sm">
+                                                <span class="_text-sm">{roadIntersectionMap[key].description}<a class="text-hero inline-flex" href="{roadIntersectionMap[key].prodlink}" target="_blank">Herstellerseite  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a></span>
                                             </div>
                                             {#if roadIntersectionMap[key].motor}
                                                 <div class="flex-none text-sm ml-8 lg:ml-32">
@@ -366,8 +368,8 @@
                                     <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
-                                    {#if gravelIntersectionMap[key].category != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
+                                    {#if gravelIntersectionMap[key].piclink != ""}
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
                                     {/if}
 
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
@@ -379,16 +381,18 @@
                                                 {key}
                                             </div>
                                             <div class="flex-none text-sm ml-8 lg:ml-32">
-                                                <span class="uppercase font-semibold text-neutral-50">Category </span> {gravelIntersectionMap[key].category}
+                                                <span class="uppercase font-semibold text-neutral-50">Kategorie </span> {gravelIntersectionMap[key].category}
                                             </div>
-                                            <div class="flex-none text-sm ml-8 lg:ml-35">
-                                                <span class="uppercase font-semibold text-neutral-100">Marke </span> {gravelIntersectionMap[key].manufacturer}
+                                            <div class="grow text-sm ml-8 lg:ml-35">
+                                                <span class="uppercase font-semibold text-neutral-100">Hersteller </span> {gravelIntersectionMap[key].manufacturer}
                                             </div>
-                                            <div class="grow text-sm ml-8 lg:ml-38">
-                                                <span class="uppercase font-semibold text-neutral-100">Suspension </span> {gravelIntersectionMap[key].suspension}
-                                            </div>
-                                            <div class="grow ml-8 mb-3 lg:ml-38">
-                                                <span class="text-xs">{gravelIntersectionMap[key].description}</span>
+                                            {#if gravelIntersectionMap[key].suspension}
+                                                <div class="grow text-sm ml-8 lg:ml-38">
+                                                    <span class="uppercase font-semibold text-neutral-100">Suspension </span> {gravelIntersectionMap[key].suspension}
+                                                </div>
+                                            {/if}
+                                            <div class="grow-2 ml-8 mb-3 lg:ml-38 mr-14 leading-5 text-sm">
+                                                <span class="_text-sm">{gravelIntersectionMap[key].description}<a class="text-hero inline-flex" href="{gravelIntersectionMap[key].prodlink}" target="_blank">Herstellerseite  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a></span>
                                             </div>
                                             {#if gravelIntersectionMap[key].motor}
                                                 <div class="flex-none text-sm ml-8 lg:ml-32">
@@ -424,8 +428,8 @@
                                     <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
-                                    {#if citytrekIntersectionMap[key].category != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={citytrekIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36" draggable="false" />
+                                    {#if citytrekIntersectionMap[key].piclink != ""}
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={citytrekIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
                                     {/if}
 
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
@@ -437,16 +441,18 @@
                                                 {key}
                                             </div>
                                             <div class="flex-none text-sm ml-8 lg:ml-32">
-                                                <span class="uppercase font-semibold text-neutral-50">Category </span> {citytrekIntersectionMap[key].category}
+                                                <span class="uppercase font-semibold text-neutral-50">Kategorie </span> {citytrekIntersectionMap[key].category}
                                             </div>
-                                            <div class="flex-none text-sm ml-8 lg:ml-35">
-                                                <span class="uppercase font-semibold text-neutral-100">Marke </span> {citytrekIntersectionMap[key].manufacturer}
+                                            <div class="grow text-sm ml-8 lg:ml-35">
+                                                <span class="uppercase font-semibold text-neutral-100">Hersteller </span> {citytrekIntersectionMap[key].manufacturer}
                                             </div>
-                                            <div class="grow text-sm ml-8 lg:ml-38">
-                                                <span class="uppercase font-semibold text-neutral-100">Suspension </span> {citytrekIntersectionMap[key].suspension}
-                                            </div>
-                                            <div class="grow ml-8 mb-3 lg:ml-38">
-                                                <span class="text-xs">{citytrekIntersectionMap[key].description}</span>
+                                            {#if citytrekIntersectionMap[key].suspension}
+                                                <div class="grow text-sm ml-8 lg:ml-38">
+                                                    <span class="uppercase font-semibold text-neutral-100">Suspension </span> {citytrekIntersectionMap[key].suspension}
+                                                </div>
+                                            {/if}
+                                            <div class="grow-2 ml-8 mb-3 lg:ml-38 mr-14 leading-5 text-sm">
+                                                <span class="_text-sm">{citytrekIntersectionMap[key].description}<a class="text-hero inline-flex" href="{citytrekIntersectionMap[key].prodlink}" target="_blank">Herstellerseite  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a></span>
                                             </div>
                                             {#if citytrekIntersectionMap[key].motor}
                                                 <div class="flex-none text-sm ml-8 lg:ml-32">
