@@ -15,6 +15,10 @@
     import teampic_2 from '$lib/assets/images/team/team_2.jpg';
 	import teampic_3 from '$lib/assets/images/team/team_3.jpg';
 	import teampic_4 from '$lib/assets/images/team/team_4.jpg';
+	import teampic_1_sport from '$lib/assets/images/team/team_1_sport.jpg';
+    import teampic_2_sport from '$lib/assets/images/team/team_2_sport.jpg';
+	import teampic_3_sport from '$lib/assets/images/team/team_3_sport.jpg';
+	import teampic_4_sport from '$lib/assets/images/team/team_4_sport.jpg';
 
 	// video timehead positioning based on current window scroll position
 	let time = $state(0);
@@ -30,24 +34,28 @@
       id: "item-1",
       title: "Georg Lohner",
       image: teampic_1,
+	  image_sport: teampic_1_sport,
       description: "Inhaber - Leidenschaftlicher Rennradfahrer und Mountainbiker, im Team bekannt für sein enormes Fachwissen."
     },
     {
       id: "item-2",
       title: "Sebastian Miesl",
       image: teampic_2,
+	  image_sport: teampic_2_sport,
       description: "Verkauf/Werkstatt - Rennradbegeistert, lebensfroh und stets mit einem freundlichen Lächeln unterwegs."
     },
     {
       id: "item-3",
       title: "Philipp Baudrexl",
       image: teampic_3,
+	  image_sport: teampic_3_sport,
       description: "Verkauf/Werkstatt - Mountainbike- und Downhill-Fan, flinker Schrauber mit einem guten Gespür für Technik."
     },
     {
       id: "item-4",
       title: "Daniel Peters",
       image: teampic_4,
+	  image_sport: teampic_4_sport,
       description: "Auszubildender Zweiradmechatroniker - Beigeistert von Rennrad und Gravel, bereits verkaufserfahren und motiviert in der Ausbildung zum Zweiradmechatroniker."
     }
   ];
@@ -190,7 +198,7 @@
 <div use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} class="bg-neutral-200 relative h-full lg:h-[100vh]" data-uipref="dark" data-stagepart="4">
 	<h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>EUER FACHHÄNDLER FÜR FAHRRÄDER UND ZUBEHÖR IN AICHACH - RADSPORT WAGNER | <span class="font-bold">WE JUST RIDE!</span></h1>
             <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-full lg:h-screen">
-               	<div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-400 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als <span class="text-neutral-600">Fachhändler</span> mitten im Herzen Aichachs brennen wir für alles was dein <span class="text-neutral-600">Biker-Herz</span> höher schlagen läßt. Unser Line-Up umfasst Bikes für <span class="text-neutral-600">Mountain</span> | <span class="text-neutral-600">Road</span> | <span class="text-neutral-600">Gravel</span> | <span class="text-neutral-600">City</span> | <span class="text-neutral-600">Trekking</span> mit und ohne <span class="text-neutral-600">E-Antrieb</span> sowie Zubehör, Ersatzteile und Radsportbekleidung. In unserer <span class="text-neutral-600">Werkstatt | Werkbank</span> bringen wir jedes Bike wieder <span class="text-neutral-600">Trail Ready</span> - egal was fehlt, <span class="text-neutral-600">unser Service passt</span>. Wir freuen uns über deinen Besuch!</div>
+               	<div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-400 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als <span class="text-neutral-700">Fachhändler</span> mitten im Herzen Aichachs brennen wir für alles was dein <span class="text-neutral-700">Biker-Herz</span> höher schlagen läßt. Unser Line-Up umfasst Bikes für <span class="text-neutral-700">Mountain</span> | <span class="text-neutral-700">Road</span> | <span class="text-neutral-700">Gravel</span> | <span class="text-neutral-700">City</span> | <span class="text-neutral-700">Trekking</span> mit und ohne <span class="text-neutral-700">E-Antrieb</span> sowie Zubehör, Ersatzteile und Radsportbekleidung. In unserer <span class="text-neutral-700">Werkstatt | Werkbank</span> bringen wir jedes Bike wieder <span class="text-neutral-700">Trail Ready</span> - egal was fehlt, <span class="text-neutral-700">unser Service passt</span>. Wir freuen uns über deinen Besuch!</div>
 				<Accordion.Root
 					type="single"
 					orientation="horizontal"
@@ -200,16 +208,23 @@
 					{#each items as item (item.id)}
 						<Accordion.Item
 						value={item.id}
-						class="relative cursor-pointer overflow-hidden rounded-lg transition-all duration-500 ease-in-out data-[state=closed]:w-[20%] data-[state=open]:w-[100%] md:data-[state=closed]:w-[10%] [&:has(:focus-visible)]:ring-2"
+						class="relative cursor-pointer overflow-hidden rounded-lg transition-all duration-500 ease-in-out data-[state=closed]:w-[20%] data-[state=open]:w-[100%] md:data-[state=closed]:w-[10%] [&:has(:focus-visible)]:ring-2 data-[state=closed]:opacity-90"
 						onclick={() => (value = item.id)}
 						>
+						<!-- {#if value == item.id} -->
+						<img
+							src={item.image_sport}
+							alt={item.title}
+							class="absolute h-[400px] w-full transition-opacity duration-300 object-cover{value == item.id ? ' opacity-100' : ' opacity-0' }"
+						/>
+						<!-- {/if} -->
 						<img
 							src={item.image}
 							alt={item.title}
 							class="h-[400px] w-full object-cover"
 						/>
 						<div
-							class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4"
+							class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/40 via-black/15 to-transparent p-4"
 						>
 							<div
 							class="transition-all duration-300 group-data-[state=closed]:translate-y-2 group-data-[state=open]:translate-y-0"
@@ -225,7 +240,13 @@
 								forceMount
 								class="max-h-0 overflow-hidden text-white/90 transition-all duration-700 data-[state=open]:max-h-[100px] data-[state=open]:text-xs data-[state=closed]:opacity-0 data-[state=open]:opacity-100 md:data-[state=open]:text-base"
 							>
-								{item.description}
+								{#snippet child({ props, open })}
+									{#if open}
+									<div {...props} in:fade={{ duration: 1000 }}>
+										{item.description}
+									</div>
+									{/if}
+								{/snippet}
 							</Accordion.Content>
 							<div
 								class="absolute bottom-0 left-0 h-1 w-full transition-all duration-300 group-data-[state=closed]:opacity-0 group-data-[state=open]:opacity-100"
