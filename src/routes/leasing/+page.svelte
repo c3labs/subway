@@ -139,8 +139,8 @@
                         {#if isCurrentStep(i)}
                             <!-- Individual steps -->
                             <div class="rounded-2xl bg-neutral-800 p-10 h-80 lg:h-60 space-y-8 text-center">
-                                <h2 class="font-headline text-2xl uppercase"><span class=" text-neutral-600 font-bold text-6xl mr-2"># {i+1} | </span> {@html step.label}</h2>
-                                <p class="font-regular text-base">{@html step.description }</p>
+                                <h2 class="font-headline text-2xl uppercase"><span class=" text-neutral-500 font-bold text-4xl mr-2"># {i+1} | </span> {@html step.label}</h2>
+                                <p class="font-regular text-base text-neutral-500">{@html step.description }</p>
                             </div>
                         {/if}
                         {/each}
@@ -181,7 +181,7 @@
     <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-100 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>ALLES WAS DU SONST NOCH WISSEN WOLLTEST | <span class="font-bold"> BIKE LEASING</span></h1>
         <div class="sticky top-0 left-0 z-10 h-[200vh] lg:h-screen w-full bg-neutral-800" in:fade={{duration: 300, delay: 500 }} out:fade>
             <div class="container mx-auto grid grid-cols-6 gap-2 place-items-center h-full lg:h-screen">
-                <div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-600 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema <span class="text-neutral-400">Fahrrad-Mitarbeiterleasing</span> geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die <span class="text-neutral-400">professionelle Beratung</span> bei der Suche nach deinem <span class="text-neutral-400">Traumbike</span>, bis hin zur unkomplizierten Abwicklung von <span class="text-neutral-400">Serviceaufträgen</span> im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei <span class="text-neutral-400">allen Fragen</span>.</div>
+                <div class="col-span-6 lg:col-span-3 pt-50 px-4 max-lg:full text-neutral-500 text-2xl font-regular font-extralight text-right" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>Als Fachhändler sind wir gerne dein erster Ansprechpartner, wenn es um das Thema <span class="text-neutral-200">Fahrrad-Mitarbeiterleasing</span> geht. Von der Erstberatung zu den grundsätzlichen Abläufen eines Leasings, über die <span class="text-neutral-200">professionelle Beratung</span> bei der Suche nach deinem <span class="text-neutral-200">Traumbike</span>, bis hin zur unkomplizierten Abwicklung von <span class="text-neutral-200">Serviceaufträgen</span> im Rahmen deines Leasings - wir sind stets an deiner Seite und unterstützen dich bei <span class="text-neutral-200">allen Fragen</span>.</div>
                 <Accordion.Root class="w-full sm:max-w-[70%]_ max-lg:h-full pt-30 pl-0 lg:pl-14 xl:pl-10 col-span-6 lg:col-span-3 text-neutral-400 font-regular" type="single">
                     {#each faqItems as item (item.value)}
                         <Accordion.Item
@@ -204,7 +204,7 @@
                         </Accordion.Header>
                         <Accordion.Content
                             forceMount={true} 
-                            class="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm tracking-[-0.01em] text-neutral-400"
+                            class="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm tracking-[-0.01em] text-neutral-300"
                         >
                             {#snippet child({ props, open })}
                                 {#if open}

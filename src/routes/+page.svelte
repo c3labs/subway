@@ -116,7 +116,7 @@
 	</div>
 	<div class="sticky top-0 left-0 z-10 h-screen w-full" transition:fade>
 		{#if scrollQuot >= 0.01 && scrollQuot < 0.33 && !transitioning}
-			<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE FAHRRÄDER FÜR DEIN NÄCHSTES ADVENTURE | <span class="font-bold">WE JUST RIDE!</span></h1>
+			<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE FAHRRÄDER FÜR DEIN NÄCHSTES ABENTEUER | <span class="font-bold">WE JUST RIDE!</span></h1>
 		{/if}
 		{#if scrollQuot > 0.33 && scrollQuot < 0.66 && !transitioning}
 			<h1 class="container mx-auto px-4 z-11 sticky top-32 lg:top-48 xl:top-44 font-extralight font-headline text-white text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>WIR LASSEN DEIN TRAUMBIKE WIRKLICHKEIT WERDEN | <span class="font-bold">PROJECT ONE</span></h1>
@@ -128,7 +128,7 @@
 				{#if scrollQuot > 0.01 && scrollQuot < 0.16 && !transitioning}
 				<h2 use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" data-stagepart="1" in:fly={{ y:50, duration: 300, delay: 100 }} out:fade class="container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white">EGAL WELCHES 
 					<span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-hero/70">
-						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">ADVENTURE 2026 </span>
+						<span class="relative text-white text-4xl landscape:max-lg:text-4xl md:text-5xl font-bold">ABENTEUER 2026 </span>
 					</span>
 					AUF DICH WARTET ...
 				</h2>
