@@ -87,6 +87,13 @@
 
 <svelte:head>
 	<title>BIKE LEASING | SUBWAY - Radsport Wagner | We just ride!</title>
+    <meta name="description" content="Der komfortable Weg zum Traumrad, nur sechs Schritte und schon geht's los!" />
+
+    <meta property="twitter:description" content="Der komfortable Weg zum Traumrad, nur sechs Schritte und schon geht's los!" />
+    <meta property="twitter:title" content="Bike Leasing | SUBWAY" />
+
+    <meta property="og:description" content="Der komfortable Weg zum Traumrad, nur sechs Schritte und schon geht's los!" />
+    <meta property="og:title" content="Bike Leasing | SUBWAY" />
 </svelte:head>
 
 <div class="relative h-screen" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="light">

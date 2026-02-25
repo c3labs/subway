@@ -92,6 +92,13 @@
 
 <svelte:head>
 	<title>SUBWAY - Radsport Wagner | We just ride!</title>
+	<meta name="description" content="Wir sind Fachhändler für Fahrräder und Radsportzubehör in Aichach. Bei uns findest Du Fahrräder für dein nächstes Abenteuer - Dein Trek Project One Traumbike - oder ein Firmenrad über Bike Leasing" />
+
+    <meta property="twitter:description" content="Wir sind Fachhändler für Fahrräder und Radsportzubehör in Aichach. Bei uns findest Du Fahrräder für dein nächstes Abenteuer - Dein Trek Project One Traumbike - oder ein Firmenrad über Bike Leasing" />
+    <meta property="twitter:title" content="SUBWAY - Radsport Wagner | We just ride!" />
+
+    <meta property="og:description" content="Wir sind Fachhändler für Fahrräder und Radsportzubehör in Aichach. Bei uns findest Du Fahrräder für dein nächstes Abenteuer - Dein Trek Project One Traumbike - oder ein Firmenrad über Bike Leasing" />
+    <meta property="og:title" content="SUBWAY - Radsport Wagner | We just ride!" />
 </svelte:head>
 <svelte:window bind:scrollY />
 

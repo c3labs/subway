@@ -65,40 +65,40 @@
     }
 
 	let mountainIntersectionMap: Record<string, bikeInfo> = $state({
-        "Powerfly+": { price: "3.999,-", manufacturer: "Trek", suspension: "", motor: "Bosch Performance Line CX", watth: "Bis zu 800 Wh", category: "E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/e-mountainbikes/powerfly/c/B337/", piclink: mountainDetail_1, visible: false},
-        "Powerfly+ FS": { price: "4.799,-", manufacturer: "Trek", suspension: "", motor: "Bosch Performance Line CX", watth: "Bis zu 800 Wh", category: "Fullsuspension E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/e-mountainbikes/powerfly/c/B337/", piclink: mountainDetail_2, visible: false},
-        "Marlin": { price: "679,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Hardtail", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/crosscountry-mountainbikes/marlin/c/B321/", piclink: mountainDetail_3, visible: false},
-        "Reaction Hybrid": { price: "3.399,-", manufacturer: "Cube", suspension: "", motor: "Bosch Performance Line CX", watth: "600-800 Wh", category: "E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/e-bikes/mountainbike/hardtail/reaction-hybrid?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: mountainDetail_4, visible: false},
-        "Stereo Hybrid": { price: "3.999,-", manufacturer: "Cube", suspension: "", motor: "Bosch Performance Line CX/CX-R", watth: "800 Wh", category: "Fullsuspension E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/e-bikes/mountainbike/fullsuspension/stereo-hybrid-one44", piclink: mountainDetail_5, visible: false},
-        "Rail+": { price: "4.999,-", manufacturer: "Trek", suspension: "", motor: "Bosch Performance Line CX", watth: "800 Wh", category: "Fullsuspension E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/e-mountainbikes/rail/c/B344/", piclink: mountainDetail_6, visible: false},
-        "Top Fuel": { price: "8.499,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fullsuspension", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/trail-mountainbikes/topfuel/c/B311/", piclink: mountainDetail_7, visible: false},
-        "Fuel+": { price: "8.499,-", manufacturer: "Trek", suspension: "", motor: "TQ HPR60", watth: "580 Wh", category: "Fullsuspension E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/e-mountainbikes/fuel/c/B370/", piclink: mountainDetail_8, visible: false},
-        "Fuel": { price: "6.499,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fullsuspension", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/trail-mountainbikes/all-mountain-bikes/fuel/c/B360/", piclink: mountainDetail_9, visible: false},
-        "Procaliber": { price: "1.199,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fullsuspension", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/crosscountry-mountainbikes/procaliber/c/B312/", piclink: mountainDetail_10, visible: false},
-        "Aim": { price: "599,-", manufacturer: "Cube", suspension: "", motor: "", watth: "", category: "Hardtail", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/bikes/mountainbike/hardtail/aim", piclink: mountainDetail_11, visible: false},
+        "Powerfly+": { price: "", manufacturer: "Trek", suspension: "", motor: "Bosch Performance Line CX", watth: "Bis zu 800 Wh", category: "E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/e-mountainbikes/powerfly/c/B337/", piclink: mountainDetail_1, visible: false},
+        "Powerfly+ FS": { price: "", manufacturer: "Trek", suspension: "", motor: "Bosch Performance Line CX", watth: "Bis zu 800 Wh", category: "Fullsuspension E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/e-mountainbikes/powerfly/c/B337/", piclink: mountainDetail_2, visible: false},
+        "Marlin": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Hardtail", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/crosscountry-mountainbikes/marlin/c/B321/", piclink: mountainDetail_3, visible: false},
+        "Reaction Hybrid": { price: "", manufacturer: "Cube", suspension: "", motor: "Bosch Performance Line CX", watth: "600-800 Wh", category: "E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/e-bikes/mountainbike/hardtail/reaction-hybrid?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: mountainDetail_4, visible: false},
+        "Stereo Hybrid": { price: "", manufacturer: "Cube", suspension: "", motor: "Bosch Performance Line CX/CX-R", watth: "800 Wh", category: "Fullsuspension E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/e-bikes/mountainbike/fullsuspension/stereo-hybrid-one44", piclink: mountainDetail_5, visible: false},
+        "Rail+": { price: "", manufacturer: "Trek", suspension: "", motor: "Bosch Performance Line CX", watth: "800 Wh", category: "Fullsuspension E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/e-mountainbikes/rail/c/B344/", piclink: mountainDetail_6, visible: false},
+        "Top Fuel": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fullsuspension", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/trail-mountainbikes/topfuel/c/B311/", piclink: mountainDetail_7, visible: false},
+        "Fuel+": { price: "", manufacturer: "Trek", suspension: "", motor: "TQ HPR60", watth: "580 Wh", category: "Fullsuspension E-MTB", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/e-mountainbikes/fuel/c/B370/", piclink: mountainDetail_8, visible: false},
+        "Fuel": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fullsuspension", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/trail-mountainbikes/all-mountain-bikes/fuel/c/B360/", piclink: mountainDetail_9, visible: false},
+        "Procaliber": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fullsuspension", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/mountainbikes/crosscountry-mountainbikes/procaliber/c/B312/", piclink: mountainDetail_10, visible: false},
+        "Aim": { price: "", manufacturer: "Cube", suspension: "", motor: "", watth: "", category: "Hardtail", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/bikes/mountainbike/hardtail/aim", piclink: mountainDetail_11, visible: false},
 	});
 
     let roadIntersectionMap: Record<string, bikeInfo> = $state({
-        "Madone": { price: "5.999,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Aero-Rennrad", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/performance-rennräder/madone/c/B213/", piclink: roadDetail_1, visible: false},
-		"Domane": { price: "5.499,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Endurance-Rennrad", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/performance-rennräder/domane/c/B221/", piclink: roadDetail_2, visible: false},
-		"Domane+": { price: "8.999,-", manufacturer: "Trek", suspension: "", motor: "TQ", watth: "360 Wh", category: "E-Rennrad", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/e-bikes/e-rennräder/domane-slr/c/B221-11/", piclink: roadDetail_3, visible: false},
+        "Madone": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Aero-Rennrad", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/performance-rennräder/madone/c/B213/", piclink: roadDetail_1, visible: false},
+		"Domane": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Endurance-Rennrad", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/performance-rennräder/domane/c/B221/", piclink: roadDetail_2, visible: false},
+		"Domane+": { price: "", manufacturer: "Trek", suspension: "", motor: "TQ", watth: "360 Wh", category: "E-Rennrad", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/e-bikes/e-rennräder/domane-slr/c/B221-11/", piclink: roadDetail_3, visible: false},
 	});
 
     let gravelIntersectionMap: Record<string, bikeInfo> = $state({
-        "Checkpoint": { price: "2.999,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Gravelbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/touren-und-bikepacking-fahrräder/checkpoint/c/B224/", piclink: gravelDetail_1, visible: false},
-		"Checkpoint+": { price: "4.999,-", manufacturer: "Trek", suspension: "", motor: "TQ", watth: "360 Wh", category: "E-Gravelbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/gravelbikes/e-gravelbikes/checkpoint/c/B224-5/", piclink: gravelDetail_2, visible: false},
-        "Checkmate": { price: "7.499,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Gravel-Racebike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/gravelbikes/gravelbikes-mit-rennlenker/checkmate/c/B225/", piclink: gravelDetail_3, visible: false},
-        "FX": { price: "1.999,-", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fitnessbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/alltagsräder/fitnessräder/fx/fxsport/c/B421-1/", piclink: gravelDetail_4, visible: false},
+        "Checkpoint": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Gravelbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/touren-und-bikepacking-fahrräder/checkpoint/c/B224/", piclink: gravelDetail_1, visible: false},
+		"Checkpoint+": { price: "", manufacturer: "Trek", suspension: "", motor: "TQ", watth: "360 Wh", category: "E-Gravelbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/gravelbikes/e-gravelbikes/checkpoint/c/B224-5/", piclink: gravelDetail_2, visible: false},
+        "Checkmate": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Gravel-Racebike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/rennräder/gravelbikes/gravelbikes-mit-rennlenker/checkmate/c/B225/", piclink: gravelDetail_3, visible: false},
+        "FX": { price: "", manufacturer: "Trek", suspension: "", motor: "", watth: "", category: "Fitnessbike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/alltagsräder/fitnessräder/fx/fxsport/c/B421-1/", piclink: gravelDetail_4, visible: false},
 	});
 
     let citytrekIntersectionMap: Record<string, bikeInfo> = $state({
-        "Suvea": { price: "4.599,-", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-SUV", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-e-bikes/diamant-suvea/c/DB365/", piclink: citytrekDetail_1, visible: false},
-		"Zing Trip Plus Lowstep": { price: "3.349,-", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-trekking/diamant-zing/c/DB450/", piclink: citytrekDetail_2, visible: false},
-        "Zing Trip Core Midstep": { price: "3.149,-", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-trekking/diamant-zing/c/DB450/", piclink: citytrekDetail_3, visible: false},
-        "Kathmandu Hybrid": { price: "3.599,-", manufacturer: "Cube", suspension: "", motor: "Bosch CX", watth: "800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/e-bikes/trekking/tour/kathmandu-hybrid?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: citytrekDetail_4, visible: false},
-        "District+": { price: "3.349,-", manufacturer: "Trek", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Citybike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/alltagsräder/elektrische-alltagsräder/district/c/B474/", piclink: citytrekDetail_5, visible: false},
-        "Mahon": { price: "1.199,-", manufacturer: "Diamant", suspension: "", motor: "", watth: "", category: "Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-bikes-ohne-motor/diamant-mahon/c/DB385/", piclink: citytrekDetail_6, visible: false},
-        "Nature": { price: "1.199,-", manufacturer: "Cube", suspension: "", motor: "", watth: "", category: "Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/bikes/trekking/tour/nature?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: citytrekDetail_7, visible: false},
+        "Suvea": { price: "", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-SUV", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-e-bikes/diamant-suvea/c/DB365/", piclink: citytrekDetail_1, visible: false},
+		"Zing Trip Plus Lowstep": { price: "", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-trekking/diamant-zing/c/DB450/", piclink: citytrekDetail_2, visible: false},
+        "Zing Trip Core Midstep": { price: "", manufacturer: "Diamant", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-trekking/diamant-zing/c/DB450/", piclink: citytrekDetail_3, visible: false},
+        "Kathmandu Hybrid": { price: "", manufacturer: "Cube", suspension: "", motor: "Bosch CX", watth: "800 Wh", category: "E-Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/e-bikes/trekking/tour/kathmandu-hybrid?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: citytrekDetail_4, visible: false},
+        "District+": { price: "", manufacturer: "Trek", suspension: "", motor: "Bosch Mittelmotor", watth: "Bis zu 800 Wh", category: "E-Citybike", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/alltagsräder/elektrische-alltagsräder/district/c/B474/", piclink: citytrekDetail_5, visible: false},
+        "Mahon": { price: "", manufacturer: "Diamant", suspension: "", motor: "", watth: "", category: "Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.trekbikes.com/de/de_DE/bikes/diamant-fahrräder/diamant-bikes-ohne-motor/diamant-mahon/c/DB385/", piclink: citytrekDetail_6, visible: false},
+        "Nature": { price: "", manufacturer: "Cube", suspension: "", motor: "", watth: "", category: "Trekking", description: "Dieses Model führen wir in mehreren Varianten, Details bei uns im Laden oder auf der ", prodlink: "https://www.cube.eu/bikes/trekking/tour/nature?p=1&properties=50007c1c87def5a29c9dbef5ecde3a12", piclink: citytrekDetail_7, visible: false},
 	});
     
     let sectionMap: Record<number, boolean> = $state({
@@ -189,6 +189,13 @@
 
 <svelte:head>
 	<title>FAHRRÄDER | SUBWAY - Radsport Wagner | We just ride!</title>
+    <meta name="description" content="Wir haben für jeden Deiner Trails das passende Bike" />
+
+    <meta property="twitter:description" content="IWir haben für jeden Deiner Trails das passende Bike" />
+    <meta property="twitter:title" content="Fahrräder | SUBWAY" />
+
+    <meta property="og:description" content="Wir haben für jeden Deiner Trails das passende Bike" />
+    <meta property="og:title" content="Fahrräder | SUBWAY" />
 </svelte:head>
 <svelte:window bind:scrollY />
 
@@ -251,7 +258,7 @@
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if mountainIntersectionMap[key].piclink != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainIntersectionMap[key].piclink} class="absolute -top-15 min-lg:-top-25 min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-20 min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
                                     {/if}
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
                                         <div class="basis-1/2 bg-amber-600/50_">
@@ -283,9 +290,11 @@
                                                     <span class="uppercase font-semibold text-neutral-100">Leistung </span> {mountainIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
+                                            {#if mountainIntersectionMap[key].price}
                                             <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
                                                <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {mountainIntersectionMap[key].price}
                                             </div>
+                                            {/if}
                                         </div>
                                     </div>
                             </li>
@@ -310,7 +319,7 @@
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if roadIntersectionMap[key].piclink != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={roadIntersectionMap[key].piclink} class="absolute -top-15 min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={roadIntersectionMap[key].piclink} class="absolute -top-0 min-lg:-top-17 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
                                     {/if}
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
                                         <div class="basis-1/2 bg-amber-600/50_">
@@ -342,9 +351,11 @@
                                                     <span class="uppercase font-semibold text-neutral-100">Leistung </span> {roadIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
+                                            {#if roadIntersectionMap[key].price}
                                             <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
                                                <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {roadIntersectionMap[key].price}
                                             </div>
+                                            {/if}
                                         </div>
                                     </div>
                             </li>
@@ -369,7 +380,7 @@
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if gravelIntersectionMap[key].piclink != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-22 min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
                                     {/if}
 
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
@@ -402,9 +413,11 @@
                                                     <span class="uppercase font-semibold text-neutral-100">Leistung </span> {gravelIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
+                                            {#if gravelIntersectionMap[key].price}
                                             <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
                                                <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {gravelIntersectionMap[key].price}
                                             </div>
+                                            {/if}
                                         </div>
                                     </div>
                             </li>
@@ -429,7 +442,7 @@
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if citytrekIntersectionMap[key].piclink != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={citytrekIntersectionMap[key].piclink} class="absolute min-lg:-top-20 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={citytrekIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-22 min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
                                     {/if}
 
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
@@ -462,9 +475,11 @@
                                                     <span class="uppercase font-semibold text-neutral-100">Leistung </span> {citytrekIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
+                                            {#if citytrekIntersectionMap[key].price}
                                             <div class="absolute bottom-4 lg:bottom-14 right-4 lg:right-6 -rotate-32 lg:-rotate-14 font-bold text-2xl lg:text-4xl">
                                                <span class="absolute text-xs font-normal text-neutral-800 -top-2"> ab €: </span> {citytrekIntersectionMap[key].price}
                                             </div>
+                                            {/if}
                                         </div>
                                     </div>
                             </li>
