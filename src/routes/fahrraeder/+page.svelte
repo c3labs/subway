@@ -241,7 +241,7 @@
         <div class="+container +mx-auto w-full absolute top-0 grid grid-cols-6 gap-2 place-items-center h-screen">
             <div class="col-span-6 w-full" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
                 {#if sectionStep === 1}
-                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={mountainUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={mountainUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(mountainIntersectionMap) as key (key)}
                                 <li
                                     class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!mountainIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
@@ -302,7 +302,7 @@
                     </ul>
                 {/if}
                 {#if sectionStep === 2}
-                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={racerUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={racerUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(roadIntersectionMap) as key (key)}
                                 <li
                                     class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!roadIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
@@ -363,7 +363,7 @@
                     </ul>
                 {/if}
                 {#if sectionStep === 3}
-                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={gravelUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={gravelUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(gravelIntersectionMap) as key (key)}
                                 <li
                                     class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!gravelIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
@@ -425,7 +425,7 @@
                     </ul>
                 {/if}
                 {#if sectionStep === 4}
-                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto p-4 col-span-6 transition-all duration-500 noscrollbar" bind:this={citytrekUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={citytrekUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(citytrekIntersectionMap) as key (key)}
                                 <li
                                     class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!citytrekIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
