@@ -220,7 +220,7 @@
         {#if sectionStep === 5}
             <enhanced:img src="/src/lib/assets/images/bikes/heros/bikeHero_kids.jpg?format=avif;webp" alt="Bikes - Hero Shot - Kids" sizes="min(1280px, 100vw)" class="absolute left-0 top-0 -z-50 h-full w-full overflow-hidden object-cover object-center" transition:fade />
         {/if}
-        <div class="fixed mix-blend-hard-light z-20 left-0 {sectionStep === 0 ? 'bottom-1/4' : 'bottom-0'} overflow-hidden h-40 lg:h-70 w-full transition-all duration-1000 ease-in-out" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" >
+        <div class="fixed mix-blend-hard-light z-20 left-0 {sectionStep === 0 ? 'bottom-1/4' : 'bottom-0'} overflow-hidden h-40 xl:h-70 w-full transition-all duration-1000 ease-in-out" use:intersect={{ threshold: 0.4 }} onintersect={onIntersect} data-uipref="dark" >
             {#if sectionStep === 0}
                 <h2 class="relative left-[50%] lg:left-[30%] top-[45%] lg:top-10 -translate-1/2 z-12 container mx-auto px-4 landscape:max-lg:translate-y-6 text-right lg:text-center font-headline font-extralight text-3xl/12 landscape:max-lg:text-3xl md:text-4xl text-white uppercase _text-shadow-lg" in:fly={{ y:50, duration: 300, delay: 600 }} out:fade >WELCHEN
                     <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-neutral-100/20">
@@ -230,21 +230,21 @@
                 </h2>
             {/if}
             <div class="absolute top-0 left-0 bg-hero w-full h-full z-10" in:fade={{duration: 300, delay: 600}} out:fade ></div>
-            <div class="absolute flex gap-20 lg:gap-120 w-full h-40 lg:h-70 top-1/2_ bottom-0 overflow-hidden overflow-x-scroll_ noscrollbar" id="scrollyStage" in:fly={{x: 200, duration: 300, delay: 600}} out:fade >    
-                <button class="font-headline font-bold {sectionStep === 1 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase tracking-tighter z-11 pl-80 lg:pl-220">Mountain</button>
-                <button class="font-headline font-bold {sectionStep === 2 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.05em] z-11">Road</button>
-                <button class="font-headline font-bold {sectionStep === 3 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11">Gravel</button>
-                <button class="font-headline font-bold {sectionStep === 4 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.06em] z-11">City/Trekking</button>
-                <button class="font-headline font-bold {sectionStep === 5 ? 'text-white' : 'text-neutral-900'} text-8xl lg:text-[240px] uppercase -tracking-[.03em] z-11 pr-20 lg:pr-120">Kids</button>
+            <div class="absolute flex gap-20 lg:gap-120 w-full h-40 xl:h-70 top-1/2_ bottom-0 overflow-hidden overflow-x-scroll_ noscrollbar" id="scrollyStage" in:fly={{x: 200, duration: 300, delay: 600}} out:fade >    
+                <button class="font-headline font-bold {sectionStep === 1 ? 'text-white' : 'text-neutral-900'} text-8xl xl:text-[240px] uppercase tracking-tighter z-11 pl-80 lg:pl-220">Mountain</button>
+                <button class="font-headline font-bold {sectionStep === 2 ? 'text-white' : 'text-neutral-900'} text-8xl xl:text-[240px] uppercase -tracking-[.05em] z-11">Road</button>
+                <button class="font-headline font-bold {sectionStep === 3 ? 'text-white' : 'text-neutral-900'} text-8xl xl:text-[240px] uppercase -tracking-[.03em] z-11">Gravel</button>
+                <button class="font-headline font-bold {sectionStep === 4 ? 'text-white' : 'text-neutral-900'} text-8xl xl:text-[240px] uppercase -tracking-[.06em] z-11">City/Trekking</button>
+                <button class="font-headline font-bold {sectionStep === 5 ? 'text-white' : 'text-neutral-900'} text-8xl xl:text-[240px] uppercase -tracking-[.03em] z-11 pr-20 lg:pr-120">Kids</button>
             </div>
         </div>
-        <div class="+container +mx-auto w-full absolute top-0 grid grid-cols-6 gap-2 place-items-center h-screen">
-            <div class="col-span-6 w-full" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
+        <div class="w-full absolute top-0 grid grid-cols-6 gap-2 place-items-center h-screen">
+            <div class="col-span-6 w-full pb-20 lg:pb-0 xl:pb-14" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade>
                 {#if sectionStep === 1}
-                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={mountainUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={mountainUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(mountainIntersectionMap) as key (key)}
                                 <li
-                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!mountainIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    class="relative font-regular text-white h-[460px] lg:h-[330px] xl:h-[365px] 2xl:h-[400px] min-w-[400px] lg:min-w-[900px] xl:min-w-[1010px] 2xl:min-w-[1120px] marker:content-none transition-all {!mountainIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                     use:intersect={{ threshold: 0.2, root: mountainUlElement }}
                                     onintersect={(event) => (
                                         mountainIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
@@ -254,39 +254,39 @@
                                     <svg data-width="1211" data-height="453" viewBox="0 0 1211 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-5 lg:top-0 left-0 fill-neutral-300/86 max-lg:origin-top max-lg:scale-y-300 max-lg:translate-y-1/3">
                                         <path d="M157.33 52.0575L1089.12 0L1211 400.442L965.033 448.996L0 453L44.3184 91.1005L157.33 52.0575Z" />
                                     </svg>
-                                    <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 scale-x-50_ -translate-x-1/2 lg:-translate-x-7/8 max-lg:origin-top_ max-lg:scale-y-150_ max-lg:translate-y-1/3 text-white">
+                                    <svg data-width="547" data-height="353" viewBox="0 0 547 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -top-5 lg:-top-3 left-1/2 w-3/4 lg:w-1/2 -translate-x-1/2 lg:-translate-x-7/8 max-lg:translate-y-1/3 text-white">
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if mountainIntersectionMap[key].piclink != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={mountainIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-20 min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - {key}" src={mountainIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-20 min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
                                     {/if}
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
-                                        <div class="basis-1/2 bg-amber-600/50_">
+                                        <div class="basis-1/2">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
+                                        <div class="basis-1/2 flex flex-col select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
-                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                            <div class="flex-none text-sm mt-1 lg:mt-0 ml-13 lg:ml-32">
                                                 <span class="uppercase font-semibold text-neutral-50">Kategorie </span> {mountainIntersectionMap[key].category}
                                             </div>
-                                            <div class="grow text-sm ml-8 lg:ml-35">
+                                            <div class="grow text-sm ml-13 lg:ml-35">
                                                 <span class="uppercase font-semibold text-neutral-100">Hersteller </span> {mountainIntersectionMap[key].manufacturer}
                                             </div>
                                             {#if mountainIntersectionMap[key].suspension}
-                                                <div class="grow text-sm ml-8 lg:ml-38">
+                                                <div class="grow text-sm ml-12 lg:ml-38">
                                                     <span class="uppercase font-semibold text-neutral-100">Suspension </span> {mountainIntersectionMap[key].suspension}
                                                 </div>
                                             {/if}
-                                            <div class="grow-2 ml-8 mb-3 lg:ml-38 mr-14 leading-5 text-sm">
-                                                <span class="_text-sm">{mountainIntersectionMap[key].description}<a class="text-hero inline-flex" href="{mountainIntersectionMap[key].prodlink}" target="_blank">Herstellerseite  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a></span>
+                                            <div class="grow-2 ml-12 mb-3 lg:ml-38 mr-4 lg:mr-14 leading-5 text-sm">
+                                                <span class="text-sm">{mountainIntersectionMap[key].description}<a class="text-hero inline-flex" href="{mountainIntersectionMap[key].prodlink}" target="_blank">Herstellerseite  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a></span>
                                             </div>
                                             {#if mountainIntersectionMap[key].motor}
-                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <div class="flex-none text-sm ml-10 lg:ml-32">
                                                     <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {mountainIntersectionMap[key].motor}
                                                 </div>
-                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                <div class="flex-none text-sm ml-10 mb-3 lg:mb-8 lg:ml-32">
                                                     <span class="uppercase font-semibold text-neutral-100">Leistung </span> {mountainIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
@@ -302,10 +302,10 @@
                     </ul>
                 {/if}
                 {#if sectionStep === 2}
-                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={racerUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={racerUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(roadIntersectionMap) as key (key)}
                                 <li
-                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!roadIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    class="relative font-regular text-white h-[460px] lg:h-[330px] xl:h-[365px] 2xl:h-[400px] min-w-[400px] lg:min-w-[900px] xl:min-w-[1010px] 2xl:min-w-[1120px] marker:content-none transition-all {!roadIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                     use:intersect={{ threshold: 0.2, root: racerUlElement }}
                                     onintersect={(event) => (
                                         roadIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
@@ -319,35 +319,35 @@
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if roadIntersectionMap[key].piclink != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={roadIntersectionMap[key].piclink} class="absolute -top-0 min-lg:-top-17 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - {key}" src={roadIntersectionMap[key].piclink} class="absolute -top-0 min-lg:-top-17 min-lg:left-3/8_ min-lg:w-2/3 min-lg:-translate-x-1/36 min-lg:-translate-y-1/24 select-none" draggable="false" />
                                     {/if}
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
                                         <div class="basis-1/2 bg-amber-600/50_">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
+                                        <div class="basis-1/2 flex flex-col select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
-                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                            <div class="flex-none text-sm mt-1 lg:mt-0 ml-13 lg:ml-32">
                                                 <span class="uppercase font-semibold text-neutral-50">Kategorie </span> {roadIntersectionMap[key].category}
                                             </div>
-                                            <div class="grow text-sm ml-8 lg:ml-35">
+                                            <div class="grow text-sm ml-13 lg:ml-35">
                                                 <span class="uppercase font-semibold text-neutral-100">Hersteller </span> {roadIntersectionMap[key].manufacturer}
                                             </div>
                                             {#if roadIntersectionMap[key].suspension}
-                                                <div class="grow text-sm ml-8 lg:ml-38">
+                                                <div class="grow text-sm ml-12 lg:ml-38">
                                                     <span class="uppercase font-semibold text-neutral-100">Suspension </span> {roadIntersectionMap[key].suspension}
                                                 </div>
                                             {/if}
-                                            <div class="grow-2 ml-8 mb-3 lg:ml-38 mr-14 leading-5 text-sm">
+                                            <div class="grow-2 ml-12 mb-3 lg:ml-38 mr-4 lg:mr-14 leading-5 text-sm">
                                                 <span class="_text-sm">{roadIntersectionMap[key].description}<a class="text-hero inline-flex" href="{roadIntersectionMap[key].prodlink}" target="_blank">Herstellerseite  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a></span>
                                             </div>
                                             {#if roadIntersectionMap[key].motor}
-                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <div class="flex-none text-sm ml-10 lg:ml-32">
                                                     <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {roadIntersectionMap[key].motor}
                                                 </div>
-                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                <div class="fflex-none text-sm ml-10 mb-3 lg:mb-8 lg:ml-32">
                                                     <span class="uppercase font-semibold text-neutral-100">Leistung </span> {roadIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
@@ -363,10 +363,10 @@
                     </ul>
                 {/if}
                 {#if sectionStep === 3}
-                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={gravelUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={gravelUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(gravelIntersectionMap) as key (key)}
                                 <li
-                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!gravelIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    class="relative font-regular text-white h-[460px] lg:h-[330px] xl:h-[365px] 2xl:h-[400px] min-w-[400px] lg:min-w-[900px] xl:min-w-[1010px] 2xl:min-w-[1120px] marker:content-none transition-all {!gravelIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                     use:intersect={{ threshold: 0.2, root: gravelUlElement }}
                                     onintersect={(event) => (
                                         gravelIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
@@ -380,36 +380,36 @@
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if gravelIntersectionMap[key].piclink != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={gravelIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-22 min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - {key}" src={gravelIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-22 min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
                                     {/if}
 
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
                                         <div class="basis-1/2 bg-amber-600/50_">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
+                                        <div class="basis-1/2 flex flex-col select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
-                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                            <div class="flex-none text-sm mt-1 lg:mt-0 ml-13 lg:ml-32">
                                                 <span class="uppercase font-semibold text-neutral-50">Kategorie </span> {gravelIntersectionMap[key].category}
                                             </div>
-                                            <div class="grow text-sm ml-8 lg:ml-35">
+                                            <div class="grow text-sm ml-13 lg:ml-35">
                                                 <span class="uppercase font-semibold text-neutral-100">Hersteller </span> {gravelIntersectionMap[key].manufacturer}
                                             </div>
                                             {#if gravelIntersectionMap[key].suspension}
-                                                <div class="grow text-sm ml-8 lg:ml-38">
+                                                <div class="grow text-sm ml-12 lg:ml-38">
                                                     <span class="uppercase font-semibold text-neutral-100">Suspension </span> {gravelIntersectionMap[key].suspension}
                                                 </div>
                                             {/if}
-                                            <div class="grow-2 ml-8 mb-3 lg:ml-38 mr-14 leading-5 text-sm">
+                                            <div class="grow-2 ml-12 mb-3 lg:ml-38 mr-4 lg:mr-14 leading-5 text-sm">
                                                 <span class="_text-sm">{gravelIntersectionMap[key].description}<a class="text-hero inline-flex" href="{gravelIntersectionMap[key].prodlink}" target="_blank">Herstellerseite  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a></span>
                                             </div>
                                             {#if gravelIntersectionMap[key].motor}
-                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <div class="flex-none text-sm ml-10 lg:ml-32">
                                                     <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {gravelIntersectionMap[key].motor}
                                                 </div>
-                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                <div class="flex-none text-sm ml-10 mb-3 lg:mb-8 lg:ml-32">
                                                     <span class="uppercase font-semibold text-neutral-100">Leistung </span> {gravelIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
@@ -425,10 +425,10 @@
                     </ul>
                 {/if}
                 {#if sectionStep === 4}
-                    <ul class="max-h-[75vh] lg:max-h-[50vh] w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={citytrekUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
+                    <ul class="w-full space-y-4 flex gap-10 overflow-hidden overflow-x-auto px-4 py-8 col-span-6 transition-all duration-500 noscrollbar" bind:this={citytrekUlElement} use:dragscroll in:fade={{duration: 200, delay: 500 }} >
                         {#each Object.keys(citytrekIntersectionMap) as key (key)}
                                 <li
-                                    class="relative font-regular text-white h-[55vh]_ h-115 lg:h-[calc(22vw)] min-w-[400px] min-w-7/8_ lg:min-w-5/8 marker:content-none transition-all {!citytrekIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
+                                    class="relative font-regular text-white h-[460px] lg:h-[330px] xl:h-[365px] 2xl:h-[400px] min-w-[400px] lg:min-w-[900px] xl:min-w-[1010px] 2xl:min-w-[1120px] marker:content-none transition-all {!citytrekIntersectionMap[key].visible ? 'opacity-0' : 'opacity-100'} duration-500"
                                     use:intersect={{ threshold: 0.2, root: citytrekUlElement }}
                                     onintersect={(event) => (
                                         citytrekIntersectionMap[key].visible = event.detail.entries[0].isIntersecting,
@@ -442,36 +442,36 @@
                                         <path d="M71 52L491.5 0L546.5 400L435.5 448.5L0 452.5L20 91L71 52Z" fill="currentcolor"/>
                                     </svg>
                                     {#if citytrekIntersectionMap[key].piclink != ""}
-                                        <enhanced:img alt="Bikes - Hero Shot - Übersicht" src={citytrekIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-22 min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
+                                        <enhanced:img alt="Bikes - Hero Shot - {key}" src={citytrekIntersectionMap[key].piclink} class="absolute -top-1 min-lg:-top-22 min-lg:w-2/3 min-lg:-translate-x-1/36 select-none" draggable="false" />
                                     {/if}
 
                                     <div class="relative w-full top-7 text-neutral-900 h-full flex flex-col lg:flex-row">
                                         <div class="basis-1/2 bg-amber-600/50_">
                                              <!-- [ img-placeholder ] -->
                                         </div>
-                                        <div class="basis-1/2 flex flex-col place-items-center_ bg-amber-800/50_ select-none">
+                                        <div class="basis-1/2 flex flex-col select-none">
                                             <div class="text-xl font-bold grow mt-6 lg:mt-2 ml-15 uppercase">
                                                 {key}
                                             </div>
-                                            <div class="flex-none text-sm ml-8 lg:ml-32">
+                                            <div class="flex-none text-sm mt-1 lg:mt-0 ml-13 lg:ml-32">
                                                 <span class="uppercase font-semibold text-neutral-50">Kategorie </span> {citytrekIntersectionMap[key].category}
                                             </div>
-                                            <div class="grow text-sm ml-8 lg:ml-35">
+                                            <div class="grow text-sm ml-13 lg:ml-35">
                                                 <span class="uppercase font-semibold text-neutral-100">Hersteller </span> {citytrekIntersectionMap[key].manufacturer}
                                             </div>
                                             {#if citytrekIntersectionMap[key].suspension}
-                                                <div class="grow text-sm ml-8 lg:ml-38">
+                                                <div class="grow text-sm ml-12 lg:ml-38">
                                                     <span class="uppercase font-semibold text-neutral-100">Suspension </span> {citytrekIntersectionMap[key].suspension}
                                                 </div>
                                             {/if}
-                                            <div class="grow-2 ml-8 mb-3 lg:ml-38 mr-14 leading-5 text-sm">
+                                            <div class="ggrow-2 ml-12 mb-3 lg:ml-38 mr-4 lg:mr-14 leading-5 text-sm">
                                                 <span class="_text-sm">{citytrekIntersectionMap[key].description}<a class="text-hero inline-flex" href="{citytrekIntersectionMap[key].prodlink}" target="_blank">Herstellerseite  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a></span>
                                             </div>
                                             {#if citytrekIntersectionMap[key].motor}
-                                                <div class="flex-none text-sm ml-8 lg:ml-32">
+                                                <div class="flex-none text-sm ml-10 lg:ml-32">
                                                     <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {citytrekIntersectionMap[key].motor}
                                                 </div>
-                                                <div class="flex-none text-sm ml-8 mb-3 lg:mb-8 lg:ml-32">
+                                                <div class="flex-none text-sm ml-10 mb-3 lg:mb-8 lg:ml-32">
                                                     <span class="uppercase font-semibold text-neutral-100">Leistung </span> {citytrekIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
@@ -487,7 +487,7 @@
                     </ul>
                 {/if}
                 {#if sectionStep === 5}
-                    <div class=" container mx-auto w-full flex flex-col md:flex-row bg-neutral-300/86 font-regular text-sm/5 text-neutral-800" in:fade={{duration: 200, delay: 500 }}>
+                    <div class="container mx-auto w-full flex flex-col md:flex-row bg-neutral-300/86 font-regular text-sm/5 text-neutral-800" in:fade={{duration: 200, delay: 500 }}>
                         <div class="w-full md:w-75 p-5 bg-neutral-950 content-center"><img src={kubike} alt="kubike Kinderfahrräder Logo"></div>
                         <div class="text-center p-3 content-center justify-items-center w-full"><span class="font-semibold text-base/7 uppercase ">Große Qualität auch für kleine BIKER</span><br><a class="text-hero inline-flex" href="https://www.kubikes.de/kubikes_shop/" target="_blank">Kubike Bikes  <ExternalLink size={18} strokeWidth={2.25} class="pl-0.5"/></a> gibts bei uns im Laden zu bewundern - schaut einfach vorbei!</div>
                     </div>
