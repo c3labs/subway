@@ -287,7 +287,7 @@
                                                     <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {mountainIntersectionMap[key].motor}
                                                 </div>
                                                 <div class="flex-none text-sm ml-10 mb-3 lg:mb-8 lg:ml-32">
-                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {mountainIntersectionMap[key].watth}
+                                                    <span class="uppercase font-semibold text-neutral-100">Akku </span> {mountainIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
                                             {#if mountainIntersectionMap[key].price}
@@ -348,7 +348,7 @@
                                                     <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {roadIntersectionMap[key].motor}
                                                 </div>
                                                 <div class="fflex-none text-sm ml-10 mb-3 lg:mb-8 lg:ml-32">
-                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {roadIntersectionMap[key].watth}
+                                                    <span class="uppercase font-semibold text-neutral-100">Akku </span> {roadIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
                                             {#if roadIntersectionMap[key].price}
@@ -410,7 +410,7 @@
                                                     <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {gravelIntersectionMap[key].motor}
                                                 </div>
                                                 <div class="flex-none text-sm ml-10 mb-3 lg:mb-8 lg:ml-32">
-                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {gravelIntersectionMap[key].watth}
+                                                    <span class="uppercase font-semibold text-neutral-100">Akku </span> {gravelIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
                                             {#if gravelIntersectionMap[key].price}
@@ -472,7 +472,7 @@
                                                     <span class="uppercase font-semibold text-neutral-100">Motortyp </span> {citytrekIntersectionMap[key].motor}
                                                 </div>
                                                 <div class="flex-none text-sm ml-10 mb-3 lg:mb-8 lg:ml-32">
-                                                    <span class="uppercase font-semibold text-neutral-100">Leistung </span> {citytrekIntersectionMap[key].watth}
+                                                    <span class="uppercase font-semibold text-neutral-100">Akku </span> {citytrekIntersectionMap[key].watth}
                                                 </div>    
                                             {/if}
                                             {#if citytrekIntersectionMap[key].price}
