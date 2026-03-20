@@ -135,53 +135,53 @@
             <h1 class="container mx-auto px-4 pb-8 pt-4 z-11 sticky top-28 lg:top-44 xl:top-40 font-extralight font-headline text-neutral-800 text-sm lg:text-base xl:text-xl" in:fade={{duration: 300, delay: 600 }} out:fade>UNSERE BIKE VISIONEN - SO INDIVIDUELL WIE IHRE BESITZER | <span class="font-bold">PROJECT ONE OWNERS CLUB</span></h1>
             <div class="noscrollbar flex h-full cursor-grab touch-pan-y touch-pinch-zoom select-none overflow-x-scroll max-sm:touch-pan-x" use:dragscroll id="scrollstage">
                 <div class="flex h-full w-max transform gap-4 px-4 lg:gap-8 lg:px-8 pb-[20vh] pt-[18vh] lg:pb-[15vh] lg:pt-[15vh] shrink-0 grow-0">
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage0">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 16.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[1.1]" out:fade id="stage0">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 16.jpeg?format=avif;webp" alt="Project One Owners Club - Show #1" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage1">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 15.jpeg?format=avif;webp" alt="Project One Owners Club - Show #2" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[1.3]" out:fade id="stage1">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 15.jpeg?format=avif;webp" alt="Project One Owners Club - Show #2" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage2">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 3.jpeg?format=avif;webp" alt="Project One Owners Club - Show #3" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[1.56]" out:fade id="stage2">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 3.jpeg?format=avif;webp" alt="Project One Owners Club - Show #3" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage3">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 1.jpeg?format=avif;webp" alt="Project One Owners Club - Show #4" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage3">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 1.jpeg?format=avif;webp" alt="Project One Owners Club - Show #4" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage4">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 2.jpeg?format=avif;webp" alt="Project One Owners Club - Show #5" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage4">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 2.jpeg?format=avif;webp" alt="Project One Owners Club - Show #5" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage5">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 4.jpeg?format=avif;webp" alt="Project One Owners Club - Show #6" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.77]" out:fade id="stage5">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 4.jpeg?format=avif;webp" alt="Project One Owners Club - Show #6" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage6">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 5.jpeg?format=avif;webp" alt="Project One Owners Club - Show #7" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[1.48]" out:fade id="stage6">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 5.jpeg?format=avif;webp" alt="Project One Owners Club - Show #7" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage7">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 6.jpeg?format=avif;webp" alt="Project One Owners Club - Show #8" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage7">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 6.jpeg?format=avif;webp" alt="Project One Owners Club - Show #8" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage8">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 7.jpeg?format=avif;webp" alt="Project One Owners Club - Show #9" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[1.33]" out:fade id="stage8">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 7.jpeg?format=avif;webp" alt="Project One Owners Club - Show #9" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage9">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 8.jpeg?format=avif;webp" alt="Project One Owners Club - Show #10" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage9">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 8.jpeg?format=avif;webp" alt="Project One Owners Club - Show #10" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage10">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 9.jpeg?format=avif;webp" alt="Project One Owners Club - Show #11" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.77]" out:fade id="stage10">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 9.jpeg?format=avif;webp" alt="Project One Owners Club - Show #11" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage11">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 10.jpeg?format=avif;webp" alt="Project One Owners Club - Show #12" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage11">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 10.jpeg?format=avif;webp" alt="Project One Owners Club - Show #12" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage12">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 11.jpeg?format=avif;webp" alt="Project One Owners Club - Show #13" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage12">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 11.jpeg?format=avif;webp" alt="Project One Owners Club - Show #13" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage13">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 12.jpeg?format=avif;webp" alt="Project One Owners Club - Show #14" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage13">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 12.jpeg?format=avif;webp" alt="Project One Owners Club - Show #14" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage14">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 13.jpeg?format=avif;webp" alt="Project One Owners Club - Show #15" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage14">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 13.jpeg?format=avif;webp" alt="Project One Owners Club - Show #15" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
-                    <div class="flex shrink-0 min-w-max h-full rounded-2xl overflow-hidden" in:fly={{ y :100, duration: 300, delay: 500 }} out:fade id="stage15">
-                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 14.jpeg?format=avif;webp" alt="Project One Owners Club - Show #16" sizes="min(1280px, 100vw)" class="_absolute object-cover object-center w-full h-full" draggable="false" />
+                    <div class="shrink-0 h-full rounded-2xl items-center overflow-hidden aspect-[0.56]" out:fade id="stage15">
+                        <enhanced:img src="/src/lib/assets/images/bikes/projectOne/show/Subway.Peters.ProjectOne - 14.jpeg?format=avif;webp" alt="Project One Owners Club - Show #16" sizes="min(1280px, 100vw)" class="object-cover object-center w-full h-full" draggable="false" />
                     </div>
                 </div>
             </div>

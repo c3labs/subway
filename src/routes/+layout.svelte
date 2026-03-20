@@ -149,7 +149,7 @@
 	</div>
 	<div class="container">
 		<p class="text-neutral-600 font-menu text-xs text-center">
-			© 2026 <a href="https://c3labs.de" target="_blank" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-300">c3labs.de</a> | All Rights Reserved | subway.v.1.0.2
+			© 2026 <a href="https://c3labs.de" target="_blank" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-300">c3labs.de</a> | All Rights Reserved | subway.v.1.0.3
 		</p>
 		<p class="text-neutral-700 font-menu text-xs text-center p-3">
 			DIESE WEBSITE FUNKTIONIERT OHNE COOKIES - SAMMELT KEINE DATEN - VERWENDET MEDIALE INHALTE MIT FREUNDLICHER GENEHMIGUNG VON TREK | CUBE | usw...

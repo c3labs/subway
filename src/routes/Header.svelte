@@ -13,11 +13,11 @@
 				<button onclick={() => uiobserver.toggleNav()}>{uiobserver.navstate ? '-' : '+'}MENU</button>
 			</li>
 			<li aria-current={page.url.pathname === '/fahrraeder' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
-				<button onclick={() => navigate('/fahrraeder')} class="cursor-pointer">FAHRRÄDER</button>
+				<button onclick={() => navigate('/fahrraeder')} class="{page.url.pathname === '/fahrraeder' ? 'cursor-auto' : 'cursor-pointer'}">FAHRRÄDER</button>
 				<!-- <button onclick={uiobserver.toggleUi}>UISTATE: {uiobserver.uistate}</button> -->
 			</li>
 			<li aria-current={page.url.pathname === '/projectone' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
-				<button onclick={() => navigate("/projectone")} class="cursor-pointer">PROJECT ONE</button>
+				<button onclick={() => navigate("/projectone")} class="{page.url.pathname === '/projectone' ? 'cursor-auto' : 'cursor-pointer'}">PROJECT ONE</button>
 			</li>
 		</ul>
 	</div>
@@ -30,10 +30,10 @@
 	<div class="corner">
 		<ul class="flex flex-col items-end xl:flex-row gap-x-12">
 			<li aria-current={page.url.pathname === '/leasing' ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
-				<button onclick={() => navigate('/leasing')} class="cursor-pointer">LEASING</button>
+				<button onclick={() => navigate('/leasing')} class="{page.url.pathname === '/leasing' ? 'cursor-auto' : 'cursor-pointer'}">LEASING</button>
 			</li>
 			<li aria-current={page.url.pathname.startsWith('/workbench') ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 max-lg:pb-1 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300">
-				<button onclick={() => navigate('/workbench')} class="cursor-pointer">SERVICE/WORKBENCH</button>
+				<button onclick={() => navigate('/workbench')} class="{page.url.pathname === '/workbench' ? 'cursor-auto' : 'cursor-pointer'}">SERVICE/WORKBENCH</button>
 			</li>
 			<!-- <li aria-current={page.url.pathname.startsWith('/info') ? 'page' : undefined} class="aria-[current=page]:text-hero hover:text-[var(--bg-menu-color)]/100 lg:inline-flex {uiobserver.navstate ? 'inline-flex' : 'hidden'} duration-300" >
 				<button onclick={() => navigate('/info')} class="cursor-pointer">+INFORMATION</button>
